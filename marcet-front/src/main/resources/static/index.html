@@ -1,0 +1,79 @@
+<!doctype html>
+
+
+<html ng-app="app">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js"></script>
+
+
+    <style>
+        body {
+            background: #bababa
+        }
+    </style>
+</head>
+
+<body>
+
+<div ng-controller="indexController">
+
+
+    <ul class="navbar-brand">
+
+        <span class="nav-item">
+                        <a class="btn btn-secondary" href="#!/products">Главная</a>
+                    </span>
+
+        <span class="nav-item">
+                        <a class="btn btn-secondary" href="#!/registration">Регистрация</a>
+                    </span>
+
+        <span class="nav-item">
+                        <a class="btn btn-secondary" href="#!/basket">Корзина</a>
+                    </span>
+
+        <span class="nav-item">
+                    <a class="btn btn-secondary" href="#!/auth">Вход</a>
+                </span>
+
+        <span class="nav-item">
+                    <a class="btn btn-secondary" href="#!/adminka">Админка</a>
+                </span>
+
+        <span class="nav-item">
+                        <a class="btn btn-secondary" href="#!/">Информация</a>
+                    </span>
+
+        <span class="nav-item">
+                    <button class="btn btn-secondary" ng-click="tryToLogout()">Выход</button>
+                </span>
+
+
+    </ul>
+
+</div>
+
+
+</div>
+
+<ng-view></ng-view>
+<script src="index.js"></script>
+<script src="home/home.js"></script>
+<script src="products/products.js"></script>
+<script src="registration/registration.js"></script>
+<script src="auth/auth.js"></script>
+<script src="basket/basket.js"></script>
+<script src="adminka/adminka.js"></script>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:mydatabase
+    username: admin
+    password:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: false
+  application:
+    name: zuul-server
+server:
+  port: 8701
+  servlet:
+    context-path: /zuul
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+
+# http://localhost:8701/zuul
+zuul:
+  routes:
+    marcet-service: /service/**
+  sensitiveHeaders: Cookie, Set-Cookie
+
+ribbon:
+  ReadTimeout: 60000
+
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds= 1000000
+#hystrix.command.default.execution.isolation.strategy= THREAD
+#
+#ribbon.ReadTimeout=60000

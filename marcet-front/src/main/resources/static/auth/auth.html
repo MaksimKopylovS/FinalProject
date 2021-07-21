@@ -1,0 +1,22 @@
+<div>
+    <h1>Авторизация</h1>
+
+    <div class="mb-3 text-center" ng-show="authBool">
+        <h1>Регистрация прошла успешно</h1>
+    </div>
+
+    <form class="align-middle" ng-submit="auth()">
+        <div class="input-group-prepend">
+
+            <input id="inputUsername" class="form-control" ng-model="user.username" type="text"
+                   placeholder="Имя пользователя" aria-describedby="inputGroup-sizing-sm" style="margin-left: 10px;" >
+
+            <input id="inputPassword" class="form-control" ng-model="user.password" type="password"
+                   placeholder="Пароль" aria-describedby="inputGroup-sizing-sm" style="margin-left: 10px;">
+
+            <button id="navLoginSubmit" class="btn btn-outline-warning btn-sm"
+                    style="margin-left: 10px;" type="submit">Войти
+            </button>
+        </div>
+    </form>
+</div>
