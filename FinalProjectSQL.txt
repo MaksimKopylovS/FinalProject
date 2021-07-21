@@ -1,0 +1,135 @@
+CREATE SCHEMA `final_project` ;
+
+CREATE TABLE `final_project`.`users` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`));
+  
+  ALTER TABLE `final_project`.`users` 
+CHANGE COLUMN `username` `username` VARCHAR(255) NOT NULL ,
+CHANGE COLUMN `password` `password` VARCHAR(255) NOT NULL ,
+CHANGE COLUMN `email` `email` VARCHAR(255) NOT NULL ;
+  
+CREATE TABLE `final_project`.`roles` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE);
+  
+CREATE TABLE `final_project`.`users_roles` (
+  `user_id` INT NOT NULL AUTO_INCREMENT,
+  `role_id` INT NOT NULL,
+  PRIMARY KEY (`user_id`, `role_id`));
+  
+CREATE TABLE `final_project`.`product` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(255) NOT NULL,
+  `cost` VARCHAR(255) NULL,
+  PRIMARY KEY (`id`));
+  
+ALTER TABLE `final_project`.`product` 
+ADD COLUMN `id_categoriy` INT NULL AFTER `id`;
+
+CREATE TABLE `final_project`.`categoriy` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`));
+
+CREATE TABLE `final_project`.`orders` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `id_user` INT NOT NULL,
+  `id_product` INT NOT NULL,
+  `order_number` INT NOT NULL,
+  `sum_cost` INT NULL,
+  `adres` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
+
+ALTER TABLE `final_project`.`product` 
+ADD INDEX `FK_Product_Categoriy_idx` (`id_categoriy` ASC) VISIBLE;
+;
+ALTER TABLE `final_project`.`product` 
+ADD CONSTRAINT `FK_Product_Categoriy`
+  FOREIGN KEY (`id_categoriy`)
+  REFERENCES `final_project`.`categoriy` (`id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+ALTER TABLE `final_project`.`orders` 
+ADD INDEX `FK_User_Product_idx` (`id_user` ASC) VISIBLE;
+;
+ALTER TABLE `final_project`.`orders` 
+ADD CONSTRAINT `FK_User_Product`
+  FOREIGN KEY (`id_user`)
+  REFERENCES `final_project`.`users` (`id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+ 
+ALTER TABLE `final_project`.`orders` 
+DROP FOREIGN KEY `FK_User_Product`;
+ALTER TABLE `final_project`.`orders` 
+ADD CONSTRAINT `FK_User_Order`
+  FOREIGN KEY (`id_user`)
+  REFERENCES `final_project`.`users` (`id`);
+  
+ALTER TABLE `final_project`.`orders` 
+DROP FOREIGN KEY `FK_User_Order`;
+ALTER TABLE `final_project`.`orders` 
+ADD INDEX `FK_Order_Product_idx` (`id_product` ASC) VISIBLE;
+;
+ALTER TABLE `final_project`.`orders` 
+ADD CONSTRAINT `FK_Order_User`
+  FOREIGN KEY (`id_user`)
+  REFERENCES `final_project`.`users` (`id`),
+ADD CONSTRAINT `FK_Order_Product`
+  FOREIGN KEY (`id_product`)
+  REFERENCES `final_project`.`product` (`id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+  
+ALTER TABLE `final_project`.`users_roles` 
+ADD INDEX `FK_Role_Id_Role_idx` (`role_id` ASC) VISIBLE;
+;
+ALTER TABLE `final_project`.`users_roles` 
+ADD CONSTRAINT `FK_User_Id_User`
+  FOREIGN KEY (`user_id`)
+  REFERENCES `final_project`.`users` (`id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION,
+ADD CONSTRAINT `FK_Role_Id_Role`
+  FOREIGN KEY (`role_id`)
+  REFERENCES `final_project`.`roles` (`id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+  
+ALTER TABLE `final_project`.`users_roles` 
+DROP FOREIGN KEY `FK_User_Id_User`;
+ALTER TABLE `final_project`.`users_roles` 
+CHANGE COLUMN `user_id` `user_id` INT NOT NULL ;
+ALTER TABLE `final_project`.`users_roles` 
+ADD CONSTRAINT `FK_User_Id_User`
+  FOREIGN KEY (`user_id`)
+  REFERENCES `final_project`.`users` (`id`);
+  
+INSERT INTO `final_project`.`users` (`username`, `password`, `email`) VALUES ('user1', '$2a$10$5fAKqEahjf2NsgPx0dD/g.BSrufqXUYcXEBC/oQk0/w.E1yRfJv9m', 'user1@user1.ru');
+INSERT INTO `final_project`.`users` (`username`, `password`, `email`) VALUES ('user2', '$10$5fAKqEahjf2NsgPx0dD/g.BSrufqXUYcXEBC/oQk0/w.E1yRfJv9m', 'user2@user2.ru');
+INSERT INTO `final_project`.`users` (`username`, `password`, `email`) VALUES ('user3', '$10$5fAKqEahjf2NsgPx0dD/g.BSrufqXUYcXEBC/oQk0/w.E1yRfJv9m', 'user3@user3.ru');
+
+INSERT INTO `final_project`.`categoriy` (`name`) VALUES ('Дерево');
+INSERT INTO `final_project`.`categoriy` (`name`) VALUES ('Железо');
+INSERT INTO `final_project`.`categoriy` (`name`) VALUES ('Инструменты');
+INSERT INTO `final_project`.`categoriy` (`name`) VALUES ('Смеси');
+
+INSERT INTO `final_project`.`product` (`id_categoriy`, `title`, `cost`) VALUES ('1', 'Брус', '100');
+INSERT INTO `final_project`.`product` (`id_categoriy`, `title`, `cost`) VALUES ('2', 'Арматура', '150');
+INSERT INTO `final_project`.`product` (`id_categoriy`, `title`, `cost`) VALUES ('3', 'Перфоратор', '7000');
+INSERT INTO `final_project`.`product` (`id_categoriy`, `title`, `cost`) VALUES ('4', 'Цемент', '150');
+
+
+INSERT INTO `final_project`.`roles` (`id`, `name`) VALUES ('1', 'ROLE_USER');
+INSERT INTO `final_project`.`roles` (`id`, `name`) VALUES ('2', 'ROLE_ADMIN');
+
+INSERT INTO `final_project`.`users_roles` (`user_id`, `role_id`) VALUES ('1', '1');
+INSERT INTO `final_project`.`users_roles` (`user_id`, `role_id`) VALUES ('2', '2');
+

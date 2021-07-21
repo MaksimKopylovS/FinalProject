@@ -6,7 +6,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/market?serverTimezone=GMT
+    url: jdbc:mysql://localhost:3306/final_project?serverTimezone=GMT
     username: root
     password: Zz123456
   jpa:
