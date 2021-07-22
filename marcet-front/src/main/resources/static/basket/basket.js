@@ -27,9 +27,10 @@ angular.module('app').controller('basketController', function ($scope, $http, $l
     }
 
     $scope.createOrder = function(adres){
-        console.log(adres)
-        console.log($localStorage.currentUser.username)
-        $http.post(contextPath + 'service/order/create', $localStorage.currentUser.username + adres)
+        let data = new Array();
+        data[0] = adres;
+        data[1] = $localStorage.currentUser.username;
+        $http.post(contextPath + 'service/order/create', data)
             .then(function (response){
 
             })

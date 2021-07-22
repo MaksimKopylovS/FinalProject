@@ -1,5 +1,6 @@
 package marcet.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,6 +11,14 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Table(name = "orders")
 public class Order {
+
+    public Order(Long idUser, Long idProduct, Long orderNumber, int sumCost, String adres){
+        this.idUser = idUser;
+        this.idProduct = idProduct;
+        this.orderNumber = orderNumber;
+        this.sumCost = sumCost;
+        this.adres = adres;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,4 +39,8 @@ public class Order {
 
     @Column(name = "adres")
     private String adres;
+
+
+
+
 }
