@@ -7,7 +7,6 @@
     <modules>
         <module>eureka-service</module>
         <module>zuul-server</module>
-        <module>marcet-controller</module>
         <module>marcet-front</module>
         <module>marcet-service</module>
     </modules>

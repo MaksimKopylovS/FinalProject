@@ -40,7 +40,4 @@ public class Order {
     @Column(name = "adres")
     private String adres;
 
-
-
-
 }
