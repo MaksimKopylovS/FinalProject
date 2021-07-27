@@ -1,8 +1,11 @@
 package marcet.controller;
 
 import lombok.RequiredArgsConstructor;
+import marcet.service.BasketService;
+import marcet.service.OrderService;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,11 +15,20 @@ import java.util.List;
 @RequestMapping("/order")
 public class OrderController {
 
+    private static Long orderCount;
+    private final OrderService orderService;
+
+
+    @PostConstruct
+    public void init(){
+        orderCount = 0L;
+    }
+
     @PostMapping("/create")
     public void createOrder(@RequestBody List<String> data) {
-        for(String str : data){
-            System.out.println(str);
-        }
+        orderCount++;
+        orderService.createOrder(data, orderCount);
+
     }
 
 }

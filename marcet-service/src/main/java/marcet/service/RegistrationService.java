@@ -17,7 +17,7 @@ public class RegistrationService {
 
     @Transactional
     public void registrationUser(UserDTO userDTO) {
-        System.out.println(userDTO.getUsername() + " " + userDTO.getPassword() + " " + userDTO.getMail() + " " + " ");
+        System.out.println(userDTO.getUsername() + " " + userDTO.getPassword() + " " + userDTO.getMail() + " " + " " + "Pапись в Базу");
         entityManager.createNativeQuery("insert into users(USERNAME, PASSWORD, EMAIL) values(:a,:b,:c)")
                 .setParameter("a", userDTO.getUsername())
                 .setParameter("b", userDTO.getPassword())

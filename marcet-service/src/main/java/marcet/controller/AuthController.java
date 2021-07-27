@@ -31,6 +31,7 @@ public class AuthController {
         System.out.println(authRequest.getUsername() + " |||| " + authRequest.getPassword());
         try {
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));
+            System.out.println("authenticationManager Down");
         } catch (BadCredentialsException ex) {
             return new ResponseEntity<>(new MarketError(HttpStatus.UNAUTHORIZED.value(), "Ошибка авторизации"), HttpStatus.UNAUTHORIZED);
         }
