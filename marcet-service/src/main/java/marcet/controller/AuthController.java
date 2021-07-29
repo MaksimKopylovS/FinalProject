@@ -2,8 +2,8 @@ package marcet.controller;
 
 import lombok.RequiredArgsConstructor;
 import marcet.bean.JwtTokenUtil;
-import marcet.dto.JwtRequest;
-import marcet.dto.JwtResponse;
+import marcet.model.JwtRequest;
+import marcet.model.JwtResponse;
 import marcet.exceptions_handling.MarketError;
 import marcet.service.AuthService;
 import org.springframework.http.HttpStatus;

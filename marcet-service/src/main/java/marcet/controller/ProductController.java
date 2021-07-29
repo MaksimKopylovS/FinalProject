@@ -13,27 +13,38 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 @CrossOrigin
+@RequestMapping("/products")
 public class ProductController {
 
     private final ProductService productService;
 
-    @GetMapping("/products")
-    public String products() {
-        System.out.println("MarcetServiceControlelr Запрос пршол");
-
-        return "Держи Пакет продуктов";
-    }
-
-
-    @GetMapping("/get-products")
-    public List<ProductDTO> getProducts() {
-        System.out.println("Запрос на продукты пришол");
-        return productService.getProduct();
-    }
+//    @GetMapping("/products")
+//    public String products() {
+//        System.out.println("MarcetServiceControlelr Запрос пршол");
+//
+//        return "Держи Пакет продуктов";
+//    }
 
 
-    @RequestMapping(value = "/get-products-all", method = RequestMethod.GET)
+//    @GetMapping("/get-products")
+//    public List<ProductDTO> getProducts() {
+//        System.out.println("Запрос на продукты пришол");
+//        return productService.getProduct();
+//    }
+
+
+    @RequestMapping(value = "/get-all", method = RequestMethod.GET)
     public Page<ProductDTO> findAllProducts(@RequestParam MultiValueMap<String, String> params,
+                                            @RequestParam(name = "page", defaultValue = "1") Integer page) {
+        for (int i = 0; i < params.size(); i++) {
+            System.out.println(params.toSingleValueMap());
+        }
+
+        return productService.findAllProducts(ProductSpecifications.build(params), page, 5);
+    }
+
+    @RequestMapping(value = "/get-all-admin", method = RequestMethod.GET)
+    public Page<ProductDTO> findAllProductsAdm(@RequestParam MultiValueMap<String, String> params,
                                             @RequestParam(name = "page", defaultValue = "1") Integer page) {
         for (int i = 0; i < params.size(); i++) {
             System.out.println(params.toSingleValueMap());

@@ -24,18 +24,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-
                 .csrf().disable()
                 .authorizeRequests()
-//                .antMatchers("/auth/**").permitAll()
+//                .antMatchers("/**").permitAll()
 //                .antMatchers("/registration/**").permitAll()
+//                .antMatchers("/auth/**").permitAll()
 //                .antMatchers("/get-products-all/**").authenticated()
-//                .antMatchers("/add-basket/**").authenticated()
-//                .antMatchers("/h2-console/**").permitAll()
+                .antMatchers("service/order/create").authenticated()
+//                .antMatchers("/**").authenticated()
                 .anyRequest().permitAll()
                 .and()
-//                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-//                .and()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
                 .headers().frameOptions().disable();
         http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
     }

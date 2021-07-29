@@ -53,8 +53,8 @@ angular.module('app').controller('indexController', function ($scope, $http, $lo
     $scope.tryToLogout = function () {
         delete $localStorage.currentUser;
         delete $localStorage.userOrder;
-        $http.defaults.headers.common.Authorization = 'qqq';
-        console.log($http.defaults.headers.common.Authorization);
+        $http.defaults.headers.common.Authorization = '';
+        console.log($localStorage.currentUser + "   " + $http.defaults.headers.common.Authorization)
     };
 
 });

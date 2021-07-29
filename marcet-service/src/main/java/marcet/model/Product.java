@@ -4,12 +4,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "product")
 @Data
 @NoArgsConstructor
 public class Product {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -22,5 +24,7 @@ public class Product {
     private String title;
 
     @Column(name = "cost")
-    private int cost;
+    private BigDecimal cost;
+
+   // private String linkToImage;
 }

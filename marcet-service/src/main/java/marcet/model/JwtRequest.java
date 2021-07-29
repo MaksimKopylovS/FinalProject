@@ -1,4 +1,4 @@
-package marcet.dto;
+package marcet.model;
 
 import lombok.Data;
 

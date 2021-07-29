@@ -17,9 +17,9 @@ import java.util.stream.Collectors;
 public class ProductService {
     private final ProductRepository productRepository;
 
-    public List<ProductDTO> getProduct() {
-        return productRepository.findAll().stream().map(ProductDTO::new).collect(Collectors.toList());
-    }
+//    public List<ProductDTO> getProduct() {
+//        return productRepository.findAll().stream().map(ProductDTO::new).collect(Collectors.toList());
+//    }
 
     public Page<ProductDTO> findAllProducts(Specification<Product> spec, int page, int pageSize) {
         Page<ProductDTO> productDTOS = productRepository.findAll(spec, PageRequest.of(page - 1, pageSize)).map(ProductDTO::new);

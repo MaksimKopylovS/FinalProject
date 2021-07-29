@@ -6,13 +6,16 @@ import marcet.model.Order;
 import marcet.model.User;
 import marcet.repository.OrderRepository;
 import marcet.repository.UserRepository;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
+@Scope(scopeName = "prototype")
 public class OrderService {
 
     private final OrderRepository orderRepository;
@@ -20,12 +23,14 @@ public class OrderService {
     private final UserRepository userRepository;
 
     public void createOrder(List<String> data, Long countOrder){
+        System.out.println("Пришол в createOrderRrRrRrRRRrRr" + "   " +  basketService.getBasket().size());
         Order order = new Order();
-        int sumCost = getSumCost(basketService.getBasket());
+        BigDecimal sumCost = getSumCost(basketService.getBasket());
         System.out.println(data.get(1));
         User user = userRepository.findByUsername(data.get(1)).get();
-        System.out.println(user.getUsername());
-        for(ProductDTO p:basketService.getBasket()){
+
+
+        for(ProductDTO p: basketService.getBasket()){
             order.setIdUser(user.getId());
             order.setIdProduct(p.getId());
             order.setOrderNumber(countOrder);
@@ -42,10 +47,10 @@ public class OrderService {
     }
 
 
-    public int getSumCost(List<ProductDTO> list){
-        int sumCost = 0;
+    public BigDecimal getSumCost(List<ProductDTO> list){
+        BigDecimal sumCost = new BigDecimal(0);
         for(ProductDTO p : list){
-            sumCost = sumCost + p.getCost();
+            sumCost = sumCost.add(p.getCost());
         }
         return sumCost;
     }

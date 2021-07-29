@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Data
 @Entity
@@ -12,7 +13,7 @@ import javax.persistence.*;
 @Table(name = "orders")
 public class Order {
 
-    public Order(Long idUser, Long idProduct, Long orderNumber, int sumCost, String adres){
+    public Order(Long idUser, Long idProduct, Long orderNumber, BigDecimal sumCost, String adres){
         this.idUser = idUser;
         this.idProduct = idProduct;
         this.orderNumber = orderNumber;
@@ -35,9 +36,13 @@ public class Order {
     private Long orderNumber;
 
     @Column(name = "sum_cost")
-    private int sumCost;
+    private BigDecimal sumCost;
 
     @Column(name = "adres")
     private String adres;
+
+   // private int quantity;
+
+    //private Long adress_id;
 
 }

@@ -5,13 +5,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import marcet.model.Product;
 
+import java.math.BigDecimal;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProductDTO {
     private Long id;
     private String title;
-    private int cost;
+    private BigDecimal cost;
 
     public ProductDTO(Product product) {
         this.id = product.getId();

@@ -6,7 +6,7 @@ angular.module('app').controller('adminkaController', function($scope, $http, $l
         console.log($http.defaults.headers.common.Authorization + "    qqqqqqqq")
 
         $http({
-            url: contextPath + 'service/get-products-all',
+            url: contextPath + 'service/products/get-all-admin',
             method: 'GET',
             params: {
                 id: $scope.filter ? $scope.filter.id : null,

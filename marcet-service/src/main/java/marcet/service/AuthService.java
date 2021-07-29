@@ -1,7 +1,7 @@
 package marcet.service;
 
 import lombok.RequiredArgsConstructor;
-import marcet.dto.JwtRequest;
+import marcet.model.JwtRequest;
 import marcet.model.Role;
 import marcet.model.User;
 import marcet.repository.UserRepository;
