@@ -23,16 +23,13 @@ public class AuthService implements UserDetailsService {
     private final UserRepository userRepository;
 
     public void toAuth(JwtRequest authRequest) {
-        System.out.println(authRequest.getUsername() + "  " + authRequest.getPassword() + "  AuthService");
         Optional<User> optionalUser = userRepository.findByUsername(authRequest.getUsername());
-        System.out.println(optionalUser.get());
     }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = findByUsername(username).orElseThrow(() -> new UsernameNotFoundException(String.format("User '%s' not found", username)));
-        System.out.println(user.getUsername() + " Nameeee");
-        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), mapRolesToAuthorities(user.getRoles()));
+        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), mapRolesToAuthorities(user.getRolesCollection()));
     }
 
     public Optional<User> findByUsername(String username) {

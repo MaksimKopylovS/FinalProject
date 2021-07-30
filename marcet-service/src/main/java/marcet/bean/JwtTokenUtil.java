@@ -26,7 +26,6 @@ public class JwtTokenUtil {
     private String secret = "ifh9v8eyf9843hf3498hg934gft093whf09hG&@G*&Gd983wgf398gf973g837fgq54tq45y245"; //добавлена жоская привящка для создания тестов
 
     public String generationToken(UserDetails userDetails) {
-        System.out.println("generationToken + ");
         Map<String, Object> claims = new HashMap<>();
         List<String> rolesList = userDetails.getAuthorities().stream()
                 .map(GrantedAuthority::getAuthority)

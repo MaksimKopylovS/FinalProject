@@ -10,14 +10,14 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-@Table(name = "categoriy")
-public class Categoriy {
+@Table(name = "products_categories_tbl")
+public class ProductsCategoriy {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    private Long productId;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "category_id")
+    private Long categoryId;
 }

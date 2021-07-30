@@ -1,40 +1,46 @@
 package marcet.model;
 
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Collection;
 
-@Data
 @Entity
-@Table(name = "users")
-@NoArgsConstructor
+@Data
+@Table(name = "users_tbl")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Long id;
+    @Column(name = "user_id")
+    private Long userId;
 
-    @Column(name = "username")
+    @Column(name = "username_fld")
     private String username;
 
-    @Column(name = "password")
+    @Column(name = "password_fld")
     private String password;
 
-    @Column(name = "email")
-    private String email;
+    @Column(name = "email_fld")
+    private String mail;
 
     @ManyToMany
-    @JoinTable(name = "users_roles",
+    @JoinTable(name = "users_roles_tbl",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private Collection<Role> roles;
+    private Collection<Role> rolesCollection;
 
-    public User(String username, String password, String mail) {
-        this.username = username;
-        this.password = password;
-        this.email = mail;
-    }
+//    @ManyToMany
+//    @JoinTable(name = "addresses_tbl",
+//            joinColumns = @JoinColumn(name = "user_id"),
+//            inverseJoinColumns = @JoinColumn(name = "user_id"))
+//    private Collection<Address> addressCollection;
+
+//    @OneToMany
+//    @JoinTable(name = "orders_tbl",
+//            joinColumns = @JoinColumn(name = "user_id"))
+//    private Collection<Order> ordersCollection;
 }

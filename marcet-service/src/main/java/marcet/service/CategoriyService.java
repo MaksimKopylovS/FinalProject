@@ -1,7 +1,7 @@
 package marcet.service;
 
 import lombok.RequiredArgsConstructor;
-import marcet.model.Categoriy;
+import marcet.model.ProductsCategoriy;
 import marcet.repository.CategoriyRepository;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ public class CategoriyService {
 
     private final CategoriyRepository categoriyRepository;
 
-    public List<Categoriy> getCategoriyes(){
+    public List<ProductsCategoriy> getCategoriyes(){
         return categoriyRepository.findAll();
     }
 }

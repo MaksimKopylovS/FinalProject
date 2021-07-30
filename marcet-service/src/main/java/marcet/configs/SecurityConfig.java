@@ -24,15 +24,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .csrf().disable()
-                .authorizeRequests()
+                .csrf().disable() // Защита от подделки межсайтовых запросов, отключена
+                .authorizeRequests() // метод для ограничения доступа
 //                .antMatchers("/**").permitAll()
 //                .antMatchers("/registration/**").permitAll()
 //                .antMatchers("/auth/**").permitAll()
 //                .antMatchers("/get-products-all/**").authenticated()
-                .antMatchers("service/order/create").authenticated()
+                .antMatchers("service/order/create").authenticated() // antMatchers определяет какую ссылку и каким способом защищать
 //                .antMatchers("/**").authenticated()
-                .anyRequest().permitAll()
+                .anyRequest().permitAll() // anyRequest определяет защиту всех ссылок
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()

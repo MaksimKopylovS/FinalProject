@@ -1,6 +1,7 @@
 package marcet.service;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import marcet.dto.ProductDTO;
 import marcet.model.Order;
 import marcet.model.User;
@@ -13,6 +14,7 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
+@Slf4j
 @RequiredArgsConstructor
 @Service
 @Scope(scopeName = "prototype")
@@ -23,7 +25,6 @@ public class OrderService {
     private final UserRepository userRepository;
 
     public void createOrder(List<String> data, Long countOrder){
-        System.out.println("Пришол в createOrderRrRrRrRRRrRr" + "   " +  basketService.getBasket().size());
         Order order = new Order();
         BigDecimal sumCost = getSumCost(basketService.getBasket());
         System.out.println(data.get(1));
@@ -31,16 +32,12 @@ public class OrderService {
 
 
         for(ProductDTO p: basketService.getBasket()){
-            order.setIdUser(user.getId());
-            order.setIdProduct(p.getId());
-            order.setOrderNumber(countOrder);
-            order.setSumCost(sumCost);
-            order.setAdres(data.get(0));
-            System.out.println(order.getIdUser() + " " +
-                    order.getIdProduct() + " " +
-                    order.getOrderNumber() + " " +
-                    order.getSumCost() + " " +
-                    order.getAdres());
+//            order.setIdUser(user.getId());
+//            order.setIdProduct(p.getId());
+//            order.setOrderNumber(countOrder);
+//            order.setSumCost(sumCost);
+//            order.setAdres(data.get(0));
+//            log.info("IdProduct {}, OrderNumber {}, SumCost {}, getAdres {}", order.getIdProduct(), order.getOrderNumber(), order.getSumCost(), order.getAdres());
             //orderRepository.save(order);
         }
 

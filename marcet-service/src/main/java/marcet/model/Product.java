@@ -1,30 +1,50 @@
 package marcet.model;
 
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.Collection;
 
 @Entity
-@Table(name = "product")
-@Data
-@NoArgsConstructor
+@Table(name = "products_tbl")
+@Getter
+@Setter
 public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Long id;
+    @Column(name = "product_id")
+    private Long productId;
 
-    @Column(name = "id_categoriy")
-    private Long id_categoriy;
+//    @Column(name = "categoriy_id")
+//    private Long categoriyId;
 
-    @Column(name = "title")
+    @Column(name = "title_fld")
     private String title;
 
-    @Column(name = "cost")
-    private BigDecimal cost;
+    @Column(name = "price_fld")
+    private BigDecimal price;
 
-   // private String linkToImage;
+    @Column(name = "short_description_fld")
+    private String shortDescription;
+
+    @Column(name = "full_description_fld")
+    private String fullDescription;
+
+    @Column(name = "foro_url_fld")
+    private String foroUrl;
+
+//    @OneToMany
+//    @JoinTable(name = "order_items_tbl",
+//            joinColumns = @JoinColumn(name = "product_id"))
+//    private Collection<Product> orderCollection;
+//
+//    @OneToMany
+//    @JoinTable(name = "products_categories_tbl",
+//            joinColumns = @JoinColumn(name = "product_id"))
+//    private Collection<Product> productsCategoriyCollection ;
 }

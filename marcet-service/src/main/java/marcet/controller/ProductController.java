@@ -1,6 +1,7 @@
 package marcet.controller;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import marcet.dto.ProductDTO;
 import marcet.service.ProductService;
 import marcet.specifications.ProductSpecifications;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Slf4j
 @RequiredArgsConstructor
 @RestController
 @CrossOrigin
@@ -37,7 +39,7 @@ public class ProductController {
     public Page<ProductDTO> findAllProducts(@RequestParam MultiValueMap<String, String> params,
                                             @RequestParam(name = "page", defaultValue = "1") Integer page) {
         for (int i = 0; i < params.size(); i++) {
-            System.out.println(params.toSingleValueMap());
+            log.info("Продукты добавленные в корзину {}", params.toSingleValueMap());
         }
 
         return productService.findAllProducts(ProductSpecifications.build(params), page, 5);
@@ -47,7 +49,7 @@ public class ProductController {
     public Page<ProductDTO> findAllProductsAdm(@RequestParam MultiValueMap<String, String> params,
                                             @RequestParam(name = "page", defaultValue = "1") Integer page) {
         for (int i = 0; i < params.size(); i++) {
-            System.out.println(params.toSingleValueMap());
+            log.info("Продукты добавленные в корзину {}", params.toSingleValueMap());
         }
 
         return productService.findAllProducts(ProductSpecifications.build(params), page, 5);

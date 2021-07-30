@@ -3,46 +3,50 @@ package marcet.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.Collection;
+import java.util.Date;
 
 @Data
 @Entity
 @NoArgsConstructor
-@Table(name = "orders")
+@Table(name = "orders_tbl")
 public class Order {
-
-    public Order(Long idUser, Long idProduct, Long orderNumber, BigDecimal sumCost, String adres){
-        this.idUser = idUser;
-        this.idProduct = idProduct;
-        this.orderNumber = orderNumber;
-        this.sumCost = sumCost;
-        this.adres = adres;
-    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Long id;
+    @Column(name = "order_id")
+    private Long orderId;
 
-    @Column(name = "id_user")
-    private Long idUser;
+    @Column(name = "user_id")
+    private Long userId;
 
-    @Column(name = "id_product")
-    private Long idProduct;
+    @Column(name = "total_quantity_fld")
+    private int totalQuantity;
 
-    @Column(name = "order_number")
-    private Long orderNumber;
+    @Column(name = "total_cost_fld")
+    private BigDecimal totalCost;
 
-    @Column(name = "sum_cost")
-    private BigDecimal sumCost;
+    @Column(name = "address_id")
+    private String addressId;
 
-    @Column(name = "adres")
-    private String adres;
+    @Column(name = "create_at")
+    @CreationTimestamp
+    private Date updateAt;
 
-   // private int quantity;
-
-    //private Long adress_id;
-
+//    @ManyToMany
+//    @JoinTable(name = "order_items_tbl",
+//            joinColumns = @JoinColumn(name = "order_id"),
+//            inverseJoinColumns = @JoinColumn(name = "order_id"))
+//    private Collection<OrderItems> ordersItemCollection;
+//
+//
+//    @ManyToMany
+//    @JoinTable(name = "categories_tbl",
+//            joinColumns = @JoinColumn(name = "category_id"),
+//            inverseJoinColumns = @JoinColumn(name = "title_id"))
+//    private Collection<Categories> addressCollection;
 }

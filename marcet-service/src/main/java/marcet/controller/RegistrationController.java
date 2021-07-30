@@ -26,13 +26,11 @@ public class RegistrationController {
             return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
         }
 
-        System.out.println(userDTO.getUsername() + " " + userDTO.getPassword() + " " + userDTO.getMail() + " " + " ");
         return ResponseEntity.ok(userDTO);
     }
 
     @GetMapping("/auth-user")
     public void authUserToMarcetService(@RequestBody User user) {
-        System.out.println("Запрос на продукты пришол");
 
     }
 }

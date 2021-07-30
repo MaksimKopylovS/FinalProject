@@ -28,11 +28,7 @@ public class ProductSpecifications {
 
     public static Specification<Product> build(MultiValueMap<String, String> params) {
 
-
         Specification<Product> spec = Specification.where(null);
-        System.out.println(params.getFirst("id_categoriy") + "       Multi");
-
-        //System.out.println(params.containsKey("id_categoriy") + "  ||  " + params.getFirst("id_categoriy"));
 
         if (params.containsKey("id") && !params.getFirst("id").isBlank()) {
             System.out.println("Приход B  params.containsKey(id)  ");
@@ -40,9 +36,7 @@ public class ProductSpecifications {
         }
 
         if (params.containsKey("id_categoriy") && !params.getFirst("id_categoriy").isBlank()) {
-            System.out.println("Приход   params.containsKey(id_categoriy)");
             spec = spec.and(ProductSpecifications.idCategoriyFilter(Long.parseLong(params.getFirst("id_categoriy"))));
-
         }
 
         if (params.containsKey("min_cost") && !params.getFirst("min_cost").isBlank()) {

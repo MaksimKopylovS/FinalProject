@@ -4,6 +4,8 @@ import lombok.RequiredArgsConstructor;
 import marcet.dto.UserDTO;
 import marcet.model.User;
 import marcet.repository.UserRepository;
+import org.aspectj.weaver.patterns.ParserException;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -11,21 +13,15 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final ModelMapper modelMapper;
 
-    public UserDTO changeUser(User user){
-        UserDTO userDTO = new UserDTO();
-        userDTO.setUsername(user.getUsername());
-        userDTO.setPassword(user.getPassword());
-        userDTO.setMail(user.getEmail());
+    public UserDTO convertToDto(User user){
+        UserDTO userDTO = modelMapper.map(user, UserDTO.class);
         return userDTO;
     }
 
-    public User changeUserDTO(UserDTO userDTO){
-        User user = new User();
-        user.setUsername(userDTO.getUsername());
-        user.setPassword(userDTO.getUsername());
-        user.setEmail(userDTO.getMail());
+    public User convertyToEntity(UserDTO userDTO) throws ParserException{
+        User user = modelMapper.map(userDTO, User.class);
         return user;
     }
-
 }

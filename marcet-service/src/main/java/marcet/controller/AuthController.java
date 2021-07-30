@@ -28,16 +28,13 @@ public class AuthController {
 
     @PostMapping("/auth")
     public ResponseEntity<?> createAuthTocen(@RequestBody JwtRequest authRequest) {
-        System.out.println(authRequest.getUsername() + " |||| " + authRequest.getPassword());
         try {
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));
-            System.out.println("authenticationManager Down");
         } catch (BadCredentialsException ex) {
             return new ResponseEntity<>(new MarketError(HttpStatus.UNAUTHORIZED.value(), "Ошибка авторизации"), HttpStatus.UNAUTHORIZED);
         }
         UserDetails userDetails = authService.loadUserByUsername(authRequest.getUsername());
         String token = jwtTokenUtil.generationToken(userDetails);
-        System.out.println(token + "     tokenn bbbbnnnnn");
         return ResponseEntity.ok(new JwtResponse(token));
 
     }

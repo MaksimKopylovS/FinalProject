@@ -23,7 +23,6 @@ public class ProductService {
 
     public Page<ProductDTO> findAllProducts(Specification<Product> spec, int page, int pageSize) {
         Page<ProductDTO> productDTOS = productRepository.findAll(spec, PageRequest.of(page - 1, pageSize)).map(ProductDTO::new);
-        System.out.println(productDTOS.getTotalElements() + " " + productDTOS.getTotalPages());
         return productRepository.findAll(spec, PageRequest.of(page - 1, pageSize)).map(ProductDTO::new);
     }
 }

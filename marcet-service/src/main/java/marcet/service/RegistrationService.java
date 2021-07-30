@@ -1,6 +1,7 @@
 package marcet.service;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import marcet.dto.UserDTO;
 import marcet.model.User;
 import marcet.repository.UserRepository;
@@ -9,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class RegistrationService {
@@ -18,18 +20,16 @@ public class RegistrationService {
 
     @Transactional
     public void registrationUser(UserDTO userDTO) {
-        System.out.println(userDTO.getUsername() + " " + userDTO.getPassword() + " " + userDTO.getMail() + " " + " " + "Pапись в Базу");
-        User user = new User();
-        user.setUsername(userDTO.getUsername());
-        user.setPassword(userDTO.getPassword());
-        user.setEmail(userDTO.getMail());
-        System.out.println(userDTO.getUsername() + " " + userDTO.getPassword() + " " + userDTO.getMail() + " " + " " + "Pапись в Базу");
-//        userRepository.save(userService.changeUserDTO(userDTO));
-        entityManager.createNativeQuery("insert into users(USERNAME, PASSWORD, EMAIL) values(:a,:b,:c)")
-                .setParameter("a", userDTO.getUsername())
-                .setParameter("b", userDTO.getPassword())
-                .setParameter("c", userDTO.getMail())
-                .executeUpdate();
+
+        log.info("Логин - {}, Пароль - {},  Почта - {}", userDTO.getUsername(), userDTO.getPassword(), userDTO.getMail() );
+        User user = userService.convertyToEntity(userDTO);
+        userRepository.save(user);
+
+//        entityManager.createNativeQuery("insert into users(USERNAME, PASSWORD, EMAIL) values(:a,:b,:c)")
+//                .setParameter("a", userDTO.getUsername())
+//                .setParameter("b", userDTO.getPassword())
+//                .setParameter("c", userDTO.getMail())
+//                .executeUpdate();
     }
 
 }

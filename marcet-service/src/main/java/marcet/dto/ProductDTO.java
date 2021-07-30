@@ -16,8 +16,8 @@ public class ProductDTO {
     private BigDecimal cost;
 
     public ProductDTO(Product product) {
-        this.id = product.getId();
+        this.id = product.getProductId();
         this.title = product.getTitle();
-        this.cost = product.getCost();
+        this.cost = product.getPrice();
     }
 }
