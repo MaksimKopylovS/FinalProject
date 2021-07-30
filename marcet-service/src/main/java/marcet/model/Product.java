@@ -35,8 +35,8 @@ public class Product {
     @Column(name = "full_description_fld")
     private String fullDescription;
 
-    @Column(name = "foro_url_fld")
-    private String foroUrl;
+    @Column(name = "photo_url_fld")
+    private String phoroUrl;
 
 //    @OneToMany
 //    @JoinTable(name = "order_items_tbl",
