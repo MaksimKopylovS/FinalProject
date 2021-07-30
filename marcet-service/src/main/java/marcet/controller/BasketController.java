@@ -10,7 +10,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 @CrossOrigin
-@RequestMapping("/http://localhost:8701/zuul/")
+@RequestMapping("/basket")
 public class BasketController {
 
     private final BasketService basketService;

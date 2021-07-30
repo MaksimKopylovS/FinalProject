@@ -1032,3 +1032,5 @@ Caused by: org.hibernate.MappingException: Repeated column in mapping for collec
 2021-07-30 16:20:55.061  INFO 12012 --- [http-nio-8704-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2021-07-30 16:20:55.072  INFO 12012 --- [http-nio-8704-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
 2021-07-30 16:20:55.861  INFO 12012 --- [http-nio-8704-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-07-30 16:25:44.044  INFO 12012 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-07-30 16:30:44.046  INFO 12012 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
