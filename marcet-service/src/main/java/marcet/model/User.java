@@ -33,14 +33,13 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Collection<Role> rolesCollection;
 
-//    @ManyToMany
-//    @JoinTable(name = "addresses_tbl",
-//            joinColumns = @JoinColumn(name = "user_id"),
-//            inverseJoinColumns = @JoinColumn(name = "user_id"))
-//    private Collection<Address> addressCollection;
+    @OneToMany
+    @JoinTable(name = "addresses_tbl",
+            joinColumns = @JoinColumn(name = "user_id"))
+    private Collection<User> addressCollection;
 
-//    @OneToMany
-//    @JoinTable(name = "orders_tbl",
-//            joinColumns = @JoinColumn(name = "user_id"))
-//    private Collection<Order> ordersCollection;
+    @OneToMany
+    @JoinTable(name = "orders_tbl",
+            joinColumns = @JoinColumn(name = "user_id"))
+    private Collection<Order> ordersCollection;
 }

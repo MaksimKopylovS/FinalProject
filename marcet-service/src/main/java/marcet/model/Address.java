@@ -33,10 +33,9 @@ public class Address {
     @Column(name = "user_id")
     private Long userId;
 
-//    @ManyToMany
-//    @JoinTable(name = "orders_tbl",
-//            joinColumns = @JoinColumn(name = "address_id"),
-//            inverseJoinColumns = @JoinColumn(name = "address_id"))
-//    private Collection<Order> ordersCollection;
+    @OneToMany
+    @JoinTable(name = "orders_tbl",
+            joinColumns = @JoinColumn(name = "address_id"))
+    private Collection<Order> ordersCollection;
 
 }

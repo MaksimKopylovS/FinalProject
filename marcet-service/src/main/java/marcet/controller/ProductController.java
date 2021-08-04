@@ -6,6 +6,7 @@ import marcet.dto.ProductDTO;
 import marcet.service.ProductService;
 import marcet.specifications.ProductSpecifications;
 import org.springframework.data.domain.Page;
+import org.springframework.http.HttpStatus;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,6 +35,17 @@ public class ProductController {
 //        return productService.getProduct();
 //    }
 
+    @PostMapping("/products")
+    @ResponseStatus(HttpStatus.CREATED)
+    public ProductDTO createNewProducts(@RequestBody ProductDTO productDTO){
+        return new ProductDTO();
+    }
+
+    @PutMapping("/products")
+    @ResponseStatus(HttpStatus.CREATED)
+    public ProductDTO editProducts(@RequestBody ProductDTO productDTO){
+        return new ProductDTO();
+    }
 
     @RequestMapping(value = "/get-all", method = RequestMethod.GET)
     public Page<ProductDTO> findAllProducts(@RequestParam MultiValueMap<String, String> params,

@@ -24,14 +24,20 @@ public class OrderService {
     private final BasketService basketService;
     private final UserRepository userRepository;
 
-    public void createOrder(List<String> data, Long countOrder){
-        Order order = new Order();
-        BigDecimal sumCost = getSumCost(basketService.getBasket());
-        System.out.println(data.get(1));
-        User user = userRepository.findByUsername(data.get(1)).get();
+//    public void createOrder(List<String> data, Long countOrder){
+//        log.info("Пришло");
+//        for(ProductDTO p : basketService.getBasket()){
+//            log.info("Продукт {} {} {} {} {}", p.getId(), p.getTitle(), p.getCost(), p.getFullDescription() , p.getShortDescription());
+//        }
 
 
-        for(ProductDTO p: basketService.getBasket()){
+//        Order order = new Order();
+//        BigDecimal sumCost = getSumCost(basketService.getBasket());
+//        System.out.println(data.get(1));
+//        User user = userRepository.findByUsername(data.get(1)).get();
+//
+//
+//        for(ProductDTO p: basketService.getBasket()){
 //            order.setIdUser(user.getId());
 //            order.setIdProduct(p.getId());
 //            order.setOrderNumber(countOrder);
@@ -39,9 +45,8 @@ public class OrderService {
 //            order.setAdres(data.get(0));
 //            log.info("IdProduct {}, OrderNumber {}, SumCost {}, getAdres {}", order.getIdProduct(), order.getOrderNumber(), order.getSumCost(), order.getAdres());
             //orderRepository.save(order);
-        }
-
-    }
+//        }
+//   }
 
 
     public BigDecimal getSumCost(List<ProductDTO> list){
@@ -51,4 +56,9 @@ public class OrderService {
         }
         return sumCost;
     }
+
+//    public Long getLastOrderCount(){
+//        Order order = orderRepository.
+//        return
+//    }
 }

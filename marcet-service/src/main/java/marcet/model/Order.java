@@ -7,6 +7,8 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Collection;
 import java.util.Date;
 
@@ -31,22 +33,24 @@ public class Order {
     private BigDecimal totalCost;
 
     @Column(name = "address_id")
-    private String addressId;
+    private Long addressId;
 
-    @Column(name = "create_at")
+    @Column(name = "created_at")
     @CreationTimestamp
-    private Date updateAt;
+    private LocalDateTime createTime;
 
-//    @ManyToMany
-//    @JoinTable(name = "order_items_tbl",
-//            joinColumns = @JoinColumn(name = "order_id"),
-//            inverseJoinColumns = @JoinColumn(name = "order_id"))
-//    private Collection<OrderItems> ordersItemCollection;
-//
-//
+    @Column(name = "order_count_fld")
+    private Long orderCount;
+
+    @OneToMany
+    @JoinTable(name = "order_items_tbl",
+            joinColumns = @JoinColumn(name = "order_id"))
+    private Collection<Order> ordersItemCollection;
+
+
 //    @ManyToMany
 //    @JoinTable(name = "categories_tbl",
 //            joinColumns = @JoinColumn(name = "category_id"),
 //            inverseJoinColumns = @JoinColumn(name = "title_id"))
-//    private Collection<Categories> addressCollection;
+//    private Collection<Order> addressCollection;
 }

@@ -16,7 +16,7 @@ import java.util.List;
 public class OrderController {
 
     private static Long orderCount;
-    private final OrderService orderService;
+    private final BasketService basketService;
 
 
     @PostConstruct
@@ -27,7 +27,7 @@ public class OrderController {
     @PostMapping("/create")
     public void createOrder(@RequestBody List<String> data) {
         orderCount++;
-        orderService.createOrder(data, orderCount);
+        basketService.createOrder(data, orderCount);
 
     }
 

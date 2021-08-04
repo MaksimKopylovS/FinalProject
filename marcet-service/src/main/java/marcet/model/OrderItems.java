@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 @Entity
 @Getter
 @Setter
-@Table(name = "order_items_id")
+@Table(name = "order_items_tbl")
 public class OrderItems {
 
     @Id
@@ -32,5 +32,7 @@ public class OrderItems {
 
     @Column(name = "cost_fld")
     private BigDecimal cost;
+
+    //Сделать связь мену ту оне
 
 }

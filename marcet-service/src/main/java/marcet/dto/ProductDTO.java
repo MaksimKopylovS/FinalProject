@@ -15,6 +15,7 @@ public class ProductDTO {
     private Long id;
     private String title;
     private BigDecimal cost;
+    private int quantity = 1;
     private String shortDescription;
     private String fullDescription;
     private String phoroUrl;
