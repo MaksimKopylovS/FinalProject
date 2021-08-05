@@ -38,6 +38,12 @@ public class Product {
     @Column(name = "photo_url_fld")
     private String phoroUrl;
 
+    @ManyToMany // LSS добавил связь с таблицей катеогрий и добавил новый парметр коллекцию категорий,
+    @JoinTable(name = "products_categories_tbl",
+                joinColumns = @JoinColumn(name = "product_id"),
+                inverseJoinColumns = @JoinColumn(name = "category_id"))
+    private Collection<Category> categories; // ?? или здесь лучше List<Category>?
+
 //    @OneToMany
 //    @JoinTable(name = "order_items_tbl",
 //            joinColumns = @JoinColumn(name = "product_id"))

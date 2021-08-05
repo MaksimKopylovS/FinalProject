@@ -9,7 +9,5 @@ import org.springframework.context.annotation.PropertySource;
 @SpringBootApplication
 @PropertySource("classpath:/secured.properties")
 public class MarcetServiceApplication {
-    public static void main(String args[]) {
-        SpringApplication.run(MarcetServiceApplication.class, args);
-    }
+    public static void main(String args[]) {SpringApplication.run(MarcetServiceApplication.class, args); }
 }

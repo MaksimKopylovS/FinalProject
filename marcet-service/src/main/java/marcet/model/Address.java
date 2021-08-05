@@ -30,8 +30,9 @@ public class Address {
     @Column(name = "house_number_fld")
     private String houseNumber;
 
-    @Column(name = "user_id")
-    private Long userId;
+    @ManyToOne // LSS добавил связь и изменил тип данных
+    @JoinColumn(name = "user_id")
+    private User user;
 
 //    @ManyToMany
 //    @JoinTable(name = "orders_tbl",

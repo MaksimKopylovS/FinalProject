@@ -1,8 +1,8 @@
 package marcet.controller;
 
 import lombok.RequiredArgsConstructor;
-import marcet.model.ProductsCategoriy;
-import marcet.service.CategoriyService;
+import marcet.model.ProductsCategory;
+import marcet.service.CategoryService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,12 +14,12 @@ import java.util.List;
 @RequiredArgsConstructor
 @CrossOrigin
 @RequestMapping("/categoriyes")
-public class CategoriyController {
+public class CategoryController {
 
-    private final CategoriyService categoriyService;
+    private final CategoryService categoryService;
 
     @GetMapping("/get-all")
-    public List<ProductsCategoriy> getCategoriyes(){
-        return categoriyService.getCategoriyes();
+    public List<ProductsCategory> getCategoriyes(){
+        return categoryService.getCategoriyes();
     }
 }

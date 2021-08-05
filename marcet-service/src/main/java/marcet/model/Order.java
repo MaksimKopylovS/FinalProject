@@ -3,12 +3,15 @@ package marcet.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @Entity
@@ -21,8 +24,13 @@ public class Order {
     @Column(name = "order_id")
     private Long orderId;
 
-    @Column(name = "user_id")
-    private Long userId;
+    @OneToMany(mappedBy = "order") // LSS Добавил новую связь и новый парамент в модель Order
+    @Cascade(org.hibernate.annotations.CascadeType.ALL) // на лекции ещё вот это добавляли здесь - вроде включили каскадное сохранение
+    private List<OrderItem> orderItems;
+
+    @ManyToOne // LSS добавил связь и изменил тип данных
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @Column(name = "total_quantity_fld")
     private int totalQuantity;
@@ -30,12 +38,13 @@ public class Order {
     @Column(name = "total_cost_fld")
     private BigDecimal totalCost;
 
+    @ManyToOne // LSS добавил связь и изменил тип данных
     @Column(name = "address_id")
-    private String addressId;
+    private Address address;
 
     @Column(name = "create_at")
     @CreationTimestamp
-    private Date updateAt;
+    private LocalDateTime createAt; //LSS изменил тип данных
 
 //    @ManyToMany
 //    @JoinTable(name = "order_items_tbl",

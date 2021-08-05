@@ -11,18 +11,20 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @Table(name = "order_items_id")
-public class OrderItems {
+public class OrderItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "order_item_id")
     private Long orderItemId;
 
-    @Column(name = "order_id")
-    private Long orderId;
+    @ManyToOne // LSS добавил связь и изменил тип данных
+    @JoinColumn(name = "order_id")
+    private Order order;
 
+    @ManyToOne // LSS добавил связь и изменил тип данных
     @Column(name = "product_id")
-    private Long productId;
+    private Product product;
 
     @Column(name = "quantity_fld")
     private int quantity;
