@@ -18,4 +18,7 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
     @Query(value = "select MAX(order_id) FROM orders_tbl", nativeQuery = true)
     Long findMaxIDOrder();
     //Order findOrdersBy
+
+    //@Query(value = "")
+
 }

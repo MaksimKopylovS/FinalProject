@@ -15,12 +15,8 @@ import javax.annotation.PostConstruct;
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 @Slf4j
@@ -44,12 +40,12 @@ public class BasketService {
 
     public List<ProductDTO> addProductInBasket(ProductDTO productDTO) {
         int quantity;
-        for (int i = 0; i < basketList.size(); i++){
-            if(basketList.get(i).getId() == productDTO.getId()){
+        for (int i = 0; i < basketList.size(); i++) {
+            if (basketList.get(i).getId() == productDTO.getId()) {
                 quantity = basketList.get(i).getQuantity();
                 quantity++;
                 productDTO.setQuantity(quantity);
-                log.info("{}",productDTO.getQuantity());
+                log.info("{}", productDTO.getQuantity());
                 basketList.set(i, productDTO);
                 log.info("Число продуктов {}  {}  увеличенно на 1 ", productDTO.getId(), productDTO.getTitle());
                 return basketList;
@@ -73,55 +69,58 @@ public class BasketService {
         return basketList;
     }
 
-    @Transactional
-    public void createOrder(List<String> data, Long orderCount) {
+
+    public Order createOrder(String userName) {
         Product product;
         Order order = new Order();
         LocalDateTime date = LocalDateTime.now();
         OrderItems orderItems = new OrderItems();
-        User user = userRepository.findByUsername(data.get(1)).get();
+        User user = userRepository.findByUsername(userName).get();
         Address address = addressRepository.findByUserId(user.getUserId());
 
         order.setUserId(user.getUserId());
         order.setTotalQuantity(getTotalQuantity(basketList));
         order.setTotalCost(getTotalCost(basketList));
         order.setAddressId(address.getAddressId());
-        order.setOrderCount(orderCount);
         order.setCreateTime(date);
-        orderRepostory.save(order);
-
-        Long id = orderRepostory.findMaxIDOrder();
+        order = orderRepostory.save(order);
 
         for (ProductDTO p : basketList) {
             log.info("Продукт Id - {}, name - {}, Cost - {}, количество {}, Описание1 - {} описание2 - {}", p.getId(), p.getTitle(), p.getCost(), p.getQuantity(), p.getFullDescription(), p.getShortDescription());
-            log.info(" Tota Quantity {},  Total Cost {} ", getTotalQuantity(basketList), getTotalCost(basketList) );
+            log.info(" Tota Quantity {},  Total Cost {} ", getTotalQuantity(basketList), getTotalCost(basketList));
             product = productService.convertToEntity(p);
-
-            entityManager.createNativeQuery("INSERT INTO order_items_tbl(order_id, product_id, quantity_fld, price_fld, cost_fld)values(:a,:b,:c,:d,:e)")
-                    .setParameter("a", id)
-                    .setParameter("b", p.getId())
-                    .setParameter("c", p.getQuantity())
-                    .setParameter("d", productService.getPrictProduct(p.getQuantity(), p.getCost()))
-                    .setParameter("e", p.getCost())
-                    .executeUpdate();
-
+            orderItemsRepository.save(
+                    new OrderItems(
+                            order.getOrderId(),
+                            p.getId(),
+                            p.getQuantity(),
+                            productService.getPrictProduct
+                                    (
+                                            p.getQuantity(),
+                                            p.getCost()
+                                    ),
+                            p.getCost()
+                    )
+            );
         }
         basketList.clear();
+        return order;
     }
 
 
 
-    public int getTotalQuantity(List<ProductDTO> productDTOList){
+
+    public int getTotalQuantity(List<ProductDTO> productDTOList) {
         int totalQuantity = 0;
-        for (ProductDTO p : productDTOList){
+        for (ProductDTO p : productDTOList) {
             totalQuantity = totalQuantity + p.getQuantity();
         }
         return totalQuantity;
     }
 
-    public BigDecimal getTotalCost(List<ProductDTO> productDTOList){
+    public BigDecimal getTotalCost(List<ProductDTO> productDTOList) {
         BigDecimal totalCost = BigDecimal.ZERO;
-        for (ProductDTO p : productDTOList){
+        for (ProductDTO p : productDTOList) {
             totalCost = totalCost.add(p.getCost());
         }
         return totalCost;

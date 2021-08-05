@@ -39,9 +39,6 @@ public class Order {
     @CreationTimestamp
     private LocalDateTime createTime;
 
-    @Column(name = "order_count_fld")
-    private Long orderCount;
-
     @OneToMany
     @JoinTable(name = "order_items_tbl",
             joinColumns = @JoinColumn(name = "order_id"))

@@ -2,15 +2,18 @@ package marcet.model;
 
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.Collection;
 
 @Entity
 @Getter
 @Setter
 @Table(name = "order_items_tbl")
+@NoArgsConstructor
 public class OrderItems {
 
     @Id
@@ -33,6 +36,12 @@ public class OrderItems {
     @Column(name = "cost_fld")
     private BigDecimal cost;
 
-    //Сделать связь мену ту оне
+    public OrderItems (Long orderId, Long productId, int quantity, BigDecimal price, BigDecimal cost){
+        this.orderId = orderId;
+        this.productId = productId;
+        this.quantity = quantity;
+        this.price = price;
+        this.cost = cost;
+    }
 
 }

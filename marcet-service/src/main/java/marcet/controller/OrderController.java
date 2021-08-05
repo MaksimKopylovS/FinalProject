@@ -1,14 +1,20 @@
 package marcet.controller;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import marcet.dto.OrderShowDTO;
+import marcet.model.JwtResponse;
+import marcet.model.Order;
 import marcet.service.BasketService;
 import marcet.service.OrderService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 
+@Slf4j
 @RestController
 @CrossOrigin
 @RequiredArgsConstructor
@@ -17,7 +23,7 @@ public class OrderController {
 
     private static Long orderCount;
     private final BasketService basketService;
-
+    private final OrderService orderService;
 
     @PostConstruct
     public void init(){
@@ -25,10 +31,14 @@ public class OrderController {
     }
 
     @PostMapping("/create")
-    public void createOrder(@RequestBody List<String> data) {
-        orderCount++;
-        basketService.createOrder(data, orderCount);
-
+    public ResponseEntity<?> createOrder(@RequestBody String userName) {
+        log.info("Username - {}", userName);
+        return ResponseEntity.ok(basketService.createOrder(userName));
     }
 
+    @PostMapping("/show")
+    public List<OrderShowDTO> showOrderOnNumber(@RequestBody Long orderNumber){
+        log.info("OrderNumber {}", orderNumber);
+        return orderService.showOrderOnNumber(orderNumber);
+    }
 }
