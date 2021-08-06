@@ -17551,3 +17551,6 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2021-08-06 20:51:54.743  INFO 15560 --- [http-nio-8704-exec-1] marcet.service.BasketService             : Продукт Id - 2, name - Туфли St м, Cost - 5900, СОХРАНЁН
 2021-08-06 20:54:48.827  INFO 15560 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2021-08-06 20:59:48.829  INFO 15560 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-06 21:04:48.831  INFO 15560 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-06 21:09:48.833  INFO 15560 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-06 21:14:48.838  INFO 15560 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
