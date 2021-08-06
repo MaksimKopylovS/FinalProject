@@ -8,6 +8,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Table(name = "products_tbl")
@@ -42,7 +43,7 @@ public class Product {
     @JoinTable(name = "products_categories_tbl",
                 joinColumns = @JoinColumn(name = "product_id"),
                 inverseJoinColumns = @JoinColumn(name = "category_id"))
-    private Collection<Category> categories; // ?? или здесь лучше List<Category>?
+    private List<Category> categories; // ?? или здесь лучше List<Category>?
 
 //    @OneToMany
 //    @JoinTable(name = "order_items_tbl",
@@ -54,14 +55,14 @@ public class Product {
 //            joinColumns = @JoinColumn(name = "product_id"))
 //    private Collection<Product> productsCategoriyCollection ;
 
-    @OneToMany
-    @JoinTable(name = "order_items_tbl",
-            joinColumns = @JoinColumn(name = "product_id"))
-    private Collection<Product> orderCollection;
-
-    @ManyToMany
-    @JoinTable(name = "products_categories_tbl",
-            joinColumns = @JoinColumn(name = "categories_id"))
-    private Collection<Category> productsCategoriyCollection ;
+//    @OneToMany
+//    @JoinTable(name = "order_items_tbl",
+//            joinColumns = @JoinColumn(name = "product_id"))
+//    private Collection<Product> orderCollection;
+//
+//    @ManyToMany
+//    @JoinTable(name = "products_categories_tbl",
+//            joinColumns = @JoinColumn(name = "categories_id"))
+//    private Collection<Category> productsCategoriyCollection ;
 
 }

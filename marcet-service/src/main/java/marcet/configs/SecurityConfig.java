@@ -26,15 +26,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable() // Защита от подделки межсайтовых запросов, отключена
                 .authorizeRequests() // метод для ограничения доступа
-//                .antMatchers("/**").permitAll()
+//                .antMatchers("/").permitAll()
 //                .antMatchers("/registration/**").permitAll()
 //                .antMatchers("/auth/**").permitAll()
 //                .antMatchers("/get-products-all/**").authenticated()
-                .antMatchers("service/order/create").authenticated() // antMatchers определяет какую ссылку и каким способом защищать
+                .antMatchers("service/order").authenticated() // antMatchers определяет какую ссылку и каким способом защищать
+                .antMatchers("service/get-all-admin").hasAnyRole("ROLE_ADMIN")
 //                .antMatchers("/**").authenticated()
-                .anyRequest().permitAll() // anyRequest определяет защиту всех ссылок
+                .anyRequest()
+                .permitAll() // anyRequest определяет защиту всех ссылок
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
+                .httpBasic()
                 .and()
                 .headers().frameOptions().disable();
         http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);

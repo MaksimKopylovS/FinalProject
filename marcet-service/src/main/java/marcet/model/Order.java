@@ -53,10 +53,10 @@ public class Order {
 
 //    private LocalDateTime createTime;
 
-    @OneToMany
-    @JoinTable(name = "order_items_tbl",
-            joinColumns = @JoinColumn(name = "order_id"))
-    private Collection<Order> ordersItemCollection;
+//    @OneToMany
+//    @JoinTable(name = "order_items_tbl",
+//            joinColumns = @JoinColumn(name = "order_id"))
+//    private Collection<Order> ordersItemCollection;
 
 
 //    @ManyToMany
