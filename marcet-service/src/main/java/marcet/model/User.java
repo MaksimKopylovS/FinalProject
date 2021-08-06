@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.List;
 
 @Entity
 @Data
@@ -32,6 +33,10 @@ public class User {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Collection<Role> rolesCollection;
+
+    @OneToMany(mappedBy = "user") // LSS добавил новую зависимость и параметр список адресов
+    private List<Address> listAddresses;
+
 
 //    @ManyToMany
 //    @JoinTable(name = "addresses_tbl",
