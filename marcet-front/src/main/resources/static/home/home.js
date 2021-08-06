@@ -2,7 +2,7 @@ angular.module('app').controller('homeController', function($scope, $http, $loca
     const contextPath = 'http://localhost:8701/zuul/';
 
     $scope.foon = function () {
-        $http.get(contextPath + 'service/categoriyes/get-all', {
+        $http.get(contextPath + 'service/category/get-all', {
             transformResponse: function (response) {
                 return (response);
             }
