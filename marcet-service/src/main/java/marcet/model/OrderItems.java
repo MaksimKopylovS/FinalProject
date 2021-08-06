@@ -1,17 +1,22 @@
 package marcet.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.Collection;
 
 @Entity
 @Getter
 @Setter
-@Table(name = "order_items_id")
-public class OrderItem {
+@Table(name = "order_items_tbl")
+@NoArgsConstructor
+public class OrderItems {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,6 +29,7 @@ public class OrderItem {
 
     @ManyToOne // LSS добавил связь и изменил тип данных
     @JoinColumn(name = "product_id")
+    @JsonIgnore
     private Product product;
 
     @Column(name = "quantity_fld")
@@ -34,5 +40,13 @@ public class OrderItem {
 
     @Column(name = "cost_fld")
     private BigDecimal cost;
+
+    public OrderItems (Order order, Product product, int quantity, BigDecimal price, BigDecimal cost){
+        this.order = order;
+        this.product = product;
+        this.quantity = quantity;
+        this.price = price;
+        this.cost = cost;
+    }
 
 }

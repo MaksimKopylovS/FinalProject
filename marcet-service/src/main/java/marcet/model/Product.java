@@ -53,4 +53,15 @@ public class Product {
 //    @JoinTable(name = "products_categories_tbl",
 //            joinColumns = @JoinColumn(name = "product_id"))
 //    private Collection<Product> productsCategoriyCollection ;
+
+    @OneToMany
+    @JoinTable(name = "order_items_tbl",
+            joinColumns = @JoinColumn(name = "product_id"))
+    private Collection<Product> orderCollection;
+
+    @ManyToMany
+    @JoinTable(name = "products_categories_tbl",
+            joinColumns = @JoinColumn(name = "categories_id"))
+    private Collection<Category> productsCategoriyCollection ;
+
 }

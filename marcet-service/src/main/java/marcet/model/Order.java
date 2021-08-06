@@ -9,6 +9,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
@@ -26,7 +27,7 @@ public class Order {
 
     @OneToMany(mappedBy = "order") // LSS Добавил новую связь и новый парамент в модель Order
     @Cascade(org.hibernate.annotations.CascadeType.ALL) // на лекции ещё вот это добавляли здесь - вроде включили каскадное сохранение
-    private List<OrderItem> orderItems;
+    private List<OrderItems> orderItems;
 
     @ManyToOne // LSS добавил связь и изменил тип данных
     @JoinColumn(name = "user_id")
@@ -42,20 +43,25 @@ public class Order {
     @JoinColumn(name = "address_id")
     private Address address;
 
-    @Column(name = "create_at")
+//    @Column(name = "address_id")
+//    private Long addressId;
+
+
+    @Column(name = "created_at")
     @CreationTimestamp
     private LocalDateTime createAt; //LSS изменил тип данных
 
-//    @ManyToMany
-//    @JoinTable(name = "order_items_tbl",
-//            joinColumns = @JoinColumn(name = "order_id"),
-//            inverseJoinColumns = @JoinColumn(name = "order_id"))
-//    private Collection<OrderItems> ordersItemCollection;
-//
-//
+//    private LocalDateTime createTime;
+
+    @OneToMany
+    @JoinTable(name = "order_items_tbl",
+            joinColumns = @JoinColumn(name = "order_id"))
+    private Collection<Order> ordersItemCollection;
+
+
 //    @ManyToMany
 //    @JoinTable(name = "categories_tbl",
 //            joinColumns = @JoinColumn(name = "category_id"),
 //            inverseJoinColumns = @JoinColumn(name = "title_id"))
-//    private Collection<Categories> addressCollection;
+//    private Collection<Order> addressCollection;
 }

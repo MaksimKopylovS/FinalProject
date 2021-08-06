@@ -1,5 +1,7 @@
 angular.module('app').controller('basketController', function ($scope, $http, $localStorage) {
     const contextPath = 'http://localhost:8701/zuul/';
+    let userName;
+    userName = $localStorage.currentUser.username;
 
     $scope.getBasket = function () {
         $http.get(contextPath + 'service/basket/get-basket')
@@ -26,15 +28,33 @@ angular.module('app').controller('basketController', function ($scope, $http, $l
         console.log($scope.totalCost);
     }
 
-    $scope.createOrder = function(adres){
-        let data = new Array();
-        data[0] = adres;
-        data[1] = $localStorage.currentUser.username;
-        $http.post(contextPath + 'service/order/create', data)
+    $scope.createOrder = function(){
+        $http.post(contextPath + 'service/order/create', userName)
             .then(function (response){
-
+                console.log(response.data)
+                $scope.orderNumber = response.data.orderId
             })
     }
 
+    $scope.showOrder = function(orderNumber){
+        console.log(orderNumber)
+        $scope.getAdressNoUserName();
+        $http.post(contextPath + 'service/order/show', orderNumber)
+            .then(function (response){
+                console.log(response)
+            })
+    }
+
+    $scope.getAdressNoUserName = function(){
+        userName = $localStorage.currentUser.username;
+            $http.post(contextPath + 'service/address/username', userName)
+                .then(function(response){
+                    console.log(response)
+                })
+    }
+
+
     $scope.getBasket();
+
 });
+
