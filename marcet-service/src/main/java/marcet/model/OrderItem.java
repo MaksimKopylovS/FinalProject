@@ -23,7 +23,7 @@ public class OrderItem {
     private Order order;
 
     @ManyToOne // LSS добавил связь и изменил тип данных
-    @Column(name = "product_id")
+    @JoinColumn(name = "product_id")
     private Product product;
 
     @Column(name = "quantity_fld")

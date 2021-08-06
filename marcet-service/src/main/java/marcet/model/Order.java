@@ -39,7 +39,7 @@ public class Order {
     private BigDecimal totalCost;
 
     @ManyToOne // LSS добавил связь и изменил тип данных
-    @Column(name = "address_id")
+    @JoinColumn(name = "address_id")
     private Address address;
 
     @Column(name = "create_at")
