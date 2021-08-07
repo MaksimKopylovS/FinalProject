@@ -45,4 +45,8 @@ public class ProductService {
         totalCost = totalCost.add(itemCost);
         return totalCost;
     }
+
+    public ProductDTO findProductById(Long product_id) { //LSS поиск продукта по id, Optional может лучше отправлять? или здесь isPresent?
+        return convertToDto(productRepository.findById(product_id).get());
+    }
 }
