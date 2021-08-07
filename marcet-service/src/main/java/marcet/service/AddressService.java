@@ -3,6 +3,7 @@ package marcet.service;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import marcet.dto.AddressDTO;
+import marcet.dto.ProductDTO;
 import marcet.dto.UserDTO;
 import marcet.model.Address;
 import marcet.model.User;
@@ -13,6 +14,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+
 import org.modelmapper.ModelMapper;
 @Slf4j
 @Service
@@ -23,23 +26,29 @@ public class AddressService {
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
 
-    public List<AddressDTO> getAdressNoUserName(String userName){
-        User user = userRepository.findByUsername(userName).get();
-        log.info("user ID {}", user.getUserId());
-        List<AddressDTO> addressList = new ArrayList<>();
-
-        addressList.add(convertToDto(addressRepository.findByUser(user)));
-        log.info("Address List size  {}, {}", addressList.size(), addressList.get(0).getCity());
-        return addressList;
-    }
+//    public List<AddressDTO> getAdressNoUserName(String userName){
+//        User user = userRepository.findByUsername(userName).get();
+//        log.info("user ID {}", user.getUserId());
+//        List<AddressDTO> addressList = new ArrayList<>();
+//
+//        addressList.add(convertToDto(addressRepository.findByUser(user)));
+//        log.info("Address List size  {}, {}", addressList.size(), addressList.get(0).getCity());
+//        return addressList;
+//    }
 
     public AddressDTO convertToDto(Address address){
         AddressDTO addressDTO = modelMapper.map(address, AddressDTO.class);
         return addressDTO;
     }
 
-    public Address convertyToEntity(AddressDTO addressDTO) throws ParserException {
+    public Address convertToEntity(AddressDTO addressDTO) throws ParserException { // LSS а здесь throws зачем?
         Address address = modelMapper.map(addressDTO, Address.class);
         return address;
+    }
+
+    public List<AddressDTO> getAddressByUser(String userName) { // LSS получение всего списка адресов у юзера
+        User user = userRepository.findByUsername(userName).get();
+        List<AddressDTO> addressList = user.getListAddresses().stream().map(this::convertToDto).collect(Collectors.toList());
+        return addressList;
     }
 }

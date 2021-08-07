@@ -19,9 +19,14 @@ public class AddressController {
 
     private final AddressService addressService;
 
-    @PostMapping("/username")
-    private List<AddressDTO> getAdressNoUserName(@RequestBody String userName){
-        log.info("UserName " + userName);
-        return addressService.getAdressNoUserName(userName);
+//    @PostMapping("/username")
+//    private List<AddressDTO> getAdressNoUserName(@RequestBody String userName){
+//        log.info("UserName " + userName);
+//        return addressService.getAdressNoUserName(userName);
+//    }
+
+    @GetMapping("/username") //LSS получение списка всех адресов юзера
+    public List<AddressDTO> getAddressesByUsername(@PathVariable String username) {
+        return addressService.getAddressByUser(username);
     }
 }
