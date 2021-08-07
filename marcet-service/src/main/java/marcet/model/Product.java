@@ -45,6 +45,9 @@ public class Product {
                 inverseJoinColumns = @JoinColumn(name = "category_id"))
     private List<Category> categories; // ?? или здесь лучше List<Category>?
 
+
+
+
 //    @OneToMany
 //    @JoinTable(name = "order_items_tbl",
 //            joinColumns = @JoinColumn(name = "product_id"))

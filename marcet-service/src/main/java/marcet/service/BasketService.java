@@ -97,6 +97,7 @@ public class BasketService {
             log.info("Продукт Id - {}, name - {}, Cost - {}, количество {}, Описание1 - {} описание2 - {}", p.getId(), p.getTitle(), p.getCost(), p.getQuantity(), p.getFullDescription(), p.getShortDescription());
             log.info(" Tota Quantity {},  Total Cost {} ", getTotalQuantity(basketList), getTotalCost(basketList));
             product = productService.convertToEntity(p);
+
             orderItemsRepository.save(
                     new OrderItems(
                             order,

@@ -29,11 +29,10 @@ public class ProductController {
 //    }
 
 
-//    @GetMapping("/get-products")
-//    public List<ProductDTO> getProducts() {
-//        System.out.println("Запрос на продукты пришол");
-//        return productService.getProduct();
-//    }
+    @GetMapping("/get-products")
+    public List<ProductDTO> getProducts() {
+        return productService.getProduct();
+    }
 
     @PostMapping("/products")
     @ResponseStatus(HttpStatus.CREATED)
