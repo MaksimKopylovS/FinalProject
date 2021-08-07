@@ -49,14 +49,14 @@ public class User {
 //            joinColumns = @JoinColumn(name = "user_id"))
 //    private Collection<Order> ordersCollection;
 
-    @OneToMany
-    @JoinTable(name = "addresses_tbl",
-            joinColumns = @JoinColumn(name = "user_id"))
-    private Collection<User> addressCollection;
-
-    @OneToMany
-    @JoinTable(name = "orders_tbl",
-            joinColumns = @JoinColumn(name = "user_id"))
-    private Collection<Order> ordersCollection;
+//    @OneToMany
+//    @JoinTable(name = "addresses_tbl",
+//            joinColumns = @JoinColumn(name = "user_id"))
+//    private Collection<User> addressCollection;
+//
+//    @OneToMany
+//    @JoinTable(name = "orders_tbl",
+//            joinColumns = @JoinColumn(name = "user_id"))
+//    private Collection<Order> ordersCollection;
 
 }

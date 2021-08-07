@@ -38,11 +38,32 @@ public class ProductService {
         return product;
     }
 
-    public BigDecimal getPrictProduct(int quantity, BigDecimal cost){
+    public BigDecimal getPriceProduct(int quantity, BigDecimal cost){
         BigDecimal totalCost = BigDecimal.ZERO;
         BigDecimal itemCost;
         itemCost = cost.multiply(new BigDecimal(quantity));
         totalCost = totalCost.add(itemCost);
         return totalCost;
+    }
+
+    public ProductDTO saveNewProduct(ProductDTO productDTO) { // LSS добавил метода по сохранению нового продукта
+        Product newProduct = new Product();
+        productDTO.setId(null);
+        newProduct = convertToEntity(productDTO);
+        productRepository.save(newProduct);
+        productDTO.setId(newProduct.getProductId());
+        return productDTO;
+    }
+
+    public ProductDTO updateProduct(ProductDTO productDTO) { //LSS добавил метод по обновлению продукта
+//        Product product = productRepository.findById(productDTO.getId()).get();
+        Product product = convertToEntity(productDTO);
+        product.setProductId(productDTO.getId());
+        productRepository.save(product);
+        return convertToDto(product);
+    }
+
+    public void deleteProductById(Long product_id) { //LSS добавил удаление продукта из БД
+        productRepository.deleteById(product_id);
     }
 }

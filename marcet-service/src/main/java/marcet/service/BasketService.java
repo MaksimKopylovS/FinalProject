@@ -103,7 +103,7 @@ public class BasketService {
                             product,
                             p.getQuantity(),
                             p.getCost(),
-                            productService.getPrictProduct
+                            productService.getPriceProduct
                                     (
                                             p.getQuantity(),
                                             p.getCost()
