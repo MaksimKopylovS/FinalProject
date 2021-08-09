@@ -1,6 +1,7 @@
 package marcet.controller;
 
 import lombok.RequiredArgsConstructor;
+import marcet.dto.CategoryDTO;
 import marcet.model.ProductsCategory;
 import marcet.service.CategoryService;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -13,13 +14,13 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @CrossOrigin
-@RequestMapping("/categoriyes")
+@RequestMapping("/category")
 public class CategoryController {
 
     private final CategoryService categoryService;
 
     @GetMapping("/get-all")
-    public List<ProductsCategory> getCategoriyes(){
+    public List<CategoryDTO> getCategoriyes(){
         return categoryService.getCategoriyes();
     }
 }
