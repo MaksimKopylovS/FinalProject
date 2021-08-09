@@ -576,3 +576,6 @@
 2021-08-09 12:47:56.442  INFO 4368 --- [http-nio-8704-exec-3] marcet.controller.BasketController       : Уменьшить количество продукта: Туфли Re 
 2021-08-09 12:47:56.443  INFO 4368 --- [http-nio-8704-exec-3] marcet.service.BasketService             : Ravno!!QQQQQQQQQQQQQQQQQQQQQ
 2021-08-09 12:51:50.816  INFO 4368 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-09 12:56:50.818  INFO 4368 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-09 13:01:50.821  INFO 4368 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-09 13:06:50.824  INFO 4368 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
