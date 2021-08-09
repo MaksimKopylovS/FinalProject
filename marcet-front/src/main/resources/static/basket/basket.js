@@ -53,6 +53,23 @@ angular.module('app').controller('basketController', function ($scope, $http, $l
                 })
     }
 
+    $scope.decrimentCount = function (p){
+        $http.post(contextPath + 'service/basket/decriment', p)
+            .then(function(response){
+                $scope.basketProduct = response.data
+                console.log(response)
+            })
+    }
+
+    $scope.incrementCount = function (product) {
+        console.log(product)
+        $http.post(contextPath + 'service/basket/add', product )
+            .then(function successCalback(response){
+                $scope.basketProduct = response.data
+                console.log(response.data)
+            });
+    };
+
 
     $scope.getBasket();
 

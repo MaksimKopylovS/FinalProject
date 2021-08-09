@@ -146,4 +146,18 @@ public class BasketService {
         totalCost = totalCost.add(itemCost);
         return totalCost;
     }
+
+    public List<ProductDTO> decrimentProduct(ProductDTO productDTO) {
+        int quantity;
+        for (int i = 0; i < basketList.size(); i++){
+            if (productDTO.getTitle().equals(basketList.get(i).getTitle())){
+                quantity = basketList.get(i).getQuantity();
+                quantity--;
+                log.info("Ravno!!QQQQQQQQQQQQQQQQQQQQQ");
+                basketList.get(i).setQuantity(quantity);
+                return basketList;
+            }
+        }
+        return basketList;
+    }
 }
