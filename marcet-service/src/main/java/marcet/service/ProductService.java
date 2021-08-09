@@ -56,6 +56,7 @@ public class ProductService {
         return totalCost;
     }
 
+<<<<<<< HEAD
     public ProductDTO saveNewProduct(ProductDTO productDTO) { // LSS добавил метода по сохранению нового продукта
         Product newProduct = new Product();
         productDTO.setId(null);
@@ -75,5 +76,9 @@ public class ProductService {
 
     public void deleteProductById(Long product_id) { //LSS добавил удаление продукта из БД
         productRepository.deleteById(product_id);
+=======
+    public ProductDTO findProductById(Long product_id) { //LSS поиск продукта по id, Optional может лучше отправлять? или здесь isPresent?
+        return convertToDto(productRepository.findById(product_id).get());
+>>>>>>> fd6032ad13052575a2f9b56e307d4cb79c177e2a
     }
 }
