@@ -1,0 +1,14 @@
+C:\java\GeekBrains\Java_lesson\FourthFive\FInalProject\micro-servica-marcet\zuul-server\src\main\java\zuul\server\configs\SecurityConfig.java
+C:\java\GeekBrains\Java_lesson\FourthFive\FInalProject\micro-servica-marcet\zuul-server\src\main\java\zuul\server\exceptions_handling\MarketError.java
+C:\java\GeekBrains\Java_lesson\FourthFive\FInalProject\micro-servica-marcet\zuul-server\src\main\java\zuul\server\dto\UserDTO.java
+C:\java\GeekBrains\Java_lesson\FourthFive\FInalProject\micro-servica-marcet\zuul-server\src\main\java\zuul\server\repository\UserRepository.java
+C:\java\GeekBrains\Java_lesson\FourthFive\FInalProject\micro-servica-marcet\zuul-server\src\main\java\zuul\server\dto\JwtRequest.java
+C:\java\GeekBrains\Java_lesson\FourthFive\FInalProject\micro-servica-marcet\zuul-server\src\main\java\zuul\server\ZuulServerApplication.java
+C:\java\GeekBrains\Java_lesson\FourthFive\FInalProject\micro-servica-marcet\zuul-server\src\main\java\zuul\server\baen\JwtTokenUtil.java
+C:\java\GeekBrains\Java_lesson\FourthFive\FInalProject\micro-servica-marcet\zuul-server\src\main\java\zuul\server\model\User.java
+C:\java\GeekBrains\Java_lesson\FourthFive\FInalProject\micro-servica-marcet\zuul-server\src\main\java\zuul\server\service\UserService.java
+C:\java\GeekBrains\Java_lesson\FourthFive\FInalProject\micro-servica-marcet\zuul-server\src\main\java\zuul\server\controller\AuthControllerr.java
+C:\java\GeekBrains\Java_lesson\FourthFive\FInalProject\micro-servica-marcet\zuul-server\src\main\java\zuul\server\dto\JwtResponse.java
+C:\java\GeekBrains\Java_lesson\FourthFive\FInalProject\micro-servica-marcet\zuul-server\src\main\java\zuul\server\model\Role.java
+C:\java\GeekBrains\Java_lesson\FourthFive\FInalProject\micro-servica-marcet\zuul-server\src\main\java\zuul\server\configs\JwtRequestFilter.java
+C:\java\GeekBrains\Java_lesson\FourthFive\FInalProject\micro-servica-marcet\zuul-server\src\main\java\zuul\server\controller\RegController.java
