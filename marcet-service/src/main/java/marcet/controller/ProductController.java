@@ -3,6 +3,7 @@ package marcet.controller;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import marcet.dto.ProductDTO;
+import marcet.model.Product;
 import marcet.service.ProductService;
 import marcet.specifications.ProductSpecifications;
 import org.springframework.data.domain.Page;
@@ -34,16 +35,21 @@ public class ProductController {
         return productService.getProduct();
     }
 
-    @PostMapping("/products")
+    @PostMapping //LSS создание нового продукта
     @ResponseStatus(HttpStatus.CREATED)
-    public ProductDTO createNewProducts(@RequestBody ProductDTO productDTO){
-        return new ProductDTO();
+    public ProductDTO createNewProduct(@RequestBody ProductDTO productDTO){
+        return productService.saveNewProduct(productDTO);
     }
 
-    @PutMapping("/products")
+    @PutMapping //LSS обновление имеющегося продукта
     @ResponseStatus(HttpStatus.CREATED)
     public ProductDTO editProducts(@RequestBody ProductDTO productDTO){
-        return new ProductDTO();
+        return productService.updateProduct(productDTO);
+    }
+
+    @DeleteMapping("/{id}") // LSS удаление продукта из базы
+    public void deleteProductById(@PathVariable Long product_id) {
+        productService.deleteProductById(product_id);
     }
 
     @RequestMapping(value = "/get-all", method = RequestMethod.GET)
@@ -70,6 +76,11 @@ public class ProductController {
     public void addBasketProduct(@RequestBody ProductDTO productDTO) {
         System.out.println(productDTO.getTitle());
         // return new ArrayList<>();
+    }
+
+    @GetMapping("/{product_id}") // LSS посик товара по id
+    public ProductDTO findProductById(@PathVariable Long product_id) {
+        return productService.findProductById(product_id);
     }
 
 
