@@ -64,8 +64,16 @@ public class BasketService {
     }
 
     public List<ProductDTO> delProductOfBasket(ProductDTO productDTO) {
+//        int quantity;
         ProductDTO p = basketList.stream().filter(pr -> pr.getTitle().equals(productDTO.getTitle())).findFirst().get();
-        basketList.remove(p);
+//        quantity = p.getQuantity();
+//        if (p.getQuantity() > 1) {
+//            quantity--;
+//            p.setQuantity(quantity);
+//            basketList.set()
+//        } else {
+            basketList.remove(p);
+//        }
         return basketList;
     }
 

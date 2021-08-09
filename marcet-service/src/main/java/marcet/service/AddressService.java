@@ -46,9 +46,17 @@ public class AddressService {
         return address;
     }
 
-    public List<AddressDTO> getAddressByUser(String userName) { // LSS получение всего списка адресов у юзера
-        User user = userRepository.findByUsername(userName).get();
+    public List<AddressDTO> getAddressByUser(String username) { // LSS получение всего списка адресов у юзера
+        User user = userRepository.findByUsername(username).get();
         List<AddressDTO> addressList = user.getListAddresses().stream().map(this::convertToDto).collect(Collectors.toList());
         return addressList;
+    }
+
+    public void addNewAddress(AddressDTO address, String username) { //LSS создание нового адреса
+        address.setAddressId(null);
+        address.setUserId(userRepository.findByUsername(username).get().getUserId());
+        Address newAddress = convertToEntity(address);
+        addressRepository.save(newAddress);
+        address.setAddressId(newAddress.getAddressId());
     }
 }
