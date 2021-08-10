@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
@@ -32,6 +33,10 @@ public class ProductController {
 
     @GetMapping("/get-products")
     public List<ProductDTO> getProducts() {
+        List<ProductDTO> productDTOS = productService.getProduct();
+        for (ProductDTO p : productDTOS){
+            log.info("{} {} {} {} {} {} ", p.getTitle(), p.getPrice(), p.getShortDescription());
+        }
         return productService.getProduct();
     }
 

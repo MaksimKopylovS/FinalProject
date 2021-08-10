@@ -102,7 +102,7 @@ public class BasketService {
 //        orderItemsRepository.save(orderItems);
 
         for (ProductDTO p : basketList) {
-            log.info("Продукт Id - {}, name - {}, Cost - {}, количество {}, Описание1 - {} описание2 - {}", p.getId(), p.getTitle(), p.getCost(), p.getQuantity(), p.getFullDescription(), p.getShortDescription());
+            log.info("Продукт Id - {}, name - {}, Cost - {}, количество {}, Описание1 - {} описание2 - {}", p.getId(), p.getTitle(), p.getPrice(), p.getQuantity(), p.getFullDescription(), p.getShortDescription());
             log.info(" Tota Quantity {},  Total Cost {} ", getTotalQuantity(basketList), getTotalCost(basketList));
             product = productService.convertToEntity(p);
 
@@ -111,19 +111,19 @@ public class BasketService {
                             order,
                             product,
                             p.getQuantity(),
-                            p.getCost(),
+                            p.getPrice(),
                             productService.getPriceProduct
                                     (
                                             p.getQuantity(),
-                                            p.getCost()
+                                            p.getPrice()
                                     )
                     )
             );
-            log.info("Продукт Id - {}, name - {}, Cost - {}, СОХРАНЁН", p.getId(), p.getTitle(), p.getCost());
+            log.info("Продукт Id - {}, name - {}, Cost - {}, СОХРАНЁН", p.getId(), p.getTitle(), p.getPrice());
         }
 
         basketList.clear();
-        return new Order();
+        return order;
     }
 
 
@@ -141,7 +141,7 @@ public class BasketService {
         BigDecimal totalCost = BigDecimal.ZERO;
         BigDecimal sum = BigDecimal.ZERO;
         for (ProductDTO p : productDTOList) {
-            totalCost = totalCost.add(calculateCost(p.getQuantity(), p.getCost()));
+            totalCost = totalCost.add(calculateCost(p.getQuantity(), p.getPrice()));
         }
         return totalCost;
     }

@@ -33,7 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/order/**").authenticated() // antMatchers определяет какую ссылку и каким способом защищать
                 .antMatchers("/products/get-all-admin").hasAnyRole("ADMIN")
 //                .antMatchers("/**").authenticated()
-                .antMatchers("/products/get-products").authenticated()
+                //.antMatchers("/products/get-products/**").authenticated()
                 .anyRequest()
                 .permitAll() // anyRequest определяет защиту всех ссылок
                 .and()

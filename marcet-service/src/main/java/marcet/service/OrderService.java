@@ -60,7 +60,7 @@ public class OrderService {
     public BigDecimal getSumCost(List<ProductDTO> list) {
         BigDecimal sumCost = new BigDecimal(0);
         for (ProductDTO p : list) {
-            sumCost = sumCost.add(p.getCost());
+            sumCost = sumCost.add(p.getPrice());
         }
         return sumCost;
     }

@@ -3,10 +3,12 @@ package marcet.controller;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import marcet.dto.OrderShowDTO;
+import marcet.exceptions_handling.MarketError;
 import marcet.model.JwtResponse;
 import marcet.model.Order;
 import marcet.service.BasketService;
 import marcet.service.OrderService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,6 +35,9 @@ public class OrderController {
     @PostMapping("/create")
     public ResponseEntity<?> createOrder(@RequestBody String userName) {
         log.info("Username - {}", userName);
+        if(userName.equals(null)){
+            return new ResponseEntity<>(new MarketError(HttpStatus.UNAUTHORIZED.value(), "Incorrect username"), HttpStatus.BAD_REQUEST);
+        }
         return ResponseEntity.ok(basketService.createOrder(userName));
     }
 

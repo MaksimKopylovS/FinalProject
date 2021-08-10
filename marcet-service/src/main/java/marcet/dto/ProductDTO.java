@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 public class ProductDTO {
     private Long id;
     private String title;
-    private BigDecimal cost;
+    private BigDecimal price;
     private int quantity = 1;
     private String shortDescription;
     private String fullDescription;
@@ -23,7 +23,7 @@ public class ProductDTO {
     public ProductDTO(Product product) {
         this.id = product.getProductId();
         this.title = product.getTitle();
-        this.cost = product.getPrice();
+        this.price = product.getPrice();
         this.shortDescription = product.getShortDescription();
         this.fullDescription = product.getFullDescription();
         this.phoroUrl = product.getPhoroUrl();
