@@ -2001,3 +2001,553 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2021-08-10 21:03:24.480  INFO 12424 --- [http-nio-8704-exec-2] marcet.controller.ProductController      : Сумка для обуви 850 Сумка для обуви с сеткой {} {} {} 
 2021-08-10 21:08:10.740  INFO 12424 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2021-08-10 21:13:10.743  INFO 12424 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 21:18:10.745  INFO 12424 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 21:23:10.747  INFO 12424 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 21:28:10.750  INFO 12424 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 21:33:10.753  INFO 12424 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 21:38:10.758  INFO 12424 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 21:43:10.760  INFO 12424 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 21:48:10.763  INFO 12424 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 21:53:10.765  INFO 12424 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 21:58:10.768  INFO 12424 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 22:03:10.770  INFO 12424 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 22:08:10.773  INFO 12424 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 22:13:10.775  INFO 12424 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 22:18:10.776  INFO 12424 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 22:19:41.720  INFO 7124 --- [main] marcet.MarcetServiceApplication          : No active profile set, falling back to default profiles: default
+2021-08-10 22:19:42.824  INFO 7124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-08-10 22:19:43.095  INFO 7124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 252ms. Found 6 repository interfaces.
+2021-08-10 22:19:43.488  INFO 7124 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=cdca2af9-68aa-313d-b45d-c8dceeffbf89
+2021-08-10 22:19:43.631  INFO 7124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3d845def] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:19:43.658  INFO 7124 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$599e60ec] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:19:44.001  INFO 7124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8704 (http)
+2021-08-10 22:19:44.041  INFO 7124 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-10 22:19:44.041  INFO 7124 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2021-08-10 22:19:44.051  INFO 7124 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+2021-08-10 22:19:44.051  INFO 7124 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-08-10 22:19:44.052  INFO 7124 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-08-10 22:19:44.057  INFO 7124 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-08-10 22:19:44.320  INFO 7124 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-10 22:19:44.321  INFO 7124 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2580 ms
+2021-08-10 22:19:44.687  INFO 7124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-10 22:19:45.294  INFO 7124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-10 22:19:45.391  INFO 7124 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-08-10 22:19:45.517  INFO 7124 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2021-08-10 22:19:45.520  INFO 7124 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-08-10 22:19:45.836  INFO 7124 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-08-10 22:19:46.052  INFO 7124 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-08-10 22:19:47.082  INFO 7124 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-10 22:19:47.942  INFO 7124 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36ce0bc2, org.springframework.security.web.context.SecurityContextPersistenceFilter@1b901f7b, org.springframework.security.web.header.HeaderWriterFilter@8d52313, org.springframework.security.web.authentication.logout.LogoutFilter@628aea61, marcet.configs.JwtRequestFilter@3730f716, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a1e38ab, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2bed5828, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@317fa5dd, org.springframework.security.web.session.SessionManagementFilter@627a890f, org.springframework.security.web.access.ExceptionTranslationFilter@775a5a67, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@27c827ec]
+2021-08-10 22:19:47.965  WARN 7124 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-10 22:19:47.965  INFO 7124 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-10 22:19:47.970  WARN 7124 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-10 22:19:47.971  INFO 7124 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-10 22:19:48.356  INFO 7124 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-10 22:19:48.445  WARN 7124 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-10 22:19:50.090  INFO 7124 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-08-10 22:19:51.206  INFO 7124 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-08-10 22:19:51.436  INFO 7124 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-08-10 22:19:51.509  INFO 7124 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2021-08-10 22:19:51.683  INFO 7124 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2021-08-10 22:19:51.683  INFO 7124 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2021-08-10 22:19:51.895  INFO 7124 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2021-08-10 22:19:51.896  INFO 7124 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2021-08-10 22:19:52.384  INFO 7124 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 22:19:52.422  INFO 7124 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2021-08-10 22:19:52.423  INFO 7124 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2021-08-10 22:19:52.423  INFO 7124 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2021-08-10 22:19:52.423  INFO 7124 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2021-08-10 22:19:52.424  INFO 7124 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2021-08-10 22:19:52.424  INFO 7124 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2021-08-10 22:19:52.424  INFO 7124 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2021-08-10 22:19:52.630  INFO 7124 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2021-08-10 22:19:52.641  INFO 7124 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2021-08-10 22:19:52.653  INFO 7124 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-08-10 22:19:52.675  INFO 7124 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1628623192673 with initial instances count: 3
+2021-08-10 22:19:52.679  INFO 7124 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MARCET-SERVICE with eureka with status UP
+2021-08-10 22:19:52.679  INFO 7124 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1628623192679, current=UP, previous=STARTING]
+2021-08-10 22:19:52.682  INFO 7124 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MARCET-SERVICE/localhost:marcet-service:8704: registering service...
+2021-08-10 22:19:52.738  INFO 7124 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MARCET-SERVICE/localhost:marcet-service:8704 - registration status: 204
+2021-08-10 22:19:52.756  INFO 7124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8704 (http) with context path ''
+2021-08-10 22:19:52.757  INFO 7124 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8704
+2021-08-10 22:19:53.818  INFO 7124 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-08-10 22:19:53.821  INFO 7124 --- [main] marcet.MarcetServiceApplication          : Started MarcetServiceApplication in 15.883 seconds (JVM running for 18.247)
+2021-08-10 22:20:46.212  INFO 7124 --- [http-nio-8704-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-10 22:20:46.213  INFO 7124 --- [http-nio-8704-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-10 22:20:46.224  INFO 7124 --- [http-nio-8704-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2021-08-10 22:20:46.723  INFO 7124 --- [http-nio-8704-exec-3] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-08-10 22:20:46.929  INFO 7124 --- [http-nio-8704-exec-3] marcet.controller.ProductController      : Туфли Re 3200 Туфли рейтинговые {} {} {} 
+2021-08-10 22:20:46.929  INFO 7124 --- [http-nio-8704-exec-3] marcet.controller.ProductController      : Туфли St м 5900 Туфли мужские Стандарт {} {} {} 
+2021-08-10 22:20:46.930  INFO 7124 --- [http-nio-8704-exec-3] marcet.controller.ProductController      : Туфли La ж 6200 Туфли женские Латина {} {} {} 
+2021-08-10 22:20:46.930  INFO 7124 --- [http-nio-8704-exec-3] marcet.controller.ProductController      : Туфли народные 3500 Туфли женские народные {} {} {} 
+2021-08-10 22:20:46.931  INFO 7124 --- [http-nio-8704-exec-3] marcet.controller.ProductController      : Платье Re 2200 Платье рейтинговое ПР-01 {} {} {} 
+2021-08-10 22:20:46.932  INFO 7124 --- [http-nio-8704-exec-3] marcet.controller.ProductController      : Платье Re 5200 Платье рейтинговое Муза {} {} {} 
+2021-08-10 22:20:46.932  INFO 7124 --- [http-nio-8704-exec-3] marcet.controller.ProductController      : Платье Re 15000 Платье рейтинрговое RDC {} {} {} 
+2021-08-10 22:20:46.933  INFO 7124 --- [http-nio-8704-exec-3] marcet.controller.ProductController      : Топ 1100 Топ женский тренировочный {} {} {} 
+2021-08-10 22:20:46.933  INFO 7124 --- [http-nio-8704-exec-3] marcet.controller.ProductController      : Юбка La 2900 Юбка латина с бахрамой {} {} {} 
+2021-08-10 22:20:46.933  INFO 7124 --- [http-nio-8704-exec-3] marcet.controller.ProductController      : Юбка St 3000 Юбка стандарт {} {} {} 
+2021-08-10 22:20:46.934  INFO 7124 --- [http-nio-8704-exec-3] marcet.controller.ProductController      : Жилет 3500 Жилет с бархатной отделкой {} {} {} 
+2021-08-10 22:20:46.934  INFO 7124 --- [http-nio-8704-exec-3] marcet.controller.ProductController      : Брюки 2600 Брюки с атласом {} {} {} 
+2021-08-10 22:20:46.934  INFO 7124 --- [http-nio-8704-exec-3] marcet.controller.ProductController      : Туника муж 1500 Туника мужская тренировочная {} {} {} 
+2021-08-10 22:20:46.934  INFO 7124 --- [http-nio-8704-exec-3] marcet.controller.ProductController      : Рубашка La 2400 Рубашка Латина {} {} {} 
+2021-08-10 22:20:46.935  INFO 7124 --- [http-nio-8704-exec-3] marcet.controller.ProductController      : Портплед 3900 Портплед взрослый {} {} {} 
+2021-08-10 22:20:46.935  INFO 7124 --- [http-nio-8704-exec-3] marcet.controller.ProductController      : Щётка для обуви 350 Щётка для обуви с липучкой DF {} {} {} 
+2021-08-10 22:20:46.935  INFO 7124 --- [http-nio-8704-exec-3] marcet.controller.ProductController      : Сумка для обуви 850 Сумка для обуви с сеткой {} {} {} 
+2021-08-10 22:20:47.034  INFO 7124 --- [http-nio-8704-exec-4] marcet.controller.ProductController      : Туфли Re 3200 Туфли рейтинговые {} {} {} 
+2021-08-10 22:20:47.035  INFO 7124 --- [http-nio-8704-exec-4] marcet.controller.ProductController      : Туфли St м 5900 Туфли мужские Стандарт {} {} {} 
+2021-08-10 22:20:47.036  INFO 7124 --- [http-nio-8704-exec-4] marcet.controller.ProductController      : Туфли La ж 6200 Туфли женские Латина {} {} {} 
+2021-08-10 22:20:47.036  INFO 7124 --- [http-nio-8704-exec-4] marcet.controller.ProductController      : Туфли народные 3500 Туфли женские народные {} {} {} 
+2021-08-10 22:20:47.036  INFO 7124 --- [http-nio-8704-exec-4] marcet.controller.ProductController      : Платье Re 2200 Платье рейтинговое ПР-01 {} {} {} 
+2021-08-10 22:20:47.037  INFO 7124 --- [http-nio-8704-exec-4] marcet.controller.ProductController      : Платье Re 5200 Платье рейтинговое Муза {} {} {} 
+2021-08-10 22:20:47.037  INFO 7124 --- [http-nio-8704-exec-4] marcet.controller.ProductController      : Платье Re 15000 Платье рейтинрговое RDC {} {} {} 
+2021-08-10 22:20:47.037  INFO 7124 --- [http-nio-8704-exec-4] marcet.controller.ProductController      : Топ 1100 Топ женский тренировочный {} {} {} 
+2021-08-10 22:20:47.037  INFO 7124 --- [http-nio-8704-exec-4] marcet.controller.ProductController      : Юбка La 2900 Юбка латина с бахрамой {} {} {} 
+2021-08-10 22:20:47.037  INFO 7124 --- [http-nio-8704-exec-4] marcet.controller.ProductController      : Юбка St 3000 Юбка стандарт {} {} {} 
+2021-08-10 22:20:47.038  INFO 7124 --- [http-nio-8704-exec-4] marcet.controller.ProductController      : Жилет 3500 Жилет с бархатной отделкой {} {} {} 
+2021-08-10 22:20:47.038  INFO 7124 --- [http-nio-8704-exec-4] marcet.controller.ProductController      : Брюки 2600 Брюки с атласом {} {} {} 
+2021-08-10 22:20:47.038  INFO 7124 --- [http-nio-8704-exec-4] marcet.controller.ProductController      : Туника муж 1500 Туника мужская тренировочная {} {} {} 
+2021-08-10 22:20:47.038  INFO 7124 --- [http-nio-8704-exec-4] marcet.controller.ProductController      : Рубашка La 2400 Рубашка Латина {} {} {} 
+2021-08-10 22:20:47.038  INFO 7124 --- [http-nio-8704-exec-4] marcet.controller.ProductController      : Портплед 3900 Портплед взрослый {} {} {} 
+2021-08-10 22:20:47.039  INFO 7124 --- [http-nio-8704-exec-4] marcet.controller.ProductController      : Щётка для обуви 350 Щётка для обуви с липучкой DF {} {} {} 
+2021-08-10 22:20:47.040  INFO 7124 --- [http-nio-8704-exec-4] marcet.controller.ProductController      : Сумка для обуви 850 Сумка для обуви с сеткой {} {} {} 
+2021-08-10 22:20:51.251  INFO 7124 --- [http-nio-8704-exec-7] marcet.controller.ProductController      : Продукты добавленные в корзину {page=1}
+2021-08-10 22:24:22.935  INFO 13284 --- [main] marcet.MarcetServiceApplication          : No active profile set, falling back to default profiles: default
+2021-08-10 22:24:23.855  INFO 13284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-08-10 22:24:24.038  INFO 13284 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 166ms. Found 6 repository interfaces.
+2021-08-10 22:24:24.416  INFO 13284 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=cdca2af9-68aa-313d-b45d-c8dceeffbf89
+2021-08-10 22:24:24.560  INFO 13284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1f9d9d23] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:24:24.587  INFO 13284 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3bb7a020] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:24:24.925  INFO 13284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8704 (http)
+2021-08-10 22:24:24.962  INFO 13284 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-10 22:24:24.963  INFO 13284 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2021-08-10 22:24:24.972  INFO 13284 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+2021-08-10 22:24:24.974  INFO 13284 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-08-10 22:24:24.975  INFO 13284 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-08-10 22:24:24.980  INFO 13284 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-08-10 22:24:25.224  INFO 13284 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-10 22:24:25.224  INFO 13284 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2256 ms
+2021-08-10 22:24:25.564  INFO 13284 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-10 22:24:26.056  INFO 13284 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-10 22:24:26.140  INFO 13284 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-08-10 22:24:26.216  INFO 13284 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2021-08-10 22:24:26.217  INFO 13284 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-08-10 22:24:26.451  INFO 13284 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-08-10 22:24:26.794  INFO 13284 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-08-10 22:24:27.925  INFO 13284 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-10 22:24:28.752  INFO 13284 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@68b3de47, org.springframework.security.web.context.SecurityContextPersistenceFilter@70869678, org.springframework.security.web.header.HeaderWriterFilter@66e434e8, org.springframework.security.web.authentication.logout.LogoutFilter@346a2799, marcet.configs.JwtRequestFilter@298b64f7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2d94279f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ef7faa9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b827796, org.springframework.security.web.session.SessionManagementFilter@64f49b3, org.springframework.security.web.access.ExceptionTranslationFilter@54eb2bf6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@9a16af1]
+2021-08-10 22:24:28.776  WARN 13284 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-10 22:24:28.777  INFO 13284 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-10 22:24:28.783  WARN 13284 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-10 22:24:28.783  INFO 13284 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-10 22:24:29.029  INFO 13284 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-10 22:24:29.076  WARN 13284 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-10 22:24:30.571  INFO 13284 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-08-10 22:24:31.713  INFO 13284 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-08-10 22:24:31.944  INFO 13284 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-08-10 22:24:32.009  INFO 13284 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2021-08-10 22:24:32.175  INFO 13284 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2021-08-10 22:24:32.175  INFO 13284 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2021-08-10 22:24:32.565  INFO 13284 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2021-08-10 22:24:32.566  INFO 13284 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2021-08-10 22:24:33.328  INFO 13284 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 22:24:33.367  INFO 13284 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2021-08-10 22:24:33.367  INFO 13284 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2021-08-10 22:24:33.367  INFO 13284 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2021-08-10 22:24:33.367  INFO 13284 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2021-08-10 22:24:33.368  INFO 13284 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2021-08-10 22:24:33.368  INFO 13284 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2021-08-10 22:24:33.368  INFO 13284 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2021-08-10 22:24:33.578  INFO 13284 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2021-08-10 22:24:33.588  INFO 13284 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2021-08-10 22:24:33.598  INFO 13284 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-08-10 22:24:33.621  INFO 13284 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1628623473619 with initial instances count: 3
+2021-08-10 22:24:33.624  INFO 13284 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MARCET-SERVICE with eureka with status UP
+2021-08-10 22:24:33.624  INFO 13284 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1628623473624, current=UP, previous=STARTING]
+2021-08-10 22:24:33.627  INFO 13284 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MARCET-SERVICE/localhost:marcet-service:8704: registering service...
+2021-08-10 22:24:33.678  INFO 13284 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MARCET-SERVICE/localhost:marcet-service:8704 - registration status: 204
+2021-08-10 22:24:33.689  INFO 13284 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8704 (http) with context path ''
+2021-08-10 22:24:33.690  INFO 13284 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8704
+2021-08-10 22:24:34.751  INFO 13284 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-08-10 22:24:34.756  INFO 13284 --- [main] marcet.MarcetServiceApplication          : Started MarcetServiceApplication in 16.013 seconds (JVM running for 17.915)
+2021-08-10 22:24:49.023  INFO 13284 --- [http-nio-8704-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-10 22:24:49.023  INFO 13284 --- [http-nio-8704-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-10 22:24:49.040  INFO 13284 --- [http-nio-8704-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2021-08-10 22:25:00.909  INFO 13284 --- [http-nio-8704-exec-2] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-08-10 22:25:28.914  INFO 18384 --- [main] marcet.MarcetServiceApplication          : No active profile set, falling back to default profiles: default
+2021-08-10 22:25:29.889  INFO 18384 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-08-10 22:25:30.061  INFO 18384 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 158ms. Found 6 repository interfaces.
+2021-08-10 22:25:30.537  INFO 18384 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=cdca2af9-68aa-313d-b45d-c8dceeffbf89
+2021-08-10 22:25:30.690  INFO 18384 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6985ae9b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:25:30.717  INFO 18384 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$859fb198] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:25:31.049  INFO 18384 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8704 (http)
+2021-08-10 22:25:31.086  INFO 18384 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-10 22:25:31.087  INFO 18384 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2021-08-10 22:25:31.097  INFO 18384 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+2021-08-10 22:25:31.098  INFO 18384 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-08-10 22:25:31.098  INFO 18384 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-08-10 22:25:31.103  INFO 18384 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-08-10 22:25:31.364  INFO 18384 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-10 22:25:31.364  INFO 18384 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2428 ms
+2021-08-10 22:25:31.676  INFO 18384 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-10 22:25:32.377  INFO 18384 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-10 22:25:32.487  INFO 18384 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-08-10 22:25:32.615  INFO 18384 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2021-08-10 22:25:32.619  INFO 18384 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-08-10 22:25:32.849  INFO 18384 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-08-10 22:25:33.051  INFO 18384 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-08-10 22:25:33.970  INFO 18384 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-10 22:25:34.818  INFO 18384 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@135a8808, org.springframework.security.web.context.SecurityContextPersistenceFilter@1165a952, org.springframework.security.web.header.HeaderWriterFilter@2f5a092e, org.springframework.security.web.authentication.logout.LogoutFilter@6ec77cab, marcet.configs.JwtRequestFilter@75aea2ba, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@102f3f05, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31ab75a5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57abe94d, org.springframework.security.web.session.SessionManagementFilter@1ae23815, org.springframework.security.web.access.ExceptionTranslationFilter@6520625f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3083e6ef]
+2021-08-10 22:25:34.841  WARN 18384 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-10 22:25:34.841  INFO 18384 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-10 22:25:34.846  WARN 18384 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-10 22:25:34.846  INFO 18384 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-10 22:25:35.165  INFO 18384 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-10 22:25:35.210  WARN 18384 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-10 22:25:36.738  INFO 18384 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-08-10 22:25:37.852  INFO 18384 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-08-10 22:25:38.176  INFO 18384 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-08-10 22:25:38.292  INFO 18384 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2021-08-10 22:25:38.534  INFO 18384 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2021-08-10 22:25:38.535  INFO 18384 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2021-08-10 22:25:38.745  INFO 18384 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2021-08-10 22:25:38.746  INFO 18384 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2021-08-10 22:25:39.274  INFO 18384 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 22:25:39.312  INFO 18384 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2021-08-10 22:25:39.312  INFO 18384 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2021-08-10 22:25:39.312  INFO 18384 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2021-08-10 22:25:39.313  INFO 18384 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2021-08-10 22:25:39.313  INFO 18384 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2021-08-10 22:25:39.313  INFO 18384 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2021-08-10 22:25:39.313  INFO 18384 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2021-08-10 22:25:39.511  INFO 18384 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2021-08-10 22:25:39.523  INFO 18384 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2021-08-10 22:25:39.533  INFO 18384 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-08-10 22:25:39.553  INFO 18384 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1628623539551 with initial instances count: 3
+2021-08-10 22:25:39.558  INFO 18384 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MARCET-SERVICE with eureka with status UP
+2021-08-10 22:25:39.559  INFO 18384 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1628623539559, current=UP, previous=STARTING]
+2021-08-10 22:25:39.561  INFO 18384 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MARCET-SERVICE/localhost:marcet-service:8704: registering service...
+2021-08-10 22:25:39.612  INFO 18384 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MARCET-SERVICE/localhost:marcet-service:8704 - registration status: 204
+2021-08-10 22:25:39.621  INFO 18384 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8704 (http) with context path ''
+2021-08-10 22:25:39.623  INFO 18384 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8704
+2021-08-10 22:25:40.683  INFO 18384 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-08-10 22:25:40.688  INFO 18384 --- [main] marcet.MarcetServiceApplication          : Started MarcetServiceApplication in 16.031 seconds (JVM running for 17.735)
+2021-08-10 22:25:41.903  INFO 18384 --- [http-nio-8704-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-10 22:25:41.904  INFO 18384 --- [http-nio-8704-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-10 22:25:41.915  INFO 18384 --- [http-nio-8704-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2021-08-10 22:25:57.174  INFO 18384 --- [http-nio-8704-exec-3] marcet.controller.ProductController      : Продукты добавленные в корзину {page=1}
+2021-08-10 22:25:57.217  INFO 18384 --- [http-nio-8704-exec-3] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-08-10 22:26:04.927  INFO 18384 --- [http-nio-8704-exec-6] marcet.controller.ProductController      : Туфли Re 3200 Туфли рейтинговые {} {} {} 
+2021-08-10 22:26:04.928  INFO 18384 --- [http-nio-8704-exec-6] marcet.controller.ProductController      : Туфли St м 5900 Туфли мужские Стандарт {} {} {} 
+2021-08-10 22:26:04.929  INFO 18384 --- [http-nio-8704-exec-6] marcet.controller.ProductController      : Туфли La ж 6200 Туфли женские Латина {} {} {} 
+2021-08-10 22:26:04.929  INFO 18384 --- [http-nio-8704-exec-6] marcet.controller.ProductController      : Туфли народные 3500 Туфли женские народные {} {} {} 
+2021-08-10 22:26:04.930  INFO 18384 --- [http-nio-8704-exec-6] marcet.controller.ProductController      : Платье Re 2200 Платье рейтинговое ПР-01 {} {} {} 
+2021-08-10 22:26:04.931  INFO 18384 --- [http-nio-8704-exec-6] marcet.controller.ProductController      : Платье Re 5200 Платье рейтинговое Муза {} {} {} 
+2021-08-10 22:26:04.931  INFO 18384 --- [http-nio-8704-exec-6] marcet.controller.ProductController      : Платье Re 15000 Платье рейтинрговое RDC {} {} {} 
+2021-08-10 22:26:04.932  INFO 18384 --- [http-nio-8704-exec-6] marcet.controller.ProductController      : Топ 1100 Топ женский тренировочный {} {} {} 
+2021-08-10 22:26:04.933  INFO 18384 --- [http-nio-8704-exec-6] marcet.controller.ProductController      : Юбка La 2900 Юбка латина с бахрамой {} {} {} 
+2021-08-10 22:26:04.934  INFO 18384 --- [http-nio-8704-exec-6] marcet.controller.ProductController      : Юбка St 3000 Юбка стандарт {} {} {} 
+2021-08-10 22:26:04.935  INFO 18384 --- [http-nio-8704-exec-6] marcet.controller.ProductController      : Жилет 3500 Жилет с бархатной отделкой {} {} {} 
+2021-08-10 22:26:04.935  INFO 18384 --- [http-nio-8704-exec-6] marcet.controller.ProductController      : Брюки 2600 Брюки с атласом {} {} {} 
+2021-08-10 22:26:04.936  INFO 18384 --- [http-nio-8704-exec-6] marcet.controller.ProductController      : Туника муж 1500 Туника мужская тренировочная {} {} {} 
+2021-08-10 22:26:04.936  INFO 18384 --- [http-nio-8704-exec-6] marcet.controller.ProductController      : Рубашка La 2400 Рубашка Латина {} {} {} 
+2021-08-10 22:26:04.937  INFO 18384 --- [http-nio-8704-exec-6] marcet.controller.ProductController      : Портплед 3900 Портплед взрослый {} {} {} 
+2021-08-10 22:26:04.937  INFO 18384 --- [http-nio-8704-exec-6] marcet.controller.ProductController      : Щётка для обуви 350 Щётка для обуви с липучкой DF {} {} {} 
+2021-08-10 22:26:04.937  INFO 18384 --- [http-nio-8704-exec-6] marcet.controller.ProductController      : Сумка для обуви 850 Сумка для обуви с сеткой {} {} {} 
+2021-08-10 22:26:05.029  INFO 18384 --- [http-nio-8704-exec-7] marcet.controller.ProductController      : Туфли Re 3200 Туфли рейтинговые {} {} {} 
+2021-08-10 22:26:05.030  INFO 18384 --- [http-nio-8704-exec-7] marcet.controller.ProductController      : Туфли St м 5900 Туфли мужские Стандарт {} {} {} 
+2021-08-10 22:26:05.030  INFO 18384 --- [http-nio-8704-exec-7] marcet.controller.ProductController      : Туфли La ж 6200 Туфли женские Латина {} {} {} 
+2021-08-10 22:26:05.030  INFO 18384 --- [http-nio-8704-exec-7] marcet.controller.ProductController      : Туфли народные 3500 Туфли женские народные {} {} {} 
+2021-08-10 22:26:05.031  INFO 18384 --- [http-nio-8704-exec-7] marcet.controller.ProductController      : Платье Re 2200 Платье рейтинговое ПР-01 {} {} {} 
+2021-08-10 22:26:05.031  INFO 18384 --- [http-nio-8704-exec-7] marcet.controller.ProductController      : Платье Re 5200 Платье рейтинговое Муза {} {} {} 
+2021-08-10 22:26:05.031  INFO 18384 --- [http-nio-8704-exec-7] marcet.controller.ProductController      : Платье Re 15000 Платье рейтинрговое RDC {} {} {} 
+2021-08-10 22:26:05.032  INFO 18384 --- [http-nio-8704-exec-7] marcet.controller.ProductController      : Топ 1100 Топ женский тренировочный {} {} {} 
+2021-08-10 22:26:05.032  INFO 18384 --- [http-nio-8704-exec-7] marcet.controller.ProductController      : Юбка La 2900 Юбка латина с бахрамой {} {} {} 
+2021-08-10 22:26:05.032  INFO 18384 --- [http-nio-8704-exec-7] marcet.controller.ProductController      : Юбка St 3000 Юбка стандарт {} {} {} 
+2021-08-10 22:26:05.032  INFO 18384 --- [http-nio-8704-exec-7] marcet.controller.ProductController      : Жилет 3500 Жилет с бархатной отделкой {} {} {} 
+2021-08-10 22:26:05.033  INFO 18384 --- [http-nio-8704-exec-7] marcet.controller.ProductController      : Брюки 2600 Брюки с атласом {} {} {} 
+2021-08-10 22:26:05.033  INFO 18384 --- [http-nio-8704-exec-7] marcet.controller.ProductController      : Туника муж 1500 Туника мужская тренировочная {} {} {} 
+2021-08-10 22:26:05.033  INFO 18384 --- [http-nio-8704-exec-7] marcet.controller.ProductController      : Рубашка La 2400 Рубашка Латина {} {} {} 
+2021-08-10 22:26:05.033  INFO 18384 --- [http-nio-8704-exec-7] marcet.controller.ProductController      : Портплед 3900 Портплед взрослый {} {} {} 
+2021-08-10 22:26:05.034  INFO 18384 --- [http-nio-8704-exec-7] marcet.controller.ProductController      : Щётка для обуви 350 Щётка для обуви с липучкой DF {} {} {} 
+2021-08-10 22:26:05.034  INFO 18384 --- [http-nio-8704-exec-7] marcet.controller.ProductController      : Сумка для обуви 850 Сумка для обуви с сеткой {} {} {} 
+2021-08-10 22:26:44.938  INFO 13364 --- [main] marcet.MarcetServiceApplication          : No active profile set, falling back to default profiles: default
+2021-08-10 22:26:46.289  INFO 13364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-08-10 22:26:46.439  INFO 13364 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 137ms. Found 6 repository interfaces.
+2021-08-10 22:26:46.822  INFO 13364 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=cdca2af9-68aa-313d-b45d-c8dceeffbf89
+2021-08-10 22:26:46.970  INFO 13364 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$31ad67f2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:26:47.000  INFO 13364 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$4dc76aef] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:26:47.333  INFO 13364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8704 (http)
+2021-08-10 22:26:47.374  INFO 13364 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-10 22:26:47.375  INFO 13364 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2021-08-10 22:26:47.384  INFO 13364 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+2021-08-10 22:26:47.384  INFO 13364 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-08-10 22:26:47.385  INFO 13364 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-08-10 22:26:47.391  INFO 13364 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-08-10 22:26:47.670  INFO 13364 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-10 22:26:47.670  INFO 13364 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2693 ms
+2021-08-10 22:26:47.970  INFO 13364 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-10 22:26:48.429  INFO 13364 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-10 22:26:48.517  INFO 13364 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-08-10 22:26:48.602  INFO 13364 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2021-08-10 22:26:48.604  INFO 13364 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-08-10 22:26:48.816  INFO 13364 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-08-10 22:26:49.041  INFO 13364 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-08-10 22:26:49.951  INFO 13364 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-10 22:26:50.891  INFO 13364 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@712594f4, org.springframework.security.web.context.SecurityContextPersistenceFilter@4efa7d2f, org.springframework.security.web.header.HeaderWriterFilter@51b11186, org.springframework.security.web.authentication.logout.LogoutFilter@3da30ce5, marcet.configs.JwtRequestFilter@e3b0369, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2041c9a3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@17344d7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30a4a111, org.springframework.security.web.session.SessionManagementFilter@50aa9a91, org.springframework.security.web.access.ExceptionTranslationFilter@135a8808, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5c04ec8]
+2021-08-10 22:26:50.933  WARN 13364 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-10 22:26:50.934  INFO 13364 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-10 22:26:50.942  WARN 13364 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-10 22:26:50.943  INFO 13364 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-10 22:26:51.435  INFO 13364 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-10 22:26:51.500  WARN 13364 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-10 22:26:53.007  INFO 13364 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-08-10 22:26:54.107  INFO 13364 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-08-10 22:26:54.324  INFO 13364 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-08-10 22:26:54.388  INFO 13364 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2021-08-10 22:26:54.549  INFO 13364 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2021-08-10 22:26:54.549  INFO 13364 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2021-08-10 22:26:54.746  INFO 13364 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2021-08-10 22:26:54.746  INFO 13364 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2021-08-10 22:26:55.266  INFO 13364 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 22:26:55.308  INFO 13364 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2021-08-10 22:26:55.309  INFO 13364 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2021-08-10 22:26:55.310  INFO 13364 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2021-08-10 22:26:55.311  INFO 13364 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2021-08-10 22:26:55.311  INFO 13364 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2021-08-10 22:26:55.312  INFO 13364 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2021-08-10 22:26:55.312  INFO 13364 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2021-08-10 22:26:55.504  INFO 13364 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2021-08-10 22:26:55.517  INFO 13364 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2021-08-10 22:26:55.528  INFO 13364 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-08-10 22:26:55.549  INFO 13364 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1628623615548 with initial instances count: 3
+2021-08-10 22:26:55.553  INFO 13364 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MARCET-SERVICE with eureka with status UP
+2021-08-10 22:26:55.553  INFO 13364 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1628623615553, current=UP, previous=STARTING]
+2021-08-10 22:26:55.555  INFO 13364 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MARCET-SERVICE/localhost:marcet-service:8704: registering service...
+2021-08-10 22:26:55.604  INFO 13364 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MARCET-SERVICE/localhost:marcet-service:8704 - registration status: 204
+2021-08-10 22:26:55.626  INFO 13364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8704 (http) with context path ''
+2021-08-10 22:26:55.627  INFO 13364 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8704
+2021-08-10 22:26:56.687  INFO 13364 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-08-10 22:26:56.692  INFO 13364 --- [main] marcet.MarcetServiceApplication          : Started MarcetServiceApplication in 15.366 seconds (JVM running for 17.235)
+2021-08-10 22:27:01.892  INFO 13364 --- [http-nio-8704-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-10 22:27:01.893  INFO 13364 --- [http-nio-8704-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-10 22:27:01.903  INFO 13364 --- [http-nio-8704-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2021-08-10 22:31:55.321  INFO 13364 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 22:36:55.324  INFO 13364 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 22:41:55.326  INFO 13364 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 22:42:49.422  INFO 3156 --- [main] marcet.MarcetServiceApplication          : No active profile set, falling back to default profiles: default
+2021-08-10 22:42:50.711  INFO 3156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-08-10 22:42:50.858  INFO 3156 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 136ms. Found 6 repository interfaces.
+2021-08-10 22:42:51.251  INFO 3156 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d445b388-6235-3a97-8d55-7e830ff78653
+2021-08-10 22:42:51.396  INFO 3156 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cc50e3cb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:42:51.437  INFO 3156 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$64feac05] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:42:51.445  INFO 3156 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:42:51.448  INFO 3156 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@4b5a078a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:42:51.457  INFO 3156 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$89d34eb7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:42:51.463  INFO 3156 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:42:51.480  INFO 3156 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e86ae6c8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:42:51.860  INFO 3156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8704 (http)
+2021-08-10 22:42:51.900  INFO 3156 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-10 22:42:51.901  INFO 3156 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2021-08-10 22:42:51.930  INFO 3156 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+2021-08-10 22:42:51.931  INFO 3156 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-08-10 22:42:51.932  INFO 3156 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-08-10 22:42:51.938  INFO 3156 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-08-10 22:42:52.190  INFO 3156 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-10 22:42:52.191  INFO 3156 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2737 ms
+2021-08-10 22:42:52.529  INFO 3156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-10 22:42:53.134  INFO 3156 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-10 22:42:53.225  INFO 3156 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-08-10 22:42:53.336  INFO 3156 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2021-08-10 22:42:53.340  INFO 3156 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-08-10 22:42:53.626  INFO 3156 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-08-10 22:42:53.840  INFO 3156 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-08-10 22:42:54.848  INFO 3156 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-10 22:42:56.191  INFO 3156 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6778636f, org.springframework.security.web.context.SecurityContextPersistenceFilter@b272860, org.springframework.security.web.header.HeaderWriterFilter@10bcbbed, org.springframework.security.web.authentication.logout.LogoutFilter@5857d723, marcet.configs.JwtRequestFilter@422ab737, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25c06894, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65234a9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2dbf8cfc, org.springframework.security.web.session.SessionManagementFilter@27c827ec, org.springframework.security.web.access.ExceptionTranslationFilter@322f84fd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@469bd719]
+2021-08-10 22:42:56.217  WARN 3156 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-10 22:42:56.218  INFO 3156 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-10 22:42:56.222  WARN 3156 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-10 22:42:56.223  INFO 3156 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-10 22:42:56.504  INFO 3156 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-10 22:42:56.568  WARN 3156 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-10 22:42:58.143  INFO 3156 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-08-10 22:42:59.300  INFO 3156 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-08-10 22:42:59.510  INFO 3156 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-08-10 22:42:59.585  INFO 3156 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2021-08-10 22:42:59.773  INFO 3156 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2021-08-10 22:42:59.773  INFO 3156 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2021-08-10 22:42:59.997  INFO 3156 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2021-08-10 22:42:59.997  INFO 3156 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2021-08-10 22:43:00.500  INFO 3156 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 22:43:00.538  INFO 3156 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2021-08-10 22:43:00.539  INFO 3156 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2021-08-10 22:43:00.539  INFO 3156 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2021-08-10 22:43:00.540  INFO 3156 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2021-08-10 22:43:00.540  INFO 3156 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2021-08-10 22:43:00.540  INFO 3156 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2021-08-10 22:43:00.540  INFO 3156 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2021-08-10 22:43:00.742  INFO 3156 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2021-08-10 22:43:00.753  INFO 3156 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2021-08-10 22:43:00.763  INFO 3156 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-08-10 22:43:00.786  INFO 3156 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1628624580783 with initial instances count: 3
+2021-08-10 22:43:00.795  INFO 3156 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MARCET-SERVICE with eureka with status UP
+2021-08-10 22:43:00.796  INFO 3156 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1628624580796, current=UP, previous=STARTING]
+2021-08-10 22:43:00.799  INFO 3156 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MARCET-SERVICE/localhost:marcet-service:8704: registering service...
+2021-08-10 22:43:00.849  INFO 3156 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MARCET-SERVICE/localhost:marcet-service:8704 - registration status: 204
+2021-08-10 22:43:00.860  INFO 3156 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8704 (http) with context path ''
+2021-08-10 22:43:00.862  INFO 3156 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8704
+2021-08-10 22:43:01.921  INFO 3156 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-08-10 22:43:01.927  INFO 3156 --- [main] marcet.MarcetServiceApplication          : Started MarcetServiceApplication in 17.21 seconds (JVM running for 19.374)
+2021-08-10 22:43:10.642  INFO 3156 --- [http-nio-8704-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-10 22:43:10.643  INFO 3156 --- [http-nio-8704-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-10 22:43:10.656  INFO 3156 --- [http-nio-8704-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2021-08-10 22:43:14.270  INFO 3156 --- [http-nio-8704-exec-1] marcet.controller.ProductController      : Продукты добавленные в корзину {page=1}
+2021-08-10 22:43:14.315  INFO 3156 --- [http-nio-8704-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-08-10 22:43:53.990  INFO 3308 --- [main] marcet.MarcetServiceApplication          : No active profile set, falling back to default profiles: default
+2021-08-10 22:43:54.912  INFO 3308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-08-10 22:43:55.055  INFO 3308 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 131ms. Found 6 repository interfaces.
+2021-08-10 22:43:55.427  INFO 3308 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d445b388-6235-3a97-8d55-7e830ff78653
+2021-08-10 22:43:55.578  INFO 3308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e42e6f41] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:43:55.621  INFO 3308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$7cdc377b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:43:55.628  INFO 3308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:43:55.632  INFO 3308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6468a7b6' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:43:55.640  INFO 3308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$a1b0da2d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:43:55.644  INFO 3308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:43:55.661  INFO 3308 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$48723e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:43:56.020  INFO 3308 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8704 (http)
+2021-08-10 22:43:56.058  INFO 3308 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-10 22:43:56.058  INFO 3308 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2021-08-10 22:43:56.068  INFO 3308 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+2021-08-10 22:43:56.068  INFO 3308 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-08-10 22:43:56.068  INFO 3308 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-08-10 22:43:56.073  INFO 3308 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-08-10 22:43:56.310  INFO 3308 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-10 22:43:56.311  INFO 3308 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2300 ms
+2021-08-10 22:43:56.645  INFO 3308 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-10 22:43:57.093  INFO 3308 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-10 22:43:57.175  INFO 3308 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-08-10 22:43:57.251  INFO 3308 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2021-08-10 22:43:57.253  INFO 3308 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-08-10 22:43:57.523  INFO 3308 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-08-10 22:43:57.770  INFO 3308 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-08-10 22:43:58.740  INFO 3308 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-10 22:44:00.096  INFO 3308 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@426bf2f2, org.springframework.security.web.context.SecurityContextPersistenceFilter@65294247, org.springframework.security.web.header.HeaderWriterFilter@109188b4, org.springframework.security.web.authentication.logout.LogoutFilter@6e149395, marcet.configs.JwtRequestFilter@322e49ee, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@35e3f3b8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@127320df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2cfd9b0a, org.springframework.security.web.session.SessionManagementFilter@78f1d29, org.springframework.security.web.access.ExceptionTranslationFilter@7983a5d5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@49c6ee4a]
+2021-08-10 22:44:00.121  WARN 3308 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-10 22:44:00.122  INFO 3308 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-10 22:44:00.126  WARN 3308 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-10 22:44:00.127  INFO 3308 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-10 22:44:00.397  INFO 3308 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-10 22:44:00.456  WARN 3308 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-10 22:44:02.027  INFO 3308 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-08-10 22:44:03.136  INFO 3308 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-08-10 22:44:03.360  INFO 3308 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-08-10 22:44:03.423  INFO 3308 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2021-08-10 22:44:03.605  INFO 3308 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2021-08-10 22:44:03.605  INFO 3308 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2021-08-10 22:44:03.797  INFO 3308 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2021-08-10 22:44:03.798  INFO 3308 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2021-08-10 22:44:04.340  INFO 3308 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 22:44:04.377  INFO 3308 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2021-08-10 22:44:04.378  INFO 3308 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2021-08-10 22:44:04.378  INFO 3308 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2021-08-10 22:44:04.378  INFO 3308 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2021-08-10 22:44:04.379  INFO 3308 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2021-08-10 22:44:04.379  INFO 3308 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2021-08-10 22:44:04.379  INFO 3308 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2021-08-10 22:44:04.669  INFO 3308 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2021-08-10 22:44:04.689  INFO 3308 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2021-08-10 22:44:04.706  INFO 3308 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-08-10 22:44:04.744  INFO 3308 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1628624644742 with initial instances count: 3
+2021-08-10 22:44:04.771  INFO 3308 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MARCET-SERVICE with eureka with status UP
+2021-08-10 22:44:04.772  INFO 3308 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1628624644772, current=UP, previous=STARTING]
+2021-08-10 22:44:04.775  INFO 3308 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MARCET-SERVICE/localhost:marcet-service:8704: registering service...
+2021-08-10 22:44:04.842  INFO 3308 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MARCET-SERVICE/localhost:marcet-service:8704 - registration status: 204
+2021-08-10 22:44:04.871  INFO 3308 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8704 (http) with context path ''
+2021-08-10 22:44:04.879  INFO 3308 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8704
+2021-08-10 22:44:06.008  INFO 3308 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-08-10 22:44:06.013  INFO 3308 --- [main] marcet.MarcetServiceApplication          : Started MarcetServiceApplication in 15.724 seconds (JVM running for 17.595)
+2021-08-10 22:44:12.136  INFO 3308 --- [http-nio-8704-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-10 22:44:12.137  INFO 3308 --- [http-nio-8704-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-10 22:44:12.152  INFO 3308 --- [http-nio-8704-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2021-08-10 22:44:18.582  INFO 3308 --- [http-nio-8704-exec-5] marcet.controller.ProductController      : Продукты добавленные в корзину {page=1}
+2021-08-10 22:44:18.643  INFO 3308 --- [http-nio-8704-exec-5] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-08-10 22:44:24.107  INFO 3308 --- [http-nio-8704-exec-7] marcet.controller.ProductController      : Продукты добавленные в корзину {page=1}
+2021-08-10 22:44:27.679  INFO 3308 --- [http-nio-8704-exec-8] marcet.controller.ProductController      : Продукты добавленные в корзину {page=1}
+2021-08-10 22:45:47.298  INFO 18420 --- [main] marcet.MarcetServiceApplication          : No active profile set, falling back to default profiles: default
+2021-08-10 22:45:48.219  INFO 18420 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-08-10 22:45:48.360  INFO 18420 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129ms. Found 6 repository interfaces.
+2021-08-10 22:45:48.752  INFO 18420 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=cdca2af9-68aa-313d-b45d-c8dceeffbf89
+2021-08-10 22:45:48.889  INFO 18420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d0d03c2a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:45:48.916  INFO 18420 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$ecea3f27] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-08-10 22:45:49.238  INFO 18420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8704 (http)
+2021-08-10 22:45:49.276  INFO 18420 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-10 22:45:49.276  INFO 18420 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2021-08-10 22:45:49.286  INFO 18420 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+2021-08-10 22:45:49.286  INFO 18420 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-08-10 22:45:49.287  INFO 18420 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-08-10 22:45:49.291  INFO 18420 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-08-10 22:45:49.533  INFO 18420 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-10 22:45:49.535  INFO 18420 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2207 ms
+2021-08-10 22:45:49.873  INFO 18420 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-10 22:45:50.319  INFO 18420 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-10 22:45:50.402  INFO 18420 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-08-10 22:45:50.485  INFO 18420 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2021-08-10 22:45:50.487  INFO 18420 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-08-10 22:45:50.743  INFO 18420 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-08-10 22:45:50.942  INFO 18420 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2021-08-10 22:45:51.873  INFO 18420 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-08-10 22:45:53.061  INFO 18420 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@322f84fd, org.springframework.security.web.context.SecurityContextPersistenceFilter@123426a9, org.springframework.security.web.header.HeaderWriterFilter@63053b71, org.springframework.security.web.authentication.logout.LogoutFilter@663e1144, marcet.configs.JwtRequestFilter@15a3b42, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@56887c8f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@70869678, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@113cc14d, org.springframework.security.web.session.SessionManagementFilter@37c45154, org.springframework.security.web.access.ExceptionTranslationFilter@68a97fc1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@45f6181a]
+2021-08-10 22:45:53.084  WARN 18420 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-10 22:45:53.084  INFO 18420 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-10 22:45:53.089  WARN 18420 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2021-08-10 22:45:53.089  INFO 18420 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-08-10 22:45:53.326  INFO 18420 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-10 22:45:53.373  WARN 18420 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-08-10 22:45:54.860  INFO 18420 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-08-10 22:45:55.984  INFO 18420 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-08-10 22:45:56.209  INFO 18420 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2021-08-10 22:45:56.272  INFO 18420 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2021-08-10 22:45:56.444  INFO 18420 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2021-08-10 22:45:56.444  INFO 18420 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2021-08-10 22:45:56.639  INFO 18420 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2021-08-10 22:45:56.640  INFO 18420 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2021-08-10 22:45:57.243  INFO 18420 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-10 22:45:57.294  INFO 18420 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2021-08-10 22:45:57.294  INFO 18420 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2021-08-10 22:45:57.295  INFO 18420 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2021-08-10 22:45:57.295  INFO 18420 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2021-08-10 22:45:57.295  INFO 18420 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2021-08-10 22:45:57.295  INFO 18420 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2021-08-10 22:45:57.295  INFO 18420 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2021-08-10 22:45:57.473  INFO 18420 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2021-08-10 22:45:57.483  INFO 18420 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2021-08-10 22:45:57.494  INFO 18420 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-08-10 22:45:57.514  INFO 18420 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1628624757513 with initial instances count: 3
+2021-08-10 22:45:57.518  INFO 18420 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MARCET-SERVICE with eureka with status UP
+2021-08-10 22:45:57.518  INFO 18420 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1628624757518, current=UP, previous=STARTING]
+2021-08-10 22:45:57.520  INFO 18420 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MARCET-SERVICE/localhost:marcet-service:8704: registering service...
+2021-08-10 22:45:57.576  INFO 18420 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MARCET-SERVICE/localhost:marcet-service:8704 - registration status: 204
+2021-08-10 22:45:57.588  INFO 18420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8704 (http) with context path ''
+2021-08-10 22:45:57.590  INFO 18420 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8704
+2021-08-10 22:45:58.650  INFO 18420 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2021-08-10 22:45:58.653  INFO 18420 --- [main] marcet.MarcetServiceApplication          : Started MarcetServiceApplication in 15.131 seconds (JVM running for 16.737)
+2021-08-10 22:46:06.676  INFO 18420 --- [http-nio-8704-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-10 22:46:06.677  INFO 18420 --- [http-nio-8704-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-10 22:46:06.687  INFO 18420 --- [http-nio-8704-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2021-08-10 22:46:07.100  INFO 18420 --- [http-nio-8704-exec-2] marcet.controller.ProductController      : Продукты добавленные в корзину {page=1}
+2021-08-10 22:46:07.139  INFO 18420 --- [http-nio-8704-exec-2] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2021-08-10 22:46:12.503  INFO 18420 --- [http-nio-8704-exec-3] marcet.controller.ProductController      : Продукты добавленные в корзину {page=1}
+2021-08-10 22:46:15.138  INFO 18420 --- [http-nio-8704-exec-4] marcet.controller.ProductController      : Продукты добавленные в корзину {page=1}

@@ -8,6 +8,7 @@ import marcet.service.ProductService;
 import marcet.specifications.ProductSpecifications;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
@@ -66,7 +67,7 @@ public class ProductController {
 
         return productService.findAllProducts(ProductSpecifications.build(params), page, 5);
     }
-
+    //@PreAuthorize("hasAuthority('ADMIN')")
     @RequestMapping(value = "/get-all-admin", method = RequestMethod.GET)
     public Page<ProductDTO> findAllProductsAdm(@RequestParam MultiValueMap<String, String> params,
                                             @RequestParam(name = "page", defaultValue = "1") Integer page) {
