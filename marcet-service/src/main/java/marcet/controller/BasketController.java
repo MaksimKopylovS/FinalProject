@@ -37,6 +37,4 @@ public class BasketController {
         log.info("Уменьшить количество продукта: {} ", productDTO.getTitle());
         return basketService.decrimentProduct(productDTO);
     }
-
-
 }

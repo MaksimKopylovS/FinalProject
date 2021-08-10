@@ -30,15 +30,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                .antMatchers("/registration/**").permitAll()
 //                .antMatchers("/auth/**").permitAll()
 //                .antMatchers("/get-products-all/**").authenticated()
-                .antMatchers("service/order").authenticated() // antMatchers определяет какую ссылку и каким способом защищать
-                .antMatchers("service/get-all-admin").hasAnyRole("ROLE_ADMIN")
+                .antMatchers("/order/**").authenticated() // antMatchers определяет какую ссылку и каким способом защищать
+                .antMatchers("/products/get-all-admin").hasAnyRole("ADMIN")
 //                .antMatchers("/**").authenticated()
+                .antMatchers("/products/get-products").authenticated()
                 .anyRequest()
                 .permitAll() // anyRequest определяет защиту всех ссылок
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .httpBasic()
                 .and()
                 .headers().frameOptions().disable();
         http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
