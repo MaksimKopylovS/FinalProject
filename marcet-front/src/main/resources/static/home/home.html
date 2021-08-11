@@ -3,9 +3,23 @@
     <p>
         Добро пожаловать в Магазин продуктов.
     </p>
-    <form novalidate ng-submit="foon()">
+    <form novalidate ng-submit="test()">
         <div>
-            <button class="btn btn-danger" ng-click="foon()">ТЕст</button>
+            <button class="btn btn-danger" ng-click="foon()">Create</button>
+        </div>
+        <h>{{productsH}}</h>
+    </form>
+
+    <form novalidate ng-submit="test1()">
+        <div>
+            <button class="btn btn-danger" ng-click="foon()">add</button>
+        </div>
+        <h>{{productsH}}</h>
+    </form>
+
+    <form novalidate ng-submit="test2()">
+        <div>
+            <button class="btn btn-danger" ng-click="foon()">del</button>
         </div>
         <h>{{productsH}}</h>
     </form>

@@ -41,35 +41,9 @@ public class ProductController {
         return productService.getProduct();
     }
 
-    @PostMapping //LSS создание нового продукта
-    @ResponseStatus(HttpStatus.CREATED)
-    public ProductDTO createNewProduct(@RequestBody ProductDTO productDTO){
-        return productService.saveNewProduct(productDTO);
-    }
-
-    @PutMapping //LSS обновление имеющегося продукта
-    @ResponseStatus(HttpStatus.CREATED)
-    public ProductDTO editProducts(@RequestBody ProductDTO productDTO){
-        return productService.updateProduct(productDTO);
-    }
-
-    @DeleteMapping("/{id}") // LSS удаление продукта из базы
-    public void deleteProductById(@PathVariable Long product_id) {
-        productService.deleteProductById(product_id);
-    }
 
     @RequestMapping(value = "/get-all", method = RequestMethod.GET)
     public Page<ProductDTO> findAllProducts(@RequestParam MultiValueMap<String, String> params,
-                                            @RequestParam(name = "page", defaultValue = "1") Integer page) {
-        for (int i = 0; i < params.size(); i++) {
-            log.info("Продукты добавленные в корзину {}", params.toSingleValueMap());
-        }
-
-        return productService.findAllProducts(ProductSpecifications.build(params), page, 5);
-    }
-    //@PreAuthorize("hasAuthority('ADMIN')")
-    @RequestMapping(value = "/get-all-admin", method = RequestMethod.GET)
-    public Page<ProductDTO> findAllProductsAdm(@RequestParam MultiValueMap<String, String> params,
                                             @RequestParam(name = "page", defaultValue = "1") Integer page) {
         for (int i = 0; i < params.size(); i++) {
             log.info("Продукты добавленные в корзину {}", params.toSingleValueMap());
