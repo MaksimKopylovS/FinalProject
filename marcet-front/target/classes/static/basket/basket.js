@@ -29,6 +29,7 @@ angular.module('app').controller('basketController', function ($scope, $http, $l
     }
 
     $scope.createOrder = function(){
+        console.log("UserName - ", userName)
         $http.post(contextPath + 'service/order/create', userName)
             .then(function (response){
                 console.log(response.data)

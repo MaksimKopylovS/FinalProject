@@ -64,16 +64,9 @@ public class BasketService {
     }
 
     public List<ProductDTO> delProductOfBasket(ProductDTO productDTO) {
-//        int quantity;
         ProductDTO p = basketList.stream().filter(pr -> pr.getTitle().equals(productDTO.getTitle())).findFirst().get();
-//        quantity = p.getQuantity();
-//        if (p.getQuantity() > 1) {
-//            quantity--;
-//            p.setQuantity(quantity);
-//            basketList.set()
-//        } else {
             basketList.remove(p);
-//        }
+        log.info("Продукт {} удалён удалён из корзины",productDTO.getTitle());
         return basketList;
     }
 
@@ -92,14 +85,6 @@ public class BasketService {
         order.setAddress(address);
         order.setCreateAt(date);
         order = orderRepostory.save(order);
-
-//        product = productService.convertToEntity(basketList.get(0));
-//        orderItems.setOrder(order);
-//        orderItems.setProduct(product);
-//        orderItems.setQuantity(basketList.get(0).getQuantity());
-//        orderItems.setPrice(productService.getPrictProduct(basketList.get(0).getQuantity(), basketList.get(0).getCost()));
-//        orderItems.setCost(basketList.get(0).getCost());
-//        orderItemsRepository.save(orderItems);
 
         for (ProductDTO p : basketList) {
             log.info("Продукт Id - {}, name - {}, Cost - {}, количество {}, Описание1 - {} описание2 - {}", p.getId(), p.getTitle(), p.getPrice(), p.getQuantity(), p.getFullDescription(), p.getShortDescription());
@@ -123,7 +108,7 @@ public class BasketService {
         }
 
         basketList.clear();
-        return order;
+        return new Order();
     }
 
 

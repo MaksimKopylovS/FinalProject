@@ -41,7 +41,7 @@
     function run($rootScope, $http, $localStorage) {
         if ($localStorage.currentUser) {
             console.log($localStorage.currentUser + " cutentIUserratr")
-            tryToLogout = 'Bearer ' + $localStorage.currentUser.token;
+            $http.defaults.headers.common.Authorization = 'Bearer ' + $localStorage.currentUser.token;
         }
     }
 })();

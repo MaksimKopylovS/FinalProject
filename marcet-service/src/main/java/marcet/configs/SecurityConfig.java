@@ -5,7 +5,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -25,17 +24,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http
-                .csrf().disable() // Защита от подделки межсайтовых запросов, отключена
-                .authorizeRequests() // метод для ограничения доступа
-//                .antMatchers("/").permitAll()
-//                .antMatchers("/registration/**").permitAll()
-//                .antMatchers("/auth/**").permitAll()
-//                .antMatchers("/get-products-all/**").authenticated()
+        http.csrf().disable();//Защита от подделки межсайтовых запросов, отключена
+        http.cors();//
+        http.authorizeRequests() // метод для ограничения доступа
                 .antMatchers("/order/**").authenticated() // antMatchers определяет какую ссылку и каким способом защищать
                 .antMatchers("/products/get-all-admin").hasAnyRole("ADMIN")
-//                .antMatchers("/**").authenticated()
-                //.antMatchers("/products/get-products/**").authenticated()
                 .anyRequest()
                 .permitAll() // anyRequest определяет защиту всех ссылок
                 .and()

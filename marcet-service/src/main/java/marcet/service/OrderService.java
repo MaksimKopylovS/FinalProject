@@ -12,6 +12,7 @@ import marcet.repository.OrderRepository;
 import marcet.repository.UserRepository;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
