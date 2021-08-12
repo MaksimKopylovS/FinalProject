@@ -1,9 +1,9 @@
 package marcet.repository;
 
-import marcet.model.OrderItems;
+import marcet.model.OrderItem;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface OrderItemsRepository extends JpaRepository<OrderItems, Long> {
+public interface OrderItemsRepository extends JpaRepository<OrderItem, Long> {
 }

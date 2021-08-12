@@ -2,17 +2,16 @@ package marcet.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import marcet.dto.BasketItemDTO;
 import marcet.dto.OrderShowDTO;
 import marcet.dto.ProductDTO;
-import marcet.model.Address;
-import marcet.model.Order;
-import marcet.model.User;
+import marcet.model.*;
 import marcet.repository.AddressRepository;
+import marcet.repository.OrderItemsRepository;
 import marcet.repository.OrderRepository;
 import marcet.repository.UserRepository;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
@@ -32,6 +31,35 @@ public class OrderService {
     private final UserRepository userRepository;
     private final EntityManager entityManager;
     private final AddressRepository addressRepository;
+    private final AddressService addressService;
+    private final ProductService productService;
+    private final OrderItemsRepository orderItemsRepository;
+
+
+    public Order createOrder(String username, Long addressId) { //LSS создать заказ из корзины
+        User user = userRepository.findByUsername(username).get();
+        Address address = addressService.findAddressById(addressId);
+        int totalQuantity = basketService.getTotalQuantity(username);
+        BigDecimal totalCost = basketService.getTotalCost(username);
+        Order newOrder = new Order();
+        newOrder.setUser(user);
+        newOrder.setAddress(address);
+        newOrder.setTotalQuantity(totalQuantity);
+        newOrder.setTotalCost(totalCost);
+        newOrder = orderRepository.save(newOrder);
+        List<BasketItemDTO> basketlist = basketService.getBasket(username);
+        for (BasketItemDTO bi: basketlist) {
+            Product product = productService.findProductById(bi.getProductDTO().getId());
+            int quantity = bi.getQuantity();
+            BigDecimal price = bi.getProductDTO().getPrice();
+            BigDecimal cost = BigDecimal.ZERO;
+            cost = cost.add(basketService.calculateCost(quantity, price));
+            OrderItem newOrderItem = new OrderItem(newOrder, product, quantity, price, cost);
+            orderItemsRepository.save(newOrderItem);
+        }
+        basketService.clearBasket(username);
+        return newOrder;
+    }
 
 //    public void createOrder(List<String> data, Long countOrder){
 //        log.info("Пришло");

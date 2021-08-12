@@ -36,7 +36,7 @@ public class BasketService {
     @PostConstruct
     public void init() {
         basketList = new ArrayList<>();
-    }
+    } // LSS это теперь не надо наверное
 
 //    public List<ProductDTO> addProductInBasket(ProductDTO productDTO) {
 //        int quantity;
@@ -57,7 +57,7 @@ public class BasketService {
 //        }
 //        return basketList;
 //    }
-    public List<BasketItemDTO> addProductToBasket(ProductDTO productDTO, String username) {
+    public List<BasketItemDTO> addProductToBasket(ProductDTO productDTO, String username) { //LSS добавление товара в корзину и увеличение кол-ва
         User user = userRepository.findByUsername(username).get();
         Product product = productService.findProductById(productDTO.getId());
         List<BasketItemDTO> basketlist = getBasket(username);
@@ -78,7 +78,7 @@ public class BasketService {
 //        return basketList;
 //    }
 
-    public List<BasketItemDTO> getBasket(String username) {
+    public List<BasketItemDTO> getBasket(String username) { //LSS показать всю корзину
         List<BasketItemDTO> basketlist = new ArrayList<>();
         User user = userRepository.findByUsername(username).get();
         basketlist = basketItemRepository.findAllByUser(user).stream().map(BasketItemDTO::new).collect(Collectors.toList());
@@ -92,7 +92,7 @@ public class BasketService {
 //        return basketList;
 //    }
 
-    public List<BasketItemDTO> delProductFromBasket(ProductDTO productDTO, String username) {
+    public List<BasketItemDTO> delProductFromBasket(ProductDTO productDTO, String username) { //LSS удалить товар из корзины
         User user = userRepository.findByUsername(username).get();
         List<BasketItemDTO> basketlist = getBasket(username);
         BasketItemDTO basketItemDTO = basketlist.stream().filter(bi -> bi.getProductDTO().equals(productDTO)).findFirst().get();
@@ -102,7 +102,7 @@ public class BasketService {
     }
 
 
-    public Order createOrder(String userName) {
+/*    public Order createOrder(String userName) {
         Product product;
         Order order = new Order();
         LocalDateTime date = LocalDateTime.now();
@@ -140,7 +140,7 @@ public class BasketService {
 
         basketList.clear();
         return new Order();
-    }
+    }*/
 
 
 
@@ -153,7 +153,7 @@ public class BasketService {
 //        return totalQuantity;
 //    }
 
-    public int getTotalQuantity(String username){
+    public int getTotalQuantity(String username){ //LSS получить общее кол-во в корзине
         int totalQuantity = 0;
         List<BasketItemDTO> basketlist = getBasket(username);
         for (BasketItemDTO bi: basketlist) {
@@ -171,7 +171,7 @@ public class BasketService {
 //        return totalCost;
 //    }
 
-    public BigDecimal getTotalCost(String username) {
+    public BigDecimal getTotalCost(String username) { //LSS получить общую стоимость корзины
         BigDecimal totalCost = BigDecimal.ZERO;
         List<BasketItemDTO> basketlist = getBasket(username);
         for (BasketItemDTO bi: basketlist) {
@@ -180,7 +180,6 @@ public class BasketService {
         return totalCost;
     }
 
-    // LSS ??? Макс, а этот метод здесь для чего?
     public BigDecimal calculateCost(int itemQuantity, BigDecimal itemPrice){
         BigDecimal itemCost = BigDecimal.ZERO;
         BigDecimal totalCost = BigDecimal.ZERO;
@@ -204,8 +203,8 @@ public class BasketService {
 //        return basketList;
 //    }
 
-    public List<BasketItemDTO> decrementProduct(ProductDTO productDTO, String username) {
-        User user = userRepository.findByUsername(username).get();
+    public List<BasketItemDTO> decrementProduct(ProductDTO productDTO, String username) { //LSS уменьшить кол-во товара в корзине
+        //User user = userRepository.findByUsername(username).get();
         List<BasketItemDTO> basketlist = getBasket(username);
         BasketItemDTO basketItemDTO = basketlist.stream().filter(bi -> bi.getProductDTO().equals(productDTO)).findFirst().get();
         BasketItem basketItem = basketItemRepository.findById(basketItemDTO.getBasketItemId()).get();
@@ -213,5 +212,14 @@ public class BasketService {
         basketItemRepository.save(basketItem);
         log.info("Продукт {} уменьшено кол-во из корзины",productDTO.getTitle());
         return getBasket(username);
+    }
+
+    public void clearBasket(String username) { //LSS очистка корзины
+        User user = userRepository.findByUsername(username).get();
+        List<BasketItem> basketItems = basketItemRepository.findAllByUser(user);
+        for (BasketItem bi: basketItems) {
+            basketItemRepository.delete(bi);
+
+        }
     }
 }

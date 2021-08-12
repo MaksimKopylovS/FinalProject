@@ -24,7 +24,7 @@ public class BasketController {
 //        return basketService.addProductInBasket(productDTO);
 //    }
 
-    @PostMapping("/add")
+    @PostMapping("/add") //LSS скопировал метод выше добавив Principal и возврат теперь BasketItemDTO
     public List<BasketItemDTO> addProductToBasket(@RequestBody ProductDTO productDTO, Principal principal) {
         return basketService.addProductToBasket(productDTO, principal.getName());
     }
@@ -44,7 +44,7 @@ public class BasketController {
 //        return basketService.delProductOfBasket(productDTO);
 //    }
 
-    @PostMapping("/del")
+    @PostMapping("/del") //LSS //LSS скопировал метод выше добавив Principal и возврат теперь BasketItemDTO
     public List<BasketItemDTO> delProductFromBasket(@RequestBody ProductDTO productDTO, Principal principal) {
         return basketService.delProductFromBasket(productDTO, principal.getName());
     }
@@ -56,7 +56,7 @@ public class BasketController {
 //        return basketService.decrimentProduct(productDTO);
 //    }
 
-    @PostMapping("/decriment")
+    @PostMapping("/decriment") //LSS скопировал метод выше добавив Principal и возврат теперь BasketItemDTO
     public List<BasketItemDTO> decrementProduct(@RequestBody ProductDTO productDTO, Principal principal){
         log.info("Уменьшить количество продукта: {} ", productDTO.getTitle());
         return basketService.decrementProduct(productDTO, principal.getName());
