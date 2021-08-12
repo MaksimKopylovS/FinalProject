@@ -85,8 +85,8 @@ public class ProductController {
     }
 
     @GetMapping("/{product_id}") // LSS посик товара по id
-    public ProductDTO findProductById(@PathVariable Long product_id) {
-        return productService.findProductById(product_id);
+    public ProductDTO findProductDtoById(@PathVariable Long product_id) {
+        return productService.findProductDtoById(product_id);
     }
 
 

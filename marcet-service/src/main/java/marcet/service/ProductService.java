@@ -78,7 +78,12 @@ public class ProductService {
         productRepository.deleteById(product_id);
     }
 
-    public ProductDTO findProductById(Long product_id) { //LSS поиск продукта по id, Optional может лучше отправлять? или здесь isPresent?
+    public ProductDTO findProductDtoById(Long product_id) { //LSS поиск продукта по id, Optional может лучше отправлять? или здесь isPresent?
         return convertToDto(productRepository.findById(product_id).get());
     }
+
+    public Product findProductById(Long product_id) { //LSS поиск продукта по id, Optional может лучше отправлять? или здесь isPresent?
+        return productRepository.findById(product_id).get();
+    }
+
 }
