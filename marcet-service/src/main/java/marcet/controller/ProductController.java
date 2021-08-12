@@ -53,7 +53,7 @@ public class ProductController {
         return productService.updateProduct(productDTO);
     }
 
-    @DeleteMapping("/{id}") // LSS удаление продукта из базы
+    @DeleteMapping("/{product_id}") // LSS удаление продукта из базы
     public void deleteProductById(@PathVariable Long product_id) {
         productService.deleteProductById(product_id);
     }
