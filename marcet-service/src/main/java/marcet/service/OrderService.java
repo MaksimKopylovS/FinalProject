@@ -54,8 +54,8 @@ public class OrderService {
             BigDecimal price = bi.getProductDTO().getPrice();
             BigDecimal cost = BigDecimal.ZERO;
             cost = cost.add(basketService.calculateCost(quantity, price));
-            OrderItem newOrderItem = new OrderItem(newOrder, product, quantity, price, cost);
-            orderItemsRepository.save(newOrderItem);
+            //OrderItem newOrderItem = new OrderItem(newOrder, product, quantity, price, cost);
+            orderItemsRepository.save(new OrderItem(newOrder, product, quantity, price, cost));
         }
         basketService.clearBasket(username);
         return newOrder;
