@@ -32,6 +32,7 @@ public class OrderController {
         orderCount = 0L;
     }
 
+/*
     @PostMapping("/create")
     public ResponseEntity<?> createOrder(@RequestBody String userName) {
         log.info("Username - {}", userName);
@@ -40,6 +41,17 @@ public class OrderController {
         }
         return ResponseEntity.ok(basketService.createOrder(userName));
     }
+*/
+
+    @PostMapping("/create") //LSS просто скопировал создание заказа как выше было, подставил только другой сервис
+    public ResponseEntity<?> createOrder(@RequestParam String userName, Long addressId) {
+        log.info("Username - {}", userName);
+        if(userName.equals(null)){
+            return new ResponseEntity<>(new MarketError(HttpStatus.UNAUTHORIZED.value(), "Incorrect username"), HttpStatus.BAD_REQUEST);
+        }
+        return ResponseEntity.ok(orderService.createOrder(userName, addressId));
+    }
+
 
     @PostMapping("/show")
     public ResponseEntity<?> showOrderOnNumber(@RequestBody Long orderNumber){

@@ -1,6 +1,5 @@
 package marcet.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Cascade;
@@ -9,9 +8,6 @@ import org.hibernate.annotations.CreationTimestamp;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.util.Collection;
-import java.util.Date;
 import java.util.List;
 
 @Data
@@ -27,7 +23,7 @@ public class Order {
 
     @OneToMany(mappedBy = "order") // LSS Добавил новую связь и новый парамент в модель Order
     @Cascade(org.hibernate.annotations.CascadeType.ALL) // на лекции ещё вот это добавляли здесь - вроде включили каскадное сохранение
-    private List<OrderItems> orderItems;
+    private List<OrderItem> orderItems;
 
     @ManyToOne // LSS добавил связь и изменил тип данных
     @JoinColumn(name = "user_id")

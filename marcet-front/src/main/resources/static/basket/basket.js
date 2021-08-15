@@ -6,13 +6,15 @@ angular.module('app').controller('basketController', function ($scope, $http, $l
     $scope.getBasket = function () {
         $http.get(contextPath + 'service/basket/get-basket')
             .then(function (response) {
+                console.log(response)
                 $scope.basketProduct = response.data;
                 $scope.sumCost();
             });
     };
 
-    $scope.delProductOfBasket = function (p) {
-        $http.post(contextPath + 'service/basket/del', p)
+    $scope.delProductOfBasket = function (productDTO) {
+        console.log(productDTO + "    product")
+        $http.post(contextPath + 'service/basket/del', productDTO)
             .then(function (response){
                 $scope.basketProduct = response.data;
                 $scope.sumCost();
@@ -55,6 +57,7 @@ angular.module('app').controller('basketController', function ($scope, $http, $l
     }
 
     $scope.decrimentCount = function (p){
+        console.log(p);
         $http.post(contextPath + 'service/basket/decriment', p)
             .then(function(response){
                 $scope.basketProduct = response.data

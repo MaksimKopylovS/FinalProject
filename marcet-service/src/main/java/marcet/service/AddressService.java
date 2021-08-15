@@ -59,4 +59,8 @@ public class AddressService {
         addressRepository.save(newAddress);
         address.setAddressId(newAddress.getAddressId());
     }
+
+    public Address findAddressById(Long addressId) { // LSS поиск адреса по id
+        return addressRepository.findById(addressId).get();
+    }
 }

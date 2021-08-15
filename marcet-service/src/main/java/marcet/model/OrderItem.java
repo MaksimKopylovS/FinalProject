@@ -15,7 +15,7 @@ import java.util.Collection;
 @Setter
 @Table(name = "order_items_tbl")
 @NoArgsConstructor
-public class OrderItems {
+public class OrderItem {
 
 
     @Id
@@ -41,7 +41,7 @@ public class OrderItems {
     @Column(name = "cost_fld")
     private BigDecimal cost;
 
-    public OrderItems (Order order, Product product, int quantity, BigDecimal price, BigDecimal cost){
+    public OrderItem(Order order, Product product, int quantity, BigDecimal price, BigDecimal cost){
         this.order = order;
         this.product = product;
         this.quantity = quantity;

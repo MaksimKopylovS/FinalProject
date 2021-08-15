@@ -41,6 +41,23 @@ public class ProductController {
         return productService.getProduct();
     }
 
+    @PostMapping //LSS создание нового продукта
+    @ResponseStatus(HttpStatus.CREATED)
+    public ProductDTO createNewProduct(@RequestBody ProductDTO productDTO){
+        return productService.saveNewProduct(productDTO);
+    }
+
+    @PutMapping //LSS обновление имеющегося продукта
+    @ResponseStatus(HttpStatus.CREATED)
+    public ProductDTO editProducts(@RequestBody ProductDTO productDTO){
+        return productService.updateProduct(productDTO);
+    }
+
+    @DeleteMapping("/{product_id}") // LSS удаление продукта из базы
+    public void deleteProductById(@PathVariable Long product_id) {
+        productService.deleteProductById(product_id);
+    }
+
 
     @RequestMapping(value = "/get-all", method = RequestMethod.GET)
     public Page<ProductDTO> findAllProducts(@RequestParam MultiValueMap<String, String> params,
@@ -59,8 +76,8 @@ public class ProductController {
     }
 
     @GetMapping("/{product_id}") // LSS посик товара по id
-    public ProductDTO findProductById(@PathVariable Long product_id) {
-        return productService.findProductById(product_id);
+    public ProductDTO findProductDtoById(@PathVariable Long product_id) {
+        return productService.findProductDtoById(product_id);
     }
 
 
