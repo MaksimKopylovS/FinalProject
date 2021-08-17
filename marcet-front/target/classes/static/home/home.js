@@ -19,13 +19,24 @@ angular.module('app').controller('homeController', function($scope, $http, $loca
     };
 
     $scope.test2 = function () {
-        let id = 1;
+        let id = 29;
         $http.delete(contextPath + 'service/admin/' + id )
             .then(function successCalback(response){
                 $scope.basketProduct = response.data
                 console.log(response.data)
             });
     };
+
+
+    $scope.test3 = function () {
+        let id = 1;
+        $http.get(contextPath + 'service/order')
+            .then(function successCalback(response){
+                $scope.basketProduct = response.data
+                console.log(response.data)
+            });
+    };
+
     // $scope.foon = function () {
     //     var product = {id: 1, title: super}
     //     $http.put(contextPath + 'service/products/create', product)

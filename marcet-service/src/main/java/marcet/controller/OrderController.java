@@ -14,6 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,19 +46,25 @@ public class OrderController {
 */
 
     @PostMapping("/create") //LSS просто скопировал создание заказа как выше было, подставил только другой сервис
-    public ResponseEntity<?> createOrder(@RequestBody OrderDTO orderDTO) {
-        log.info("Username - {}, addressId - {} ", orderDTO.getUserName(), orderDTO.getAddressId());
-        if(orderDTO.getUserName().equals(null)){
+    public ResponseEntity<?> createOrder(@RequestParam String userName, Long addressId) {
+        log.info("Username - {}", userName);
+        if(userName.equals(null)){
             return new ResponseEntity<>(new MarketError(HttpStatus.UNAUTHORIZED.value(), "Incorrect username"), HttpStatus.BAD_REQUEST);
         }
-        return ResponseEntity.ok(orderService.createOrder(orderDTO.getUserName(), orderDTO.getAddressId()));
+        return ResponseEntity.ok(orderService.createOrder(userName, addressId));
     }
-
 
 
     @PostMapping("/show")
     public ResponseEntity<?> showOrderOnNumber(@RequestBody Long orderNumber){
         log.info("OrderNumber {}", orderNumber);
         return ResponseEntity.ok(orderService.showOrderOnNumber(orderNumber));
+    }
+
+    @GetMapping //LSS список всех заказов по юзеру
+    public List<OrderDTO> findAllOrderByUsername(Principal principal) {
+        String username = principal.getName();
+        List<OrderDTO> orderList = orderService.getAllByUsername(username);
+        return orderList;
     }
 }
