@@ -3,6 +3,7 @@ package marcet.service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import marcet.dto.BasketItemDTO;
+import marcet.dto.OrderDTO;
 import marcet.dto.OrderShowDTO;
 import marcet.dto.ProductDTO;
 import marcet.model.*;
@@ -19,6 +20,7 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -114,6 +116,11 @@ public class OrderService {
             );
         }
         return orderShowDTOList;
+    }
+
+    public List<OrderDTO> getAllByUsername (String username) { //LSS список всех заказов по юзеру
+        User user = userRepository.findByUsername(username).get();
+        return orderRepository.findAllByUser(user).stream().map(OrderDTO::new).collect(Collectors.toList());
     }
 
 
