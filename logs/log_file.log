@@ -1803,3 +1803,4 @@ org.springframework.dao.EmptyResultDataAccessException: No class marcet.model.Pr
 2021-08-18 14:48:14.563  INFO 500 --- [http-nio-8704-exec-8] marcet.service.OrderService              : Liset Size 3
 2021-08-18 14:48:58.236  INFO 500 --- [http-nio-8704-exec-10] marcet.controller.ProductController      : Продукты добавленные в корзину {page=1}
 2021-08-18 14:49:01.653  INFO 500 --- [http-nio-8704-exec-2] marcet.controller.AdminPanelController   : Продукты добавленные в корзину {page=1}
+2021-08-18 14:51:59.728  INFO 500 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
