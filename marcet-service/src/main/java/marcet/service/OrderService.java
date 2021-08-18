@@ -136,8 +136,8 @@ public class OrderService {
 
         OrderShowDTO orderShowDTOList = new OrderShowDTO(
                 userService.convertToDto(user),
-                addressService.getAddressByUser(user.getUsername()),
-                productList,
+                addressService.convertToDto(order.getAddress()),
+                setQantityProductDTOList(productList, orderItemList),
                 orderItemList
         );
         return orderShowDTOList;
@@ -159,6 +159,13 @@ public class OrderService {
     public OrderItemDTO convertToDto(OrderItem orderItem) {
         OrderItemDTO orderItemDTO = modelMapper.map(orderItem, OrderItemDTO.class);
         return orderItemDTO;
+    }
+
+    private List<ProductDTO> setQantityProductDTOList(List<ProductDTO> productList, List<OrderItem> orderItemList){
+        for (int i = 0; i < orderItemList.size(); i++){
+            productList.get(i).setQuantity(orderItemList.get(i).getQuantity());
+        }
+        return productList;
     }
 
 //    public Long getLastOrderCount(){
