@@ -13,6 +13,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 @Slf4j
@@ -62,9 +63,15 @@ public class ProductController {
     @RequestMapping(value = "/get-all", method = RequestMethod.GET)
     public Page<ProductDTO> findAllProducts(@RequestParam MultiValueMap<String, String> params,
                                             @RequestParam(name = "page", defaultValue = "1") Integer page) {
-        for (int i = 0; i < params.size(); i++) {
-            log.info("Продукты добавленные в корзину {}", params.toSingleValueMap());
+        Iterator<String> iteratot = params.keySet().iterator();
+        log.info("params size - {}", params.size());
+        while(iteratot.hasNext()) {
+            String theKey = (String)iteratot.next();
+            //log.info("Продукты добавленные в корзину {}", params.toSingleValueMap());
+            log.info("Key  {} Params {}", theKey,params.getFirst(theKey));
+
         }
+
 
         return productService.findAllProducts(ProductSpecifications.build(params), page, 5);
     }

@@ -26,14 +26,11 @@ import java.util.List;
 @RequestMapping("/order")
 public class OrderController {
 
-    private static Long orderCount;
+    //private static Long orderCount;
     private final BasketService basketService;
     private final OrderService orderService;
 
-    @PostConstruct
-    public void init(){
-        orderCount = 0L;
-    }
+
 
 /*
     @PostMapping("/create")

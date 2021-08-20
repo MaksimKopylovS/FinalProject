@@ -1,5 +1,6 @@
 package marcet.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,6 +10,7 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Table(name = "categories_tbl")
+@AllArgsConstructor
 public class Category {
 
     @Id
