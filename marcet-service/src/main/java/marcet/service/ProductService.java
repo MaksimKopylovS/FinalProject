@@ -37,8 +37,8 @@ public class ProductService {
     }
 
     public Page<ProductDTO> findAllProducts(Specification<Product> spec, int page, int pageSize) {
-        Page<ProductDTO> productDTOS = productRepository.findAll(spec, PageRequest.of(page - 1, pageSize)).map(ProductDTO::new);
-        Page<ProductDTO> page1 = productRepository.findAll(PageRequest.of(page - 1, pageSize)).map(ProductDTO::new);
+//        Page<ProductDTO> productDTOS = productRepository.findAll(spec, PageRequest.of(page - 1, pageSize)).map(ProductDTO::new);
+//        Page<ProductDTO> page1 = productRepository.findAll(PageRequest.of(page - 1, pageSize)).map(ProductDTO::new);
         return productRepository.findAll(spec, PageRequest.of(page - 1, pageSize)).map(ProductDTO::new);
     }
 

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.util.MultiValueMap;
 
+import javax.persistence.criteria.*;
 import java.math.BigDecimal;
 
 
@@ -20,8 +21,19 @@ public class ProductSpecifications {
         return (Specification<Product>) (root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.equal(root.get("productId"), lon);
     }
 
-    private static Specification<Product> idCategoryFilter(String category) {
-        return (Specification<Product>) (root, criteriaQuery, criteriaBuilder) -> criteriaBuilder.equal(root.get("categories"), category);
+//    private static Specification<Product> idCategoryFilter(Long categoryId) {
+//        return (Specification<Product>) (root, criteriaQuery, criteriaBuilder) ->
+//                criteriaBuilder.equal(root.get("categoryId"), categoryId);
+//    }
+
+    private static Specification<Product> FilterByCategory(Long id) { //LSS новый фильтр по id категории
+        return new Specification<Product>() {
+            @Override
+            public Predicate toPredicate(Root<Product> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
+                Join<Product, Category> productCategoryJoin = root.join("categories");
+                return criteriaBuilder.equal(productCategoryJoin.get("categoryId"), id);
+            }
+        };
     }
 
     private static Specification<Product> priceGreaterOrEqualsThan(BigDecimal minPrice) {
@@ -45,9 +57,15 @@ public class ProductSpecifications {
             spec = spec.and(ProductSpecifications.idFilter(Long.parseLong(params.getFirst("id"))));
         }
 
-        if (params.containsKey("category") && !params.getFirst("category").isBlank()) {
-            spec = spec.and(ProductSpecifications.idCategoryFilter(params.getFirst("category")));
+//        if (params.containsKey("id_category") && !params.getFirst("id_category").isBlank()) {
+//            spec = spec.and(ProductSpecifications.idCategoryFilter(Long.parseLong(params.getFirst("id_category"))));
+//        }
+
+        //LSS новый фильтр по id категории
+        if (params.containsKey("id_category") && !params.getFirst("id_category").isBlank()) {
+            spec = spec.and(ProductSpecifications.FilterByCategory(Long.parseLong(params.getFirst("id_category"))));
         }
+
 
         if (params.containsKey("min_cost") && !params.getFirst("min_cost").isBlank()) {
             spec = spec.and(ProductSpecifications.priceGreaterOrEqualsThan(BigDecimal.valueOf(Long.parseLong(params.getFirst("min_cost")))));
@@ -62,3 +80,17 @@ public class ProductSpecifications {
     }
 
 }
+
+//public class PersonSpecification {
+//    public static Specification<Person> personWorksIn(final String companyName) {
+//        return new Specification<Person>() {
+//            @Override
+//            public Predicate toPredicate(Root<Person> root,
+//                                         CriteriaQuery<?> criteriaQuery,
+//                                         CriteriaBuilder criteriaBuilder) {
+//                Join<Person, Company> company = root.join("workingPlaces");
+//                return criteriaBuilder.equal(company.get("name"), companyName);
+//            }
+//        };
+//    }
+//}
