@@ -1,7 +1,6 @@
 package marcet.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -9,6 +8,9 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Table(name = "categories_tbl")
+@AllArgsConstructor
+@Data
+@NoArgsConstructor
 public class Category {
 
     @Id
@@ -19,4 +21,7 @@ public class Category {
     @Column(name = "title_fld")
     private String title;
 
+    public Category(String title) {
+        this.title = title;
+    }
 }

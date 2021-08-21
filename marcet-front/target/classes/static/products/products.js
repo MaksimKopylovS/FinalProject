@@ -10,7 +10,7 @@ angular.module('app').controller('productController', function($scope, $http, $l
             method: 'GET',
             params: {
                 id: $scope.filter ? $scope.filter.id : null,
-                id_categoriy: $scope.filter ? $scope.filter.id_categoriy : null,
+                category: $scope.filter ? $scope.filter.category : null,
                 title: $scope.filter ? $scope.filter.title : null,
                 min_cost: $scope.filter ? $scope.filter.min_cost : null,
                 max_cost: $scope.filter ? $scope.filter.max_cost : null,
@@ -68,12 +68,13 @@ angular.module('app').controller('productController', function($scope, $http, $l
     };
 
     $scope.showDerevo = function(){
-        $scope.filter.id_categoriy = 1;
+        $scope.filter.category = "Танцевальная обувь";
         $scope.getProducts();
     }
 
     $scope.showIron = function(){
-        $scope.filter.id_categoriy = 2;
+//        $scope.filter.id_categoriy = 2;
+        $scope.filter.category = 2;
         $scope.getProducts();
     }
 

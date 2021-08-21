@@ -15,7 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 public class OrderShowDTO {
         private UserDTO userDTO;
-        private List<AddressDTO> addressDTO;
+        private AddressDTO addressDTO;
         private List<ProductDTO> productDTO;
         private List<OrderItem> orderItem;
         //private Order order;

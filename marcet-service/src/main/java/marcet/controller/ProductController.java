@@ -3,6 +3,7 @@ package marcet.controller;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import marcet.dto.ProductDTO;
+import marcet.model.Category;
 import marcet.model.Product;
 import marcet.service.ProductService;
 import marcet.specifications.ProductSpecifications;
@@ -13,6 +14,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 @Slf4j
@@ -62,9 +64,15 @@ public class ProductController {
     @RequestMapping(value = "/get-all", method = RequestMethod.GET)
     public Page<ProductDTO> findAllProducts(@RequestParam MultiValueMap<String, String> params,
                                             @RequestParam(name = "page", defaultValue = "1") Integer page) {
-        for (int i = 0; i < params.size(); i++) {
-            log.info("Продукты добавленные в корзину {}", params.toSingleValueMap());
+        Iterator<String> iteratot = params.keySet().iterator();
+        log.info("params size - {}", params.size());
+        while(iteratot.hasNext()) {
+            String theKey = (String)iteratot.next();
+            //log.info("Продукты добавленные в корзину {}", params.toSingleValueMap());
+            log.info("Key  {} Params {}", theKey,params.getFirst(theKey));
+
         }
+
 
         return productService.findAllProducts(ProductSpecifications.build(params), page, 5);
     }
@@ -78,6 +86,21 @@ public class ProductController {
     @GetMapping("/{product_id}") // LSS посик товара по id
     public ProductDTO findProductDtoById(@PathVariable Long product_id) {
         return productService.findProductDtoById(product_id);
+    }
+
+    @GetMapping("/get-by-category/{category_id}") //LSS все товары по id категории
+    public List<ProductDTO> findAllByCategoryId(@PathVariable Long category_id) {
+        List<ProductDTO> list = productService.findAllByCategory(category_id);
+        log.info("Продукты категории {} размер {}", list.toString(), list.size());
+        return list;
+    }
+
+    @GetMapping("/getcategory/{id}") //LSS тестил почему категории не дастаются
+    public List<Category> findCategoriesById(@PathVariable Long id) {
+        System.out.println("ищем категории");
+        List<Category> categoryList = productService.findCategoriesById(id);
+        System.out.println(categoryList);
+        return categoryList;
     }
 
 
