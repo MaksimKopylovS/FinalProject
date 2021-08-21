@@ -68,7 +68,7 @@ angular.module('app').controller('productController', function($scope, $http, $l
     };
 
     $scope.showDerevo = function(){
-        $scope.filter.category = "Танцевальная обувь";
+        $scope.filter.id_categoriy = 1;
         $scope.getProducts();
     }
 

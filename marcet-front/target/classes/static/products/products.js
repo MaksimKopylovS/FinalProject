@@ -73,7 +73,8 @@ angular.module('app').controller('productController', function($scope, $http, $l
     }
 
     $scope.showIron = function(){
-        $scope.filter.id_categoriy = 2;
+//        $scope.filter.id_categoriy = 2;
+        $scope.filter.category = 2;
         $scope.getProducts();
     }
 

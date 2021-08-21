@@ -3,6 +3,7 @@ package marcet.controller;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import marcet.dto.ProductDTO;
+import marcet.model.Category;
 import marcet.model.Product;
 import marcet.service.ProductService;
 import marcet.specifications.ProductSpecifications;
@@ -85,6 +86,21 @@ public class ProductController {
     @GetMapping("/{product_id}") // LSS посик товара по id
     public ProductDTO findProductDtoById(@PathVariable Long product_id) {
         return productService.findProductDtoById(product_id);
+    }
+
+    @GetMapping("/get-by-category/{category_id}") //LSS все товары по id категории
+    public List<ProductDTO> findAllByCategoryId(@PathVariable Long category_id) {
+        List<ProductDTO> list = productService.findAllByCategory(category_id);
+        log.info("Продукты категории {} размер {}", list.toString(), list.size());
+        return list;
+    }
+
+    @GetMapping("/getcategory/{id}") //LSS тестил почему категории не дастаются
+    public List<Category> findCategoriesById(@PathVariable Long id) {
+        System.out.println("ищем категории");
+        List<Category> categoryList = productService.findCategoriesById(id);
+        System.out.println(categoryList);
+        return categoryList;
     }
 
 
