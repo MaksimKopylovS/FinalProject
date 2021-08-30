@@ -36,12 +36,4 @@ public class Address {
     @JoinColumn(name = "user_id")
     private User user;
 
-//    @Column(name = "user_id")
-//    private Long userId;
-
-//    @OneToMany
-//    @JoinTable(name = "orders_tbl",
-//            joinColumns = @JoinColumn(name = "address_id"))
-//    private Collection<Order> ordersCollection;
-
 }

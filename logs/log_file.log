@@ -1,62 +1,9 @@
-2021-08-22 15:21:18.810  WARN 5416 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1d14h51m26s250ms771µs578ns).
-2021-08-22 15:21:54.092  INFO 5416 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2021-08-22 15:26:54.095  INFO 5416 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2021-08-22 15:31:54.097  INFO 5416 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2021-08-22 15:36:54.100  INFO 5416 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2021-08-22 15:41:46.828  INFO 16816 --- [main] marcet.MarcetServiceApplication          : No active profile set, falling back to default profiles: default
-2021-08-22 15:41:48.000  INFO 16816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2021-08-22 15:41:48.181  INFO 16816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 166ms. Found 7 repository interfaces.
-2021-08-22 15:41:48.578  INFO 16816 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=eadebd62-2d8e-3823-bb1c-489c9a12878a
-2021-08-22 15:41:48.728  INFO 16816 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e87a4398] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-08-22 15:41:48.775  INFO 16816 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$4944695] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-08-22 15:41:49.134  INFO 16816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8704 (http)
-2021-08-22 15:41:49.184  INFO 16816 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-08-22 15:41:49.184  INFO 16816 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2021-08-22 15:41:49.196  INFO 16816 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
-2021-08-22 15:41:49.196  INFO 16816 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2021-08-22 15:41:49.196  INFO 16816 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2021-08-22 15:41:49.202  INFO 16816 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
-2021-08-22 15:41:49.476  INFO 16816 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-08-22 15:41:49.477  INFO 16816 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2612 ms
-2021-08-22 15:41:49.823  INFO 16816 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-08-22 15:41:51.127  INFO 16816 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-08-22 15:41:51.292  INFO 16816 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2021-08-22 15:41:51.480  INFO 16816 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
-2021-08-22 15:41:51.484  INFO 16816 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2021-08-22 15:41:51.766  INFO 16816 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2021-08-22 15:41:52.046  INFO 16816 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2021-08-22 15:41:53.261  INFO 16816 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-08-22 15:41:54.103  INFO 16816 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2021-08-22 15:41:54.634  WARN 16816 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-08-22 15:41:54.789  INFO 16816 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7095b688, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b5a04b0, org.springframework.security.web.header.HeaderWriterFilter@44f338ec, org.springframework.web.filter.CorsFilter@7c919e1e, org.springframework.security.web.authentication.logout.LogoutFilter@2c0d7099, marcet.configs.JwtRequestFilter@58fd1214, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b78a946, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ecbfba1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@bddac1c, org.springframework.security.web.session.SessionManagementFilter@3fb4beb1, org.springframework.security.web.access.ExceptionTranslationFilter@78e4fa1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@103033fe]
-2021-08-22 15:41:54.815  WARN 16816 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-08-22 15:41:54.815  INFO 16816 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-08-22 15:41:54.821  WARN 16816 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2021-08-22 15:41:54.821  INFO 16816 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2021-08-22 15:41:55.068  INFO 16816 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-08-22 15:41:57.535  INFO 16816 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2021-08-22 15:41:57.632  INFO 16816 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2021-08-22 15:41:57.837  INFO 16816 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2021-08-22 15:41:57.837  INFO 16816 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2021-08-22 15:41:58.109  INFO 16816 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2021-08-22 15:41:58.110  INFO 16816 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2021-08-22 15:41:58.694  INFO 16816 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2021-08-22 15:41:58.740  INFO 16816 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2021-08-22 15:41:58.740  INFO 16816 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2021-08-22 15:41:58.741  INFO 16816 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2021-08-22 15:41:58.741  INFO 16816 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2021-08-22 15:41:58.741  INFO 16816 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2021-08-22 15:41:58.741  INFO 16816 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2021-08-22 15:41:58.742  INFO 16816 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2021-08-22 15:41:58.966  INFO 16816 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2021-08-22 15:41:58.980  INFO 16816 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2021-08-22 15:41:58.995  INFO 16816 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2021-08-22 15:41:59.018  INFO 16816 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1629636119016 with initial instances count: 3
-2021-08-22 15:41:59.022  INFO 16816 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MARCET-SERVICE with eureka with status UP
-2021-08-22 15:41:59.022  INFO 16816 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1629636119022, current=UP, previous=STARTING]
-2021-08-22 15:41:59.024  INFO 16816 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MARCET-SERVICE/WIN-P96KM697CTJ:marcet-service:8704: registering service...
-2021-08-22 15:41:59.078  INFO 16816 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MARCET-SERVICE/WIN-P96KM697CTJ:marcet-service:8704 - registration status: 204
-2021-08-22 15:41:59.090  INFO 16816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8704 (http) with context path ''
-2021-08-22 15:41:59.091  INFO 16816 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8704
+2021-08-30 01:00:11.655  WARN 2344 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h29s146ms115µs135ns).
+2021-08-30 09:38:31.266  WARN 2344 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8h38m26s707ms211µs115ns).
+2021-08-30 09:40:55.755  INFO 2344 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-30 09:45:55.757  INFO 2344 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-30 09:50:55.759  INFO 2344 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-30 09:55:55.760  INFO 2344 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-30 10:00:55.763  INFO 2344 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-30 10:05:55.765  INFO 2344 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2021-08-30 10:10:55.767  INFO 2344 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

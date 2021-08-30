@@ -38,25 +38,6 @@ public class BasketService {
         basketList = new ArrayList<>();
     } // LSS это теперь не надо наверное
 
-//    public List<ProductDTO> addProductInBasket(ProductDTO productDTO) {
-//        int quantity;
-//        for (int i = 0; i < basketList.size(); i++) {
-//            if (basketList.get(i).getId() == productDTO.getId()) {
-//                quantity = basketList.get(i).getQuantity();
-//                quantity++;
-//                productDTO.setQuantity(quantity);
-//                log.info("{}", productDTO.getQuantity());
-//                basketList.set(i, productDTO);
-//                log.info("Число продуктов {}  {}  увеличенно на 1 ", productDTO.getId(), productDTO.getTitle());
-//                return basketList;
-//            }
-//        }
-//        basketList.add(productDTO);
-//        for (ProductDTO p : basketList) {
-//            log.info("addProductInBasket Продукты добавленные в корзину {}", p.getTitle());
-//        }
-//        return basketList;
-//    }
     public List<BasketItemDTO> addProductToBasket(ProductDTO productDTO, String username) { //LSS добавление товара в корзину и увеличение кол-ва
         User user = userRepository.findByUsername(username).get();
         Product product = productService.findProductById(productDTO.getId());
@@ -74,9 +55,6 @@ public class BasketService {
         return getBasket(username);
     }
 
-//    public List<ProductDTO> getBasket() {
-//        return basketList;
-//    }
 
     public List<BasketItemDTO> getBasket(String username) { //LSS показать всю корзину
         List<BasketItemDTO> basketlist = new ArrayList<>();
@@ -85,12 +63,6 @@ public class BasketService {
         return basketlist;
     }
 
-//    public List<ProductDTO> delProductOfBasket(ProductDTO productDTO) {
-//        ProductDTO p = basketList.stream().filter(pr -> pr.getTitle().equals(productDTO.getTitle())).findFirst().get();
-//            basketList.remove(p);
-//        log.info("Продукт {} удалён удалён из корзины",productDTO.getTitle());
-//        return basketList;
-//    }
 
     public List<BasketItemDTO> delProductFromBasket(ProductDTO productDTO, String username) { //LSS удалить товар из корзины
         User user = userRepository.findByUsername(username).get();
@@ -102,57 +74,6 @@ public class BasketService {
     }
 
 
-/*    public Order createOrder(String userName) {
-        Product product;
-        Order order = new Order();
-        LocalDateTime date = LocalDateTime.now();
-        OrderItems orderItems = new OrderItems();
-        User user = userRepository.findByUsername(userName).get();
-        Address address = addressRepository.findByUser(user);
-
-        order.setUser(user);
-        order.setTotalQuantity(getTotalQuantity(basketList));
-        order.setTotalCost(getTotalCost(basketList));
-        order.setAddress(address);
-        order.setCreateAt(date);
-        order = orderRepostory.save(order);
-
-        for (ProductDTO p : basketList) {
-            log.info("Продукт Id - {}, name - {}, Cost - {}, количество {}, Описание1 - {} описание2 - {}", p.getId(), p.getTitle(), p.getPrice(), p.getQuantity(), p.getFullDescription(), p.getShortDescription());
-            log.info(" Tota Quantity {},  Total Cost {} ", getTotalQuantity(basketList), getTotalCost(basketList));
-            product = productService.convertToEntity(p);
-
-            orderItemsRepository.save(
-                    new OrderItems(
-                            order,
-                            product,
-                            p.getQuantity(),
-                            p.getPrice(),
-                            productService.getPriceProduct
-                                    (
-                                            p.getQuantity(),
-                                            p.getPrice()
-                                    )
-                    )
-            );
-            log.info("Продукт Id - {}, name - {}, Cost - {}, СОХРАНЁН", p.getId(), p.getTitle(), p.getPrice());
-        }
-
-        basketList.clear();
-        return new Order();
-    }*/
-
-
-
-
-//    public int getTotalQuantity(List<ProductDTO> productDTOList) {
-//        int totalQuantity = 0;
-//        for (ProductDTO p : productDTOList) {
-//            totalQuantity = totalQuantity + p.getQuantity();
-//        }
-//        return totalQuantity;
-//    }
-
     public int getTotalQuantity(String username){ //LSS получить общее кол-во в корзине
         int totalQuantity = 0;
         List<BasketItemDTO> basketlist = getBasket(username);
@@ -161,15 +82,6 @@ public class BasketService {
         }
         return totalQuantity;
     }
-
-//    public BigDecimal getTotalCost(List<ProductDTO> productDTOList) {
-//        BigDecimal totalCost = BigDecimal.ZERO;
-//        BigDecimal sum = BigDecimal.ZERO;
-//        for (ProductDTO p : productDTOList) {
-//            totalCost = totalCost.add(calculateCost(p.getQuantity(), p.getPrice()));
-//        }
-//        return totalCost;
-//    }
 
     public BigDecimal getTotalCost(String username) { //LSS получить общую стоимость корзины
         BigDecimal totalCost = BigDecimal.ZERO;
@@ -188,20 +100,6 @@ public class BasketService {
         totalCost = totalCost.add(itemCost);
         return totalCost;
     }
-
-//    public List<ProductDTO> decrimentProduct(ProductDTO productDTO) {
-//        int quantity;
-//        for (int i = 0; i < basketList.size(); i++){
-//            if (productDTO.getTitle().equals(basketList.get(i).getTitle())){
-//                quantity = basketList.get(i).getQuantity();
-//                quantity--;
-//                log.info("Ravno!!QQQQQQQQQQQQQQQQQQQQQ");
-//                basketList.get(i).setQuantity(quantity);
-//                return basketList;
-//            }
-//        }
-//        return basketList;
-//    }
 
     public List<BasketItemDTO> decrementProduct(ProductDTO productDTO, String username) { //LSS уменьшить кол-во товара в корзине
         //User user = userRepository.findByUsername(username).get();

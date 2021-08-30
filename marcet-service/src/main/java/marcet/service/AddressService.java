@@ -26,16 +26,6 @@ public class AddressService {
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
 
-//    public List<AddressDTO> getAdressNoUserName(String userName){
-//        User user = userRepository.findByUsername(userName).get();
-//        log.info("user ID {}", user.getUserId());
-//        List<AddressDTO> addressList = new ArrayList<>();
-//
-//        addressList.add(convertToDto(addressRepository.findByUser(user)));
-//        log.info("Address List size  {}, {}", addressList.size(), addressList.get(0).getCity());
-//        return addressList;
-//    }
-
     public AddressDTO convertToDto(Address address){
         AddressDTO addressDTO = modelMapper.map(address, AddressDTO.class);
         return addressDTO;

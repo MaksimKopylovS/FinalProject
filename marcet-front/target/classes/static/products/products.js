@@ -10,7 +10,7 @@ angular.module('app').controller('productController', function($scope, $http, $l
             method: 'GET',
             params: {
                 id: $scope.filter ? $scope.filter.id : null,
-                category: $scope.filter ? $scope.filter.category : null,
+                id_category: $scope.filter ? $scope.filter.id_category : null,
                 title: $scope.filter ? $scope.filter.title : null,
                 min_cost: $scope.filter ? $scope.filter.min_cost : null,
                 max_cost: $scope.filter ? $scope.filter.max_cost : null,
@@ -46,8 +46,8 @@ angular.module('app').controller('productController', function($scope, $http, $l
         for (let i = startPage; i < endPage + 1; i++) {
             arr.push(i);
         };
-        $scope.filter.id_categoriy = null;
-        console.log($scope.filter.id_categoriy)
+        $scope.filter.id_category = null;
+        console.log($scope.filter.id_category)
         return arr
     };
 
@@ -68,23 +68,22 @@ angular.module('app').controller('productController', function($scope, $http, $l
     };
 
     $scope.showDerevo = function(){
-        $scope.filter.category = "Танцевальная обувь";
+        $scope.filter.id_category = 1;
         $scope.getProducts();
     }
 
     $scope.showIron = function(){
-//        $scope.filter.id_categoriy = 2;
-        $scope.filter.category = 2;
+        $scope.filter.id_category = 2;
         $scope.getProducts();
     }
 
     $scope.showInstrument = function(){
-        $scope.filter.id_categoriy = 3;
+        $scope.filter.id_category = 3;
         $scope.getProducts();
     }
 
     $scope.showSmesi = function(){
-        $scope.filter.id_categoriy = 4;
+        $scope.filter.id_category = 4;
         $scope.getProducts();
 
     }

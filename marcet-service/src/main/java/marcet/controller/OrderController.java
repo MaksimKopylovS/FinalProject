@@ -26,22 +26,8 @@ import java.util.List;
 @RequestMapping("/order")
 public class OrderController {
 
-    //private static Long orderCount;
     private final BasketService basketService;
     private final OrderService orderService;
-
-
-
-/*
-    @PostMapping("/create")
-    public ResponseEntity<?> createOrder(@RequestBody String userName) {
-        log.info("Username - {}", userName);
-        if(userName.equals(null)){
-            return new ResponseEntity<>(new MarketError(HttpStatus.UNAUTHORIZED.value(), "Incorrect username"), HttpStatus.BAD_REQUEST);
-        }
-        return ResponseEntity.ok(basketService.createOrder(userName));
-    }
-*/
 
     @PostMapping("/create") //LSS просто скопировал создание заказа как выше было, подставил только другой сервис
     public ResponseEntity<?> createOrder(@RequestBody CreateOrderDTO createOrderDTO) {

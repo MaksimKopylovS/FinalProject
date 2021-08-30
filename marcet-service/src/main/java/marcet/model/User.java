@@ -37,26 +37,4 @@ public class User {
     @OneToMany(mappedBy = "user") // LSS добавил новую зависимость и параметр список адресов
     private List<Address> listAddresses;
 
-
-//    @ManyToMany
-//    @JoinTable(name = "addresses_tbl",
-//            joinColumns = @JoinColumn(name = "user_id"),
-//            inverseJoinColumns = @JoinColumn(name = "user_id"))
-//    private Collection<Address> addressCollection;
-
-//    @OneToMany
-//    @JoinTable(name = "orders_tbl",
-//            joinColumns = @JoinColumn(name = "user_id"))
-//    private Collection<Order> ordersCollection;
-
-//    @OneToMany
-//    @JoinTable(name = "addresses_tbl",
-//            joinColumns = @JoinColumn(name = "user_id"))
-//    private Collection<User> addressCollection;
-//
-//    @OneToMany
-//    @JoinTable(name = "orders_tbl",
-//            joinColumns = @JoinColumn(name = "user_id"))
-//    private Collection<Order> ordersCollection;
-
 }

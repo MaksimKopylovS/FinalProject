@@ -31,14 +31,9 @@ public class ProductService {
         Type listType = new TypeToken<List<ProductDTO>>(){}.getType();
         List<ProductDTO> productDTOList = modelMapper.map(productList,listType);
         return productDTOList;
-
-
-       // return productRepository.findAll().stream().map(ProductDTO::new).collect(Collectors.toList());
     }
 
     public Page<ProductDTO> findAllProducts(Specification<Product> spec, int page, int pageSize) {
-//        Page<ProductDTO> productDTOS = productRepository.findAll(spec, PageRequest.of(page - 1, pageSize)).map(ProductDTO::new);
-//        Page<ProductDTO> page1 = productRepository.findAll(PageRequest.of(page - 1, pageSize)).map(ProductDTO::new);
         return productRepository.findAll(spec, PageRequest.of(page - 1, pageSize)).map(ProductDTO::new);
     }
 
@@ -78,7 +73,6 @@ public class ProductService {
     }
 
     public ProductDTO updateProduct(ProductDTO productDTO) { //LSS добавил метод по обновлению продукта
-//        Product product = productRepository.findById(productDTO.getId()).get();
         Product product = convertToEntity(productDTO);
         product.setProductId(productDTO.getId());
         productRepository.save(product);

@@ -26,14 +26,6 @@ public class ProductController {
 
     private final ProductService productService;
 
-//    @GetMapping("/products")
-//    public String products() {
-//        System.out.println("MarcetServiceControlelr Запрос пршол");
-//
-//        return "Держи Пакет продуктов";
-//    }
-
-
     @GetMapping("/get-products")
     public List<ProductDTO> getProducts() {
         List<ProductDTO> productDTOS = productService.getProduct();
@@ -68,19 +60,11 @@ public class ProductController {
         log.info("params size - {}", params.size());
         while(iteratot.hasNext()) {
             String theKey = (String)iteratot.next();
-            //log.info("Продукты добавленные в корзину {}", params.toSingleValueMap());
             log.info("Key  {} Params {}", theKey,params.getFirst(theKey));
-
         }
 
 
         return productService.findAllProducts(ProductSpecifications.build(params), page, 5);
-    }
-
-    @PostMapping("/add-basket")
-    public void addBasketProduct(@RequestBody ProductDTO productDTO) {
-        System.out.println(productDTO.getTitle());
-        // return new ArrayList<>();
     }
 
     @GetMapping("/{product_id}") // LSS посик товара по id
@@ -102,6 +86,5 @@ public class ProductController {
         System.out.println(categoryList);
         return categoryList;
     }
-
 
 }

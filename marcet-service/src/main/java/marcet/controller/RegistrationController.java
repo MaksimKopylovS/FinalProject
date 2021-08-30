@@ -25,7 +25,6 @@ public class RegistrationController {
             e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
         }
-
         return ResponseEntity.ok(userDTO);
     }
 

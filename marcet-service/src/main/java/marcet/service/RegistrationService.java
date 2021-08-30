@@ -20,16 +20,9 @@ public class RegistrationService {
 
     @Transactional
     public void registrationUser(UserDTO userDTO) {
-
         log.info("Логин - {}, Пароль - {},  Почта - {}", userDTO.getUsername(), userDTO.getPassword(), userDTO.getMail() );
         User user = userService.convertyToEntity(userDTO);
         userRepository.save(user);
-
-//        entityManager.createNativeQuery("insert into users(USERNAME, PASSWORD, EMAIL) values(:a,:b,:c)")
-//                .setParameter("a", userDTO.getUsername())
-//                .setParameter("b", userDTO.getPassword())
-//                .setParameter("c", userDTO.getMail())
-//                .executeUpdate();
     }
 
 }

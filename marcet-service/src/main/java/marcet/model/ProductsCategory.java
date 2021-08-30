@@ -17,7 +17,6 @@ public class ProductsCategory {
     @Column(name = "id")
     private Long productId;
 
-//    @Id
     @Column(name = "category_id")
     private Long categoryId;
 }

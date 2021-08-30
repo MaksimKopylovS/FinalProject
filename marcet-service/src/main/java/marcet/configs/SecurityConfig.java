@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 
 @EnableWebSecurity
-//@EnableGlobalMethodSecurity(prePostEnabled = true)
 @RequiredArgsConstructor
 @Slf4j
 @CrossOrigin

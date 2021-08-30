@@ -16,13 +16,7 @@ import java.util.List;
 @Repository
 public interface OrderRepository extends JpaRepository<Order, Long> {
 
-    //Order findOrdersByCreateTime(LocalDateTime date);
-
     @Query(value = "select MAX(order_id) FROM orders_tbl", nativeQuery = true)
     Long findMaxIDOrder();
-    //Order findOrdersBy
-
-    //@Query(value = "")
-    //@Query(value = "")
     List<Order> findAllByUser(User user);
 }

@@ -21,9 +21,6 @@ public class Product {
     @Column(name = "product_id")
     private Long productId;
 
-//    @Column(name = "categoriy_id")
-//    private Long categoriyId;
-
     @Column(name = "title_fld")
     private String title;
 
@@ -44,28 +41,5 @@ public class Product {
                 joinColumns = @JoinColumn(name = "product_id"),
                 inverseJoinColumns = @JoinColumn(name = "category_id"))
     private List<Category> categories; // ?? или здесь лучше List<Category>?
-
-
-
-
-//    @OneToMany
-//    @JoinTable(name = "order_items_tbl",
-//            joinColumns = @JoinColumn(name = "product_id"))
-//    private Collection<Product> orderCollection;
-//
-//    @OneToMany
-//    @JoinTable(name = "products_categories_tbl",
-//            joinColumns = @JoinColumn(name = "product_id"))
-//    private Collection<Product> productsCategoriyCollection ;
-
-//    @OneToMany
-//    @JoinTable(name = "order_items_tbl",
-//            joinColumns = @JoinColumn(name = "product_id"))
-//    private Collection<Product> orderCollection;
-//
-//    @ManyToMany
-//    @JoinTable(name = "products_categories_tbl",
-//            joinColumns = @JoinColumn(name = "categories_id"))
-//    private Collection<Category> productsCategoriyCollection ;
 
 }

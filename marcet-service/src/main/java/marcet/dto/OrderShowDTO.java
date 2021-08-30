@@ -18,6 +18,4 @@ public class OrderShowDTO {
         private AddressDTO addressDTO;
         private List<ProductDTO> productDTO;
         private List<OrderItem> orderItem;
-        //private Order order;
-
 }
