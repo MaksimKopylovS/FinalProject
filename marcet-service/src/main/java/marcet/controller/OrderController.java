@@ -26,7 +26,6 @@ import java.util.List;
 @RequestMapping("/order")
 public class OrderController {
 
-    private final BasketService basketService;
     private final OrderService orderService;
 
     @PostMapping("/create") //LSS просто скопировал создание заказа как выше было, подставил только другой сервис

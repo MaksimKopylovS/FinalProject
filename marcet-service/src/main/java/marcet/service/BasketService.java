@@ -21,22 +21,17 @@ import java.util.stream.Collectors;
 @Slf4j
 @RequiredArgsConstructor
 @Service
-@Scope(scopeName = "prototype")
 public class BasketService {
 
     private static ArrayList<ProductDTO> basketList;
     private final ProductService productService;
-    private final OrderRepository orderRepostory;
-    private final OrderItemsRepository orderItemsRepository;
     private final UserRepository userRepository;
-    private final AddressRepository addressRepository;
-    private final EntityManager entityManager;
     private final BasketItemRepository basketItemRepository;
 
     @PostConstruct
     public void init() {
         basketList = new ArrayList<>();
-    } // LSS это теперь не надо наверное
+    }
 
     public List<BasketItemDTO> addProductToBasket(ProductDTO productDTO, String username) { //LSS добавление товара в корзину и увеличение кол-ва
         User user = userRepository.findByUsername(username).get();
@@ -65,7 +60,6 @@ public class BasketService {
 
 
     public List<BasketItemDTO> delProductFromBasket(ProductDTO productDTO, String username) { //LSS удалить товар из корзины
-        User user = userRepository.findByUsername(username).get();
         List<BasketItemDTO> basketlist = getBasket(username);
         BasketItemDTO basketItemDTO = basketlist.stream().filter(bi -> bi.getProductDTO().equals(productDTO)).findFirst().get();
         basketItemRepository.deleteById(basketItemDTO.getBasketItemId());
@@ -102,7 +96,6 @@ public class BasketService {
     }
 
     public List<BasketItemDTO> decrementProduct(ProductDTO productDTO, String username) { //LSS уменьшить кол-во товара в корзине
-        //User user = userRepository.findByUsername(username).get();
         List<BasketItemDTO> basketlist = getBasket(username);
         BasketItemDTO basketItemDTO = basketlist.stream().filter(bi -> bi.getProductDTO().equals(productDTO)).findFirst().get();
         BasketItem basketItem = basketItemRepository.findById(basketItemDTO.getBasketItemId()).get();

@@ -62,8 +62,6 @@ public class ProductController {
             String theKey = (String)iteratot.next();
             log.info("Key  {} Params {}", theKey,params.getFirst(theKey));
         }
-
-
         return productService.findAllProducts(ProductSpecifications.build(params), page, 5);
     }
 
